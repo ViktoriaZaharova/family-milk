@@ -1,55 +1,238 @@
 @import "vars"
 
-/*==========  Desktop First  ==========*/
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1210px)
+  .tabs__caption li
+    font-size: 14px
+    width: 180px
+    height: 45px
+    margin: 0 0 30px
 
+  .slider-advantages
+    max-width: none
+    width: calc(100% - 500px)
 
-/* Medium Devices, Desktops */
+  .slider-advantages__box
+    font-size: 22px
+
+@media only screen and (max-width : 1080px)
+  .footer-menu
+    li
+      margin: 0 0 10px
+      a
+        font-size: 12px
+
+  footer
+    .whatsapp
+      font-size: 12px
+      margin: 0 0 20px
+    h3
+      margin: 0 0 15px
+      font-size: 14px
+    .phone
+      margin: 0 0 20px
+
+  .footer-top
+    padding: 30px 0
+
+  .menu-document
+    margin: 0 0 0 auto
+
+  .banner-box
+    font-size: 18px
+
+  .banner-box__title
+    padding: 20px
+
+  .slider-advantages
+    padding: 30px 45px
+
 @media only screen and (max-width : 992px)
-	/**/
+  .footer-box
+    margin: 0 0 30px
+    &:last-child
+      margin: 0
+
+  .list-payment li a
+    width: 42px
+    height: 32px
+
+  .footer-bottom
+    font-size: 12px
+
+  .menu-document li
+    margin: 0 20px 0 0
+
+  .about-wrapper, .about-content
+    padding: 20px
+
+  .about
+    h3
+      font-size: 18px
 
 
-/* Small Devices, Tablets */
+  .box-text
+    font-size: 13px
+    line-height: 1.2
+    p
+      margin: 0 0 15px
+      &:last-child
+        margin: 0
+    ul
+      li
+        margin: 0 0 15px
+        &:last-child
+          margin: 0
+
+  h2
+    margin: 0 auto 30px
+    font-size: 36px
+
+  .col-4
+    width: 33.3%
+
+  .tabs__caption
+    justify-content: space-around
+
+  .group-company__links
+    max-width: none
+    width: 33%
+    height: 100px
+    font-size: 16px
+
+  .group-company__text
+    max-width: none
+    br
+      display: none
+
+@media only screen and (max-width : 920px)
+  .slider-advantages
+    width: 100%
+
+  .slider-products-top__wrapper
+    width: 100%
+    margin: 30px auto 0
+    max-width: none
+
+
 @media only screen and (max-width : 768px)
-	/**/
+  .about-box
+    width: 100%
+    margin: 0 0 30px
+    &:last-child
+      margin: 0
 
+  .about-content
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
 
-/* Extra Small Devices, Phones */
+  .about
+    padding: 60px 0 0
+
+  .col-4
+    width: 50%
+
+  .new-price
+    font-size: 20px
+
+  .product-card__img
+    height: 220px
+
+  .col-banner-box
+    width: 100%
+
+  .banner-box
+    height: 200px
+
+  .dishes
+    margin: 60px 0 0
+
+  .group-company__icon
+    width: 40px
+    min-width: 40px
+
+  .group-company__links
+    font-size: 14px
+    padding: 10px
+
+  .sum-value
+    font-size: 20px
+
+  .btn-green
+    font-size: 14.5px
+
+  .old-price
+    font-size: 18px
+
+@media only screen and (max-width : 620px)
+  .menu-document
+    margin: 0 auto 10px
+    order: -1
+    width: 100%
+    justify-content: space-around
+    li
+      margin: 0
+
+  .copyright
+    margin: 0 auto
+
+  .tabs__caption
+    margin: 0 0 15px
+    li
+      width: 49%
+      margin: 0 0 10px
+      font-size: 12px
+
+  .group-company__links
+    width: 49%
+    margin: 0 0 15px
+    height: 70px
+
+  .group-company
+    flex-wrap: wrap
+    justify-content: space-around
+
+@media only screen and (max-width : 500px)
+  .col-4
+    width: 100%
+
+  h2
+    font-size: 30px
+
+  .group-company__links
+    width: 100%
+
+  .slider-advantages__box
+    font-size: 20px
+
 @media only screen and (max-width : 480px)
-	/**/
+  .slider-products-card
+    flex-direction: column
+    align-items: center
+
+  .slider-products-card__content
+    width: 100%
+    padding: 0
+    margin: 20px 0 0
+
+  .slider-products-card__title
+    max-width: none
+
+  .slider-products-top__title
+    font-size: 14px
+
+  .timer, .slider-products-top__wrapper .slick-dots li button
+    font-size: 16px
 
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
 
 
-/*==========  Mobile First  ==========*/
+@media only screen and (max-width : 420px)
+  .timer
+    width: 100%
+    margin: 10px auto 0
+    text-align: center
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
-
+  .slider-products-top__line
+    flex-wrap: wrap

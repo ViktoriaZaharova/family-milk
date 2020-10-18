@@ -198,8 +198,6 @@ a
     justify-content: space-between
 
 
-
-
 .logo
   max-width: 96px
   width: 100%
@@ -410,13 +408,6 @@ h2
       &:last-child
         transform: rotate(135deg)
 
-.catalog-wrapper
-  position: absolute
-  left: 0
-  top: 100%
-  z-index: 2
-  background: #fff
-  display: none
 
 .header-bottom
   padding: 3px 0
@@ -448,7 +439,123 @@ h2
   z-index: 2
   width: 100%
   box-shadow: 0 10px 15px 0 rgba(84, 55, 49, 0.1)
-  padding: 28px 0
+  padding: 28px 0 30px
+  display: none
+  .container
+    align-items: stretch
+
+.scrollbar
+  overflow-y: scroll
+
+  &::-webkit-scrollbar-button
+    display: none
+
+  &::-webkit-scrollbar-thumb
+    background: #c5b1ad
+    border-radius: 2.5px
+    border: none
+
+  &::-webkit-scrollbar-track
+    background: #fff
+
+  &::-webkit-scrollbar
+    width: 5px
+    background: #fff
+
+
+.menu-category
+  height: 563px
+  position: relative
+  padding: 0 33px 0 10px
+
+
+.menu-category__links
+  display: flex
+  align-items: center
+  color: $text
+  font-size: 14px
+  width: 100%
+  padding: 14px 10px 14px 40px
+  border-radius: 5px
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 10px
+    transform: translate(0, -50%)
+    width: 21px
+    height: 23px
+    background: url("../img/category-icon.png") no-repeat center
+      size: contain
+    transition: .3s ease
+
+  &:hover
+    color: #fff
+    background: #7f6965
+
+    &:before
+      filter: brightness(0) invert(1)
+
+.menu-category__links-icon
+  width: 21px
+  height: 23px
+
+.catalog-wrapper__content
+  width: calc(100% - 328px)
+  padding: 0 28px
+
+.menu-subcategory
+  display: none
+  position: relative
+
+.menu-subcategory.active
+  display: block
+
+.menu-subcategory__links
+  color: #7c7c7c
+
+  &:hover
+    text-decoration: underline
+    font-weight: 500
+    color: #1c1c1c
+
+.menu-subcategory__item
+  margin: 0 0 28px
+  width: calc(100% - 488px)
+  &:last-child
+    margin: 0
+  &:hover
+    .menu-subcategory__item-preview
+      display: block
+
+.menu-subcategory__item-preview
+  position: absolute
+  right: 0
+  top: 0
+  width: 100%
+  max-width: 488px
+  color: #301f1c
+  font-size: 20px
+  font-weight: 500
+  text-transform: uppercase
+  text-align: center
+  display: none
+
+.menu-subcategory__item-preview-img
+  width: 100%
+  height: 248px
+  border-radius: 5px
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 auto 19px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 .search-dropDown
   position: absolute
@@ -468,6 +575,7 @@ h2
   justify-content: flex-start
   padding: 0 0 0 22%
   margin: 0 0 42px
+
   p
     color: #91837f
     font-size: 19px
@@ -484,6 +592,7 @@ h2
   color: #1c1c1c
   font-size: 16px
   margin: 0 30px 0 0
+
   &:last-child
     margin: 0
 
@@ -523,6 +632,7 @@ h2
   height: 250px
   border-radius: 5px
   background: #e8e8e8
+
   img
     width: 100%
     height: 100%
@@ -813,6 +923,7 @@ h2
   display: flex
   align-items: flex-start
   justify-content: space-between
+  flex-wrap: wrap
 
 .box-text
   font-size: 15px
