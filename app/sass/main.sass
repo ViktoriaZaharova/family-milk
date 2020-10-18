@@ -908,13 +908,14 @@ h2
 
 //about
 .about
-  padding: 110px 0 0
+  padding: 90px 0
 
   h2
     font-size: 24px
 
   h3
     font-size: 20px
+    margin: 0 0 20px
     line-height: 1.1
 
 .about-wrapper
@@ -959,6 +960,12 @@ h2
 
 .about-box
   width: 49%
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+
+
 
 //group-company
 .group-company
@@ -993,8 +1000,6 @@ h2
 //footer
 footer
   border-top: 1px solid #aa9b98
-  margin: 90px 0 0
-
   h3
     font-size: 15px
     font-weight: 500
@@ -1187,6 +1192,10 @@ footer
 
 .col-4
   width: 25%
+  padding: 0 10px
+
+.col-3
+  width: 33.3%
   padding: 0 10px
 
 .product-card
@@ -1474,7 +1483,454 @@ footer
   opacity: .7
   display: none
 
+//page catalog
+.breadcrumbs-section
+  margin: 15px 0 24px
+  .container
+    align-items: center
 
+.breadcrumb
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  font-size: 13px
+  li
+    a
+      color: #1c1c1c
+      &:after
+        content: ''
+        display: inline-block
+        margin: 0 14px
+        width: 4px
+        height: 8px
+        background: url("../img/arrow-right.png") no-repeat center
+          size: contain
+    span
+      color: #858585
+
+
+.sidebar
+  width: 270px
+  .btn-close
+    display: none
+  h3
+    display: flex
+    align-items: center
+    margin: 0 0 15px
+    font-size: 20px
+    font-weight: 500
+    .icon
+      margin: 0 5px 0 0
+      display: flex
+      align-items: center
+      justify-content: center
+
+.wrapper-content
+  width: calc(100% - 270px)
+  padding: 0 0 0 35px
+
+h1
+  font-size: 26px
+  font-weight: 500
+
+.line-title
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 0 16px
+
+.catalog-value-products
+  color: #888888
+  font-size: 12px
+  margin: 0 0 0 10px
+
+.list-products
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  li
+    margin: 0 5px 5px 0
+    &:last-child
+      margin-right: 0
+    a
+      color: $text
+      font-size: 14px
+      padding: 6.5px 7px
+      border-radius: 5px
+      border: solid 1px #aa9b98
+
+.banner-horizontal
+  margin: 17px 0 23px
+  height: 89px
+  position: relative
+  width: 100%
+  overflow: hidden
+  padding: 13px 30px
+  color: #fff
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(23, 23, 23, .5) 100%)
+    z-index: 1
+
+.banner-bg
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+.banner-title
+  position: relative
+  z-index: 1
+  font-size: 28px
+  font-weight: bold
+  max-width: 360px
+  width: 100%
+
+.subscribe
+  background: url("../img/bg1.jpg") no-repeat center
+    size: cover
+
+.subscribe-wrapper
+  margin: 45px auto
+  max-width: 680px
+  width: 100%
+  background: #fff
+  border-radius: 5px
+  padding: 39px 145px 0
+  h2
+    font-size: 32px
+    margin: 0 auto 27px
+  .form-subscribe
+    margin: 30px auto 17px
+    input
+      height: 52px
+      font-size: 15px
+      color: #888888
+      padding: 0 136px 0 16px
+
+      &::placeholder
+        color: #888888
+    button
+      width: 136px
+      font-size: 12px
+
+.list-check
+  font-size: 17px
+  font-weight: 500
+  li
+    position: relative
+    padding: 0 0 0 26px
+    margin: 0 0 15px
+    &:last-child
+      margin: 0
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(0,-50%)
+      width: 21px
+      height: 21px
+      background: url("../img/check.png") no-repeat center
+        size: contain
+
+.img-subscribe
+  margin: 0 auto
+
+.line-sorting
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 0 0 30px
+
+.sorting-wrapper
+  display: flex
+  align-items: center
+  p
+    color: #888888
+    font-size: 14px
+    margin: 0 15px 0 0
+
+select
+  padding: 0
+  box-sizing: border-box
+  outline: none
+  font-family: $default-font
+  color: #543731
+  font-size: 14px
+  border: none
+    bottom: 1px solid #aa9b98
+  -webkit-appearance: none
+  appearance: none
+  -moz-appearance: none
+  border-radius: 0
+
+.select-sort
+  width: 214px
+  background: url("../img/arrow-bottom.png") no-repeat right center
+
+.views-products
+  display: flex
+  align-items: center
+
+.views-products__item
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 10px 0 0
+  width: 27px
+  height: 27px
+  border-radius: 3px
+  border: solid 1px #aa9b98
+  background: #fff
+  padding: 3px 6px
+  cursor: pointer
+  transition: .3s ease
+  &:last-child
+    margin: 0
+  .icon-svg
+    fill: #aa9b98
+  &:hover
+    background: #aa9b98
+    border-color: #aa9b98
+    .icon-svg
+      fill: #fff
+
+.views-products__item.active
+  background: $accent
+  border-color: $accent
+  .icon-svg
+    fill: #fff
+
+.icon-svg
+  width: 100%
+  height: 100%
+
+.mb-30
+  margin-bottom: 30px
+
+.bottom-line
+  padding: 0 0 10px
+  border-bottom: 1px solid #eae6e5
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+
+.pagination
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  li
+    margin: 0 5px 0 0
+    &:last-child
+      margin: 0
+    a
+      border-radius: 5px
+      color: #aa9b98
+      font-size: 15px
+      padding: 6.5px 13px
+    .active
+      color: #fff
+      background: $green
+    .links-next
+      background: #e8e8e8
+      color: $green
+
+.form-pagination
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  font-size: 13px
+  input
+    height: 31px
+    border-radius: 5px
+    border: solid 1px #aa9b98
+    background-color: #ffffff
+    padding: 0
+    text-align: center
+  label
+    width: 47px
+    margin: 0 8px 0 7px
+  button
+    border-radius: 5px
+    background-color: #aa9b98
+    font-size: 13px
+    color: #fff
+    padding: 8px 14px
+    &:hover
+      background: $accent
+
+.links-prev
+  display: flex
+  align-items: center
+  margin: 0 0 19px
+  width: 100%
+  color: #858585
+  font-size: 13px
+  img
+    margin: 0 6px 0 0
+    width: 5px
+
+.sidebar-item-category
+  background: #fdfbfa
+
+.sidebar-item
+  border-radius: 5px
+  border: solid 1px #aa9b98
+  width: 100%
+  margin: 0 0 30px
+  &:last-child
+    margin: 0
+
+.sidebar-box
+  padding: 15px 20px
+  border-bottom: 1px solid #aa9b98
+  &:last-child
+    border: none
+
+.block_title
+  width: 100%
+  font-size: 17px
+  font-weight: 500
+  display: flex
+  align-items: center
+  cursor: pointer
+  &:after
+    content: ''
+    display: inline-block
+    margin: 0 0 0 auto
+    width: 11px
+    height: 6px
+    background: url("../img/arrow-bottom.png") no-repeat center
+      size: contain
+    transition: .3s ease
+
+.block_title.in
+  &:after
+    transform: scale(1,-1)
+
+.block_hover
+  margin: 20px 0 0
+  display: none
+
+.menu-category-sidebar
+  li
+    margin: 0 0 15px
+    &:last-child
+      margin: 0
+    a
+      font-size: 14px
+      color: $text
+      &:hover
+        text-decoration: underline
+
+.slider-price
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+  input
+    padding: 0
+    width: 100px
+    height: 34px
+    text-align: center
+    font-size: 16px
+    color: #1c1c1c
+    &::placeholder
+      color: #1c1c1c
+
+.line-input
+  width: 12px
+  height: 2px
+  background: #7b7a77
+
+.slider-range
+  width: 100%
+  margin: 35px 0 0
+  border: none
+    radius: 2px
+  background: rgba(#aa9b98, .5)
+  height: 4px
+
+.ui-corner-all, .ui-widget.ui-widget-content
+  border: none
+
+.ui-slider-horizontal .ui-slider-handle
+  background: #4b312c
+  border: none
+    radius: 50%
+  width: 14px
+  height: 14px
+  outline: none
+  cursor: pointer
+
+.ui-slider .ui-slider-range
+  background: #7a6763
+
+.checkbox
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  color: $text
+  font-size: 14px
+  .checkbox-inp
+    display: none
+  .checkbox-custom
+    position: relative
+    width: 26px
+    height: 26px
+    display: inline-block
+    vertical-align: middle
+    border: solid 1px #aa9b98
+      radius: 3px
+    background: #ffffff
+    cursor: pointer
+    transition: .3s ease
+    margin: 0 10px 0 0
+  .label
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+  .checkbox-inp:checked + .checkbox-custom
+    background: $green
+    border-color: $green
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      width: 12px
+      height: 9px
+      background: url("../img/checkbox.png") no-repeat center
+        size: contain
+  .label-val
+    color: #888888
+
+.list-checkbox
+  li
+    margin: 0 0 10px
+    &:last-child
+      margin: 0
+
+.btn-filter
+  display: none
 
 @import "media"
 // Всегда в конце

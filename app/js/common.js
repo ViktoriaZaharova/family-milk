@@ -16,6 +16,24 @@ $('.slider-products-top').slick({
     nextArrow: '<button type="button" class="slick-next"></button>',
 });
 
+// slick active
+$(window).on('load resize', function() {
+    if ($(window).width() < 768) {
+        $('.list-products:not(.slick-initialized)').slick({
+            infinite: true,
+            speed: 100,
+            slidesToShow: 1,
+            variableWidth: true,
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>',
+        });
+    } else {
+        $(".list-products.slick-initialized").slick("unslick");
+    }
+});
+// slick active
+
 // tabs
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
     $(this)
@@ -73,3 +91,35 @@ $('.btn-search-mobile').click(function () {
     $('.form-search').fadeToggle();
 });
 
+$('.btn-filter').click(function () {
+    $('.overlay').fadeIn();
+   $('.sidebar').fadeIn();
+});
+
+$('.btn-close, .overlay').click(function () {
+    $('.overlay').fadeOut();
+    $('.sidebar').fadeOut();
+});
+
+// accordeon
+$('.panel_heading .block_title').click(function () {
+    $(this).toggleClass('in').next().slideToggle();
+    $('.panel_heading .block_title').not(this).removeClass('in').next().slideUp();
+});
+
+$(".slider-range").slider({
+    range: true,
+    min: 0, // минимальное значение цены
+    max: 3200, // максимальное значение цены
+    step: 1, // шаг слайдера
+    values: [15, 3200],  // начальные значения - позиции ползунков на шкале
+
+    slide: function( event, ui ) {
+        $( "input[name=price_s]" ).val(  ui.values[ 0 ] + ' ' + '₽'); // выводим  значение от
+        $( "input[name=price_f]" ).val(  ui.values[ 1 ] + ' ' + '₽'); // выводим  значение до
+    },
+    stop: function(event, ui) { show(); } // выполняем действие  после остановки ползунка, в нашем случае функция show
+});
+
+$(".dec1").val($(".slider-range").slider("value") + ' ' + '₽');
+$(".dec2").val($(".slider-range").slider("value") + ' ' + '₽');

@@ -76,6 +76,9 @@
   .phone-wrapper
     max-width: 260px
 
+  .pagination li
+    margin: 0
+
 @media only screen and (max-width : 992px)
   .footer-box
     margin: 0 0 30px
@@ -133,6 +136,33 @@
     max-width: none
     br
       display: none
+
+  .sidebar
+    display: none
+    position: fixed
+    left: 0
+    top: 0
+    width: 300px
+    height: 100%
+    overflow-y: auto
+    background: #fff
+    padding: 20px
+    z-index: 10
+    .btn-close
+      display: flex
+
+  .btn-filter
+    display: flex
+    font-size: 14px
+    img
+      margin: 0 10px 0 0
+
+  .wrapper-content
+    width: 100%
+    padding: 0
+
+  .block_title
+    font-size: 15px
 
 @media only screen and (max-width : 920px)
   .slider-advantages
@@ -254,6 +284,48 @@
   .old-price
     font-size: 18px
 
+  .col-3
+    width: 50%
+
+  .list-products
+    padding: 0 35px
+    .slick-next
+      right: 0
+    .slick-prev
+      left: 0
+    li
+      margin-bottom: 0
+
+  .banner-title
+    font-size: 22px
+
+  .bottom-line
+    flex-direction: column
+    align-items: center
+
+  .pagination
+    margin: 0 auto 10px
+
+  .pagination li a
+    padding: 4.5px 11px
+    font-size: 12px
+
+  .form-pagination
+    font-size: 12px
+
+  .subscribe-wrapper
+    padding: 30px 20px 0
+
+  .list-check
+    font-size: 14px
+
+  .subscribe-wrapper h2
+    font-size: 24px
+
+  .subscribe-wrapper .form-subscribe input
+    font-size: 13px
+
+
 @media only screen and (max-width : 620px)
   .menu-document
     margin: 0 auto 10px
@@ -330,6 +402,14 @@
     margin: 0 0 20px
     font-size: 18px
 
+  .sorting-wrapper
+    width: 100%
+    margin: 10px auto 0
+    order: 1
+
+  .list-products li a
+    font-size: 12px
+
 @media only screen and (max-width : 500px)
   .col-4
     width: 100%
@@ -362,9 +442,27 @@
   .timer, .slider-products-top__wrapper .slick-dots li button
     font-size: 16px
 
-
   .basket-sum, header .phone-box
     display: none
+
+  .col-3
+    width: 100%
+
+  .banner-title
+    font-size: 18px
+
+  .sidebar h3
+    font-size: 18px
+
+  .block_title
+    font-size: 14px
+
+  .subscribe-wrapper .form-subscribe button
+    font-size: 11px
+    width: 100px
+
+  .subscribe-wrapper .form-subscribe input
+    padding: 0 100px 0 15px
 
 @media only screen and (max-width : 420px)
   .timer
