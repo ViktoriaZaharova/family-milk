@@ -1011,7 +1011,13 @@ h2 {
     max-width: 200px; }
 
 .units {
-  margin: 3px 0 0 5px; }
+  margin: 3px 0 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .sum-value {
   font-size: 26px; }
@@ -1546,7 +1552,31 @@ footer {
   line-height: 1.47; }
 
 .price {
-  font-size: 24px; }
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .price .units {
+    margin: 0 0 0 6px;
+    font-size: 16.5px; }
+    .price .units img {
+      width: 12px; }
+
+.rub-icon {
+  width: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3px 0 0 6px; }
 
 .button-wrapper {
   margin: 24px 0 0;
@@ -1644,7 +1674,18 @@ footer {
 
 .new-price {
   font-size: 24px;
-  color: #c81947; }
+  color: #c81947;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .new-price .units {
+    font-size: 16.5px;
+    margin: 0 0 0 6px; }
+    .new-price .units img {
+      width: 12px; }
 
 .banner-box {
   width: 100%;
