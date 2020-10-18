@@ -113,6 +113,7 @@ a
   color: $accent
   font-family: $title-font
   border-bottom: 1px solid #aa9b98
+
   p
     width: 100%
     text-align: center
@@ -120,6 +121,7 @@ a
 
 .header-top
   padding: 14px 0 17px
+
   .container
     align-items: center
     justify-content: space-between
@@ -128,10 +130,13 @@ a
   display: flex
   align-items: center
   flex-wrap: wrap
+
   li
     margin: 0 30px 0 0
+
     &:last-child
       margin: 0
+
     a
       font-size: 14px
       color: $text
@@ -174,6 +179,7 @@ a
   align-items: center
   color: $green
   font-size: 14px
+
   &:hover
     color: $text
 
@@ -185,9 +191,14 @@ a
   justify-content: center
 
 .header-center
+  position: relative
+
   .container
     align-items: center
     justify-content: space-between
+
+
+
 
 .logo
   max-width: 96px
@@ -202,6 +213,7 @@ a
   max-width: 497px
   width: 100%
   position: relative
+
   button
     position: absolute
     right: 0
@@ -213,6 +225,7 @@ a
     justify-content: center
     border: solid 1px #aa9b98
       radius: 0 5px 5px 0
+
   input
     border: solid 1px #aa9b98
       radius: 5px
@@ -226,6 +239,7 @@ input
   padding: 0 72px 0 20px
   height: 54px
   width: 100%
+
   &::placeholder
     color: $accent
 
@@ -261,6 +275,7 @@ button
   color: #fff
   background: $accent
   max-width: 194px
+
   &:hover
     background: #7f6965
 
@@ -271,6 +286,7 @@ button
   font-weight: 500
   background: $green
   color: #fff
+
   .icon-basket
     margin: 0 0 0 7px
     width: 25px
@@ -291,6 +307,7 @@ h2
 .w-100
   width: 100%
 
+//header
 .header-links
   display: flex
   flex-direction: column
@@ -370,6 +387,7 @@ h2
   height: 18px
   margin: 0 17px 0 0
   position: relative
+
   span
     width: 100%
     display: block
@@ -382,10 +400,13 @@ h2
     span
       position: absolute
       top: 8px
+
       &:nth-child(2)
         width: 0
+
       &:first-child
         transform: rotate(45deg)
+
       &:last-child
         transform: rotate(135deg)
 
@@ -405,21 +426,112 @@ h2
   display: flex
   align-items: center
   justify-content: space-between
+
   li
     a
       text-transform: uppercase
       font-size: 14px
       color: $text
       padding: 14px 0
+
       &:hover
         background: #7f6965
         color: #fff
         border-radius: 3px
         padding: 14px 20px
 
+.catalog-wrapper
+  position: absolute
+  left: 0
+  top: calc(100% + 10px)
+  background: #fff
+  z-index: 2
+  width: 100%
+  box-shadow: 0 10px 15px 0 rgba(84, 55, 49, 0.1)
+  padding: 28px 0
+
+.search-dropDown
+  position: absolute
+  left: 0
+  top: calc(100% + 15px)
+  background: #fff
+  z-index: 2
+  width: 100%
+  box-shadow: 0 10px 15px 0 rgba(84, 55, 49, 0.1)
+  display: none
+
+.frequent-queries
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: flex-start
+  padding: 0 0 0 22%
+  margin: 0 0 42px
+  p
+    color: #91837f
+    font-size: 19px
+    margin: 0 27px 0 0
+
+.frequent-queries__result
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+.frequent-queries__tag
+  display: flex
+  align-items: center
+  color: #1c1c1c
+  font-size: 16px
+  margin: 0 30px 0 0
+  &:last-child
+    margin: 0
+
+.frequent-queries__icon
+  margin: 0 0 0 5px
+  width: 16px
+  height: 16px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.popular-category-search
+  h3
+    text-align: center
+    width: 100%
+    margin: 0 auto 40px
+    text-transform: uppercase
+    font-size: 20px
+    color: #543731
+
+.category-item
+  margin: 0 0 29px
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: #1c1c1c
+  font-size: 16px
+
+.category-item__img
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  margin: 0 auto 18px
+  width: 100%
+  height: 250px
+  border-radius: 5px
+  background: #e8e8e8
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
 //main
 .main-home
   margin: 0 0 48px
+
   .container
     align-items: stretch
     justify-content: space-between
@@ -433,6 +545,7 @@ h2
   min-height: 284px
   width: 100%
   padding: 40px 109px 20px
+
   .slick-dots
     position: relative
     bottom: 0
@@ -441,16 +554,20 @@ h2
     align-items: center
     justify-content: center
     margin: 45px 0 0
+
     li
       width: 31px
       height: 3px
       border-radius: 1.5px
       background-color: #d4cdcb
       margin: 0 10px 0 0
+
       &:last-child
         margin: 0
+
       button
         display: none
+
     .slick-active
       background: $accent
 
@@ -475,6 +592,7 @@ h2
   display: flex
   align-items: center
   justify-content: center
+
   &:before
     display: none
 
@@ -482,6 +600,7 @@ h2
   background: #dddad7 url("../img/arrow-right.png") no-repeat center
     size: 6px
   right: 11px
+
   &:hover, &:focus
     background: #dddad7 url("../img/arrow-right.png") no-repeat center
       size: 6px
@@ -490,6 +609,7 @@ h2
   background: #dddad7 url("../img/arrow-left.png") no-repeat center
     size: 6px
   left: 11px
+
   &:hover, &:focus
     background: #dddad7 url("../img/arrow-left.png") no-repeat center
       size: 6px
@@ -499,15 +619,19 @@ h2
   max-width: 488px
   width: 100%
   padding: 15px 0 21px
+
   .slick-dots
     position: relative
     bottom: 0
+
     li
       width: auto
       height: auto
       margin: 0 5px 0 0
+
       &:last-child
         margin: 0
+
       button
         display: flex
         align-items: center
@@ -520,12 +644,15 @@ h2
         padding: 0 4px
         border-radius: 3px
         line-height: normal
+
         &:before, &:after
           display: none
+
     .slick-active
       button
         background: #7f6965
         color: #fff
+
   .slick-arrow
     top: 39%
 
@@ -558,6 +685,7 @@ h2
 .slider-products-card
   display: flex
   align-items: stretch
+
   .btn
     margin: 14px 0 0
     max-width: 200px
@@ -610,6 +738,7 @@ h2
   align-items: center
   justify-content: center
   margin: 0 10px 0 0
+
   li
     margin: 0 5px 0 0
     width: 17px
@@ -617,6 +746,7 @@ h2
     display: flex
     align-items: center
     justify-content: center
+
     &:last-child
       margin: 0
 
@@ -647,11 +777,12 @@ h2
   font-size: 22px
   margin: 0 9px 0 0
   position: relative
+
   &:before
     content: ''
     position: absolute
     top: 50%
-    transform: translate(0,-50%)
+    transform: translate(0, -50%)
     left: 0
     width: 100%
     height: 1px
@@ -660,8 +791,10 @@ h2
 //about
 .about
   padding: 110px 0 0
+
   h2
     font-size: 24px
+
   h3
     font-size: 20px
     line-height: 1.1
@@ -685,13 +818,17 @@ h2
   font-size: 15px
   font-weight: 300
   line-height: 1.53
+
   p
     margin: 0 0 20px
+
     &:last-child
       margin: 0
+
   ul
     li
       margin: 0 0 20px
+
       &:last-child
         margin: 0
 
@@ -738,17 +875,20 @@ h2
 footer
   border-top: 1px solid #aa9b98
   margin: 90px 0 0
+
   h3
     font-size: 15px
     font-weight: 500
     color: $accent
     margin: 0 0 25px
+
   .phone
     display: flex
     align-items: center
     color: #1c1c1c
     font-size: 16px
     margin: 0 0 42px
+
   .whatsapp
     color: #1c1c1c
     font-size: 13px
@@ -769,14 +909,17 @@ footer
 .footer-menu
   li
     margin: 0 0 20px
+
     &:last-child
       margin: 0
+
     a
       font-size: 13px
       color: #877572
 
 .footer-top
   padding: 54px 0 51px
+
   .container
     align-items: flex-start
     justify-content: space-between
@@ -787,6 +930,7 @@ footer
   color: #fff
   padding: 16px 0
   font-size: 13px
+
   .container
     align-items: center
     justify-content: flex-start
@@ -802,10 +946,13 @@ footer
   align-items: center
   flex-wrap: wrap
   margin: 0 0 0 86px
+
   li
     margin: 0 30px 0 0
+
     &:last-child
       margin: 0
+
     a
       color: #fff
 
@@ -814,13 +961,16 @@ footer
   align-items: center
   position: relative
   margin: 0 0 28px
+
   input
     padding: 0 97px 0 10px
     height: 39px
     font-size: 13px
     color: #888888
+
     &::placeholder
       color: #888888
+
   button
     position: absolute
     right: 0
@@ -838,10 +988,13 @@ footer
   align-items: center
   flex-wrap: wrap
   margin: 0 0 28px
+
   li
     margin: 0 8px 0 0
+
     &:last-child
       margin: 0
+
     a
       display: flex
       align-items: center
@@ -855,10 +1008,13 @@ footer
   display: flex
   align-items: center
   flex-wrap: wrap
+
   li
     margin: 0 4px 0 0
+
     &:last-child
       margin: 0
+
     a
       display: flex
       align-items: center
@@ -883,6 +1039,7 @@ footer
   align-items: stretch
   flex-wrap: wrap
   justify-content: space-between
+
   li
     height: 54px
     max-width: 224px
@@ -898,6 +1055,7 @@ footer
     border: solid 1px #543731
     color: #301f1c
     margin: 0 0 40px
+
   .active
     background: #4b312c
     color: #fff
@@ -918,14 +1076,18 @@ footer
   border-radius: 5px
   border: solid 1px #eae6e5
   position: relative
+
   &:hover
     .btn-hover
       display: flex
+
   .units
     margin: 0
+
   .old-price
     margin: 0 0 0 11px
     font-size: 14.5px
+
   .sale-value
     font-size: 12px
     width: 32px
@@ -980,6 +1142,7 @@ footer
   font-size: 13px
   color: #fffefe
   display: none
+
   .links-white
     font-weight: 300
     color: #fff
@@ -1017,6 +1180,7 @@ footer
   letter-spacing: 1.05px
   text-transform: uppercase
   overflow: hidden
+
   &:before, &:after
     content: ""
     position: absolute
@@ -1028,6 +1192,7 @@ footer
     border-right: 10px solid #7c0e15
     border-bottom: 10px solid transparent
     bottom: 9px
+
   &:after
     width: 0
     height: 0
@@ -1036,6 +1201,7 @@ footer
     border-bottom: 10px solid #7c0e15
     top: 0
     right: 8px
+
   span
     width: 200px
     height: 35px
@@ -1050,6 +1216,7 @@ footer
     box-shadow: 0 3px 15px 0 rgba(67, 61, 43, 0.1)
     background: #c81925
     text-align: center
+
 .new-price
   font-size: 24px
   color: #c81947
@@ -1065,6 +1232,7 @@ footer
   justify-content: center
   font-size: 28px
   color: #f1efec
+
   &:before
     content: ''
     position: absolute
@@ -1072,7 +1240,7 @@ footer
     top: 0
     width: 100%
     height: 100%
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(23,23,23,.7) 100%)
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(23, 23, 23, .7) 100%)
 
 .banner-box__title
   position: absolute
