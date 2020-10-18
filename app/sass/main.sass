@@ -408,6 +408,25 @@ h2
       &:last-child
         transform: rotate(135deg)
 
+.btn-close
+  position: relative
+  width: 14px
+  height: 14px
+  margin: 0 0 20px auto
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 2px
+    height: 100%
+    left: 6px
+    background: $accent
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+.slick-slide
+  outline: none
 
 .header-bottom
   padding: 3px 0
@@ -475,32 +494,20 @@ h2
   color: $text
   font-size: 14px
   width: 100%
-  padding: 14px 10px 14px 40px
+  padding: 14px 10px
   border-radius: 5px
   position: relative
-
-  &:before
-    content: ''
-    position: absolute
-    top: 50%
-    left: 10px
-    transform: translate(0, -50%)
-    width: 21px
-    height: 23px
-    background: url("../img/category-icon.png") no-repeat center
-      size: contain
-    transition: .3s ease
 
   &:hover
     color: #fff
     background: #7f6965
-
-    &:before
+    .menu-category__links-icon
       filter: brightness(0) invert(1)
 
 .menu-category__links-icon
   width: 21px
   height: 23px
+  margin: 0 9px 0 0
 
 .catalog-wrapper__content
   width: calc(100% - 328px)
@@ -515,7 +522,6 @@ h2
 
 .menu-subcategory__links
   color: #7c7c7c
-
   &:hover
     text-decoration: underline
     font-weight: 500
@@ -1365,6 +1371,87 @@ footer
   width: 100%
   height: 100%
   object-fit: cover
+
+.phone-box, .btn-search-mobile
+  display: none
+  
+.mobile-menu
+  position: fixed
+  left: 0
+  top: 0
+  width: 300px
+  height: 100%
+  overflow-y: auto
+  z-index: 7
+  background: #fff
+  padding: 20px
+  display: none
+  .location
+    margin: 0 0 20px
+  .phone-box .phone
+    font-size: 14px
+
+.btn-burger
+  display: none
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  width: 20px
+  height: 14px
+  span
+    width: 100%
+    height: 2px
+    background: $accent
+
+.menu-mobile
+  margin: 30px 0
+
+  li
+    margin: 0 0 15px
+    &:last-child
+      margin: 0
+    a
+      color: $accent
+    .btn-catalog
+      font-weight: 500
+      position: relative
+      display: flex
+      align-items: center
+      &:after
+        content: '+'
+        display: inline-block
+        margin: 0 0 0 auto
+        transition: .3s ease
+    .btn-catalog.click
+      &:after
+        content: '-'
+
+.dropDown-menu
+  margin: 20px 0 0
+  display: none
+  li
+    a
+      display: flex
+      align-items: center
+      font-size: 14px
+      color: $text
+
+.icon-dropDownMenu
+  width: 30px
+  margin: 0 10px 0 0
+
+.overlay
+  position: fixed
+  z-index: 5
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: $accent
+  opacity: .7
+  display: none
+
+
 
 @import "media"
 // Всегда в конце

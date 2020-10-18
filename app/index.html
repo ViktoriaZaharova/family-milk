@@ -24,6 +24,49 @@
 
 <body>
 
+<div class="mobile-menu">
+    <div class="btn-close"></div>
+
+    <a href="#" class="location">
+        <span class="location-icon"><img src="img/location.png" alt=""></span>
+        <span class="location-text">Санкт-Петербург</span>
+    </a>
+
+    <div class="phone-box">
+        <a href="tel:+78126977777" class="phone"><span class="phone-icon"><img src="img/smartphone.png" alt=""></span>+7
+            (812) 697 77 77</a>
+        <a href="tel:+79214160369" class="phone"><span class="phone-icon"><img src="img/smartphone.png" alt=""></span>+7
+            (921) 416 03 69</a>
+    </div>
+
+    <ul class="menu-mobile">
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Форум</a></li>
+        <li><a href="#">Адреса магазинов</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Оплата</a></li>
+        <li>
+            <a href="#" class="btn-catalog">Каталог товаров</a>
+            <ul class="dropDown-menu">
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Молочная продукция</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Колбасные изделия</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Мясная продукция</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Птица и яйцо</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Рыба и морепродукты</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Замороженные продукты</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Бакалея</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Готовая кулинария</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Напитки</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Хлеб, выпечка</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Кондитерские изделия</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Консервированная продукция</a></li>
+                <li><a href="#"><img src="img/category-icon.png" alt="" class="icon-dropDownMenu">Прочее</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
 <header>
     <div class="sale-line">
         <div class="container">
@@ -71,12 +114,24 @@
                 <div class="catalog-button__text">Каталог товаров</div>
             </div>
 
+            <div class="phone-box">
+                <a href="tel:+78126977777" class="phone"><span class="phone-icon"><img src="img/smartphone.png" alt=""></span>+7
+                    (812) 697 77 77</a>
+                <a href="tel:+79214160369" class="phone"><span class="phone-icon"><img src="img/smartphone.png" alt=""></span>+7
+                    (921) 416 03 69</a>
+            </div>
+
+            <div class="btn-search-mobile">
+                <span class="header-links__icon"><img src="img/search.png" alt=""></span>
+                Поиск
+            </div>
+
             <form method="post" class="form-search">
                 <label><input type="text" placeholder="Поиск товаров" name="search" required></label>
                 <button type="submit"><img src="img/search.png" alt=""></button>
             </form>
 
-            <a href="#" class="header-links">
+            <a href="#" class="header-links header-links-delivery">
                 <span class="header-links__icon"><img src="img/delivery.png" alt=""></span>
                 <span class="header-links__text">Доставка</span>
             </a>
@@ -99,6 +154,12 @@
                     <span class="currency-icon"><img src="img/rub.png" alt=""></span>
                 </span>
             </a>
+
+            <div class="btn-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
         </div>
 
@@ -162,96 +223,112 @@
         <div class="catalog-wrapper">
             <div class="container">
                 <ul class="menu-category scrollbar">
-                    <li class="menu-category__item" data-tab="menu-subcategory1" >
-                        <a href="#" class="menu-category__links">
-                            Молочная продукция
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item"data-tab="menu-subcategory2">
-                        <a href="#" class="menu-category__links">
-                            Колбасные изделия
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item" data-tab="menu-subcategory3">
-                        <a href="#" class="menu-category__links">
-                            Мясная продукция
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item" data-tab="menu-subcategory4">
-                        <a href="#" class="menu-category__links">
-                            Птица и яйцо
-                        </a>
-                    </li>
-                    <li class="menu-category__item" data-tab="menu-subcategory5">
-                        <a href="#" class="menu-category__links">
-                            Рыба и морепродукты
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item" data-tab="menu-subcategory6">
-                        <a href="#" class="menu-category__links">
-                            Замороженные продукты
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item" data-tab="menu-subcategory7">
-                        <a href="#" class="menu-category__links">
-                            Бакалея
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item" data-tab="menu-subcategory">
-                        <a href="#" class="menu-category__links">
-                            Готовая кулинария
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item" data-tab="menu-subcategory9">
-                        <a href="#" class="menu-category__links">
-                            Напитки
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item" data-tab="menu-subcategory10">
-                        <a href="#" class="menu-category__links">
-                            Хлеб, выпечка
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item" data-tab="menu-subcategory11">
-                        <a href="#" class="menu-category__links">
-                            Кондитерские изделия
-                        </a>
-                    </li>
-
                     <li class="menu-category__item" data-tab="menu-subcategory1">
                         <a href="#" class="menu-category__links">
-                            Консервированная продукция
-                        </a>
-                    </li>
-
-                    <li class="menu-category__item" data-tab="menu-subcategory13">
-                        <a href="#" class="menu-category__links">
-                            Прочее
-                        </a>
-                    </li>
-                    <li class="menu-category__item" data-tab="menu-subcategory1">
-                        <a href="#" class="menu-category__links">
+                            <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
                             Молочная продукция
                         </a>
                     </li>
 
                     <li class="menu-category__item" data-tab="menu-subcategory2">
                         <a href="#" class="menu-category__links">
+                            <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
                             Колбасные изделия
                         </a>
                     </li>
 
                     <li class="menu-category__item" data-tab="menu-subcategory3">
                         <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Мясная продукция
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory4">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Птица и яйцо
+                        </a>
+                    </li>
+                    <li class="menu-category__item" data-tab="menu-subcategory5">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Рыба и морепродукты
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory6">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Замороженные продукты
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory7">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Бакалея
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Готовая кулинария
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory9">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Напитки
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory10">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Хлеб, выпечка
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory11">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Кондитерские изделия
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory1">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Консервированная продукция
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory13">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Прочее
+                        </a>
+                    </li>
+                    <li class="menu-category__item" data-tab="menu-subcategory1">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Молочная продукция
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory2">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
+                            Колбасные изделия
+                        </a>
+                    </li>
+
+                    <li class="menu-category__item" data-tab="menu-subcategory3">
+                        <a href="#" class="menu-category__links">
+                             <span class="menu-category__links-icon"><img src="img/category-icon.png" alt=""></span>
                             Мясная продукция
                         </a>
                     </li>
@@ -262,7 +339,8 @@
                             <a href="#" class="menu-subcategory__links">Живая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -270,7 +348,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -278,7 +357,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -286,7 +366,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -294,7 +375,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -304,7 +386,8 @@
                             <a href="#" class="menu-subcategory__links">Мясо</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -312,7 +395,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -320,7 +404,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -328,7 +413,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -336,7 +422,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -346,7 +433,8 @@
                             <a href="#" class="menu-subcategory__links">Живая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -354,7 +442,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -362,7 +451,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -370,7 +460,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -378,7 +469,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -388,7 +480,8 @@
                             <a href="#" class="menu-subcategory__links">Мясо</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -396,7 +489,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -404,7 +498,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -412,7 +507,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -420,7 +516,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -430,7 +527,8 @@
                             <a href="#" class="menu-subcategory__links">Живая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -438,7 +536,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -446,7 +545,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -454,7 +554,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -462,7 +563,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -472,7 +574,8 @@
                             <a href="#" class="menu-subcategory__links">Мясо</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -480,7 +583,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -488,7 +592,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -496,7 +601,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -504,7 +610,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -514,7 +621,8 @@
                             <a href="#" class="menu-subcategory__links">Живая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -522,7 +630,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -530,7 +639,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -538,7 +648,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -546,7 +657,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -556,7 +668,8 @@
                             <a href="#" class="menu-subcategory__links">Мясо</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -564,7 +677,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -572,7 +686,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -580,7 +695,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -588,7 +704,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -598,7 +715,8 @@
                             <a href="#" class="menu-subcategory__links">Живая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -606,7 +724,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -614,7 +733,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -622,7 +742,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -630,7 +751,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -640,7 +762,8 @@
                             <a href="#" class="menu-subcategory__links">Мясо</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -648,7 +771,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -656,7 +780,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -664,7 +789,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -672,7 +798,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -682,7 +809,8 @@
                             <a href="#" class="menu-subcategory__links">Живая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -690,7 +818,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -698,7 +827,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -706,7 +836,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -714,7 +845,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -724,7 +856,8 @@
                             <a href="#" class="menu-subcategory__links">Мясо</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -732,7 +865,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -740,7 +874,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -748,7 +883,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -756,7 +892,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -766,7 +903,8 @@
                             <a href="#" class="menu-subcategory__links">Мясо</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -774,7 +912,8 @@
                             <a href="#" class="menu-subcategory__links">Икра</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -782,7 +921,8 @@
                             <a href="#" class="menu-subcategory__links">Копченая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product11.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -790,7 +930,8 @@
                             <a href="#" class="menu-subcategory__links">Пресервы</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product9.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -798,7 +939,8 @@
                             <a href="#" class="menu-subcategory__links">Соленая рыба</a>
 
                             <a href="#" class="menu-subcategory__item-preview">
-                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg" alt=""></span>
+                                <span class="menu-subcategory__item-preview-img"><img src="img/product10.jpg"
+                                                                                      alt=""></span>
                                 <span class="menu-subcategory__item-preview-text">Вкусняшка</span>
                             </a>
                         </li>
@@ -2232,6 +2374,8 @@
         </div>
     </div>
 </footer>
+
+<div class="overlay"></div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>

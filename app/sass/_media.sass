@@ -47,6 +47,35 @@
   .slider-advantages
     padding: 30px 45px
 
+  .menu-subcategory__item-preview
+    width: 300px
+
+  .menu-subcategory__item
+    width: calc(100% - 300px)
+
+  .form-search
+    max-width: 300px
+    button
+      width: 60px
+
+  .home-menu
+    li
+      margin: 0 10px 0 0
+      a
+        font-size: 12px
+
+  .sale-line
+    font-size: 22px
+
+  .whatsapp, .location
+    font-size: 12px
+
+  .catalog-button
+    font-size: 14px
+
+  .phone-wrapper
+    max-width: 260px
+
 @media only screen and (max-width : 992px)
   .footer-box
     margin: 0 0 30px
@@ -108,11 +137,71 @@
 @media only screen and (max-width : 920px)
   .slider-advantages
     width: 100%
+    min-height: auto
 
   .slider-products-top__wrapper
     width: 100%
     margin: 30px auto 0
     max-width: none
+
+  header
+    .form-search, .header-top, .header-bottom, .catalog-button, .header-links-delivery
+      display: none
+
+  .phone-box
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    .phone
+      display: flex
+      align-items: center
+      margin: 0 0 5px
+      &:last-child
+        margin: 0
+
+  .btn-burger
+    display: flex
+
+  .header-center
+    padding: 10px 0
+
+  .location
+    font-size: 14px
+
+  .btn-search-mobile
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 12px
+    flex-direction: column
+
+  .form-search
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    max-width: none
+    padding: 20px
+    background: #fff
+    z-index: 2
+    button
+      height: 54px
+      top: 20px
+      right: 20px
+
+  .search-dropDown
+    top: calc(100% + 75px)
+
+  .category-item__img
+    height: 200px
+
+  .frequent-queries
+    padding: 0
+    justify-content: center
+    margin: 0 0 30px
+    p
+      font-size: 16px
+
 
 
 @media only screen and (max-width : 768px)
@@ -193,6 +282,54 @@
     flex-wrap: wrap
     justify-content: space-around
 
+  .logo
+    max-width: 60px
+
+  .phone-box .phone
+    font-size: 12px
+
+  .header-links, .btn-search-mobile
+    font-size: 10px
+
+  .header-links__icon
+    height: 20px
+    width: 25px
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+
+  .basket-icon
+    width: 20px
+    height: 20px
+
+  .basket-box
+    font-size: 10px
+
+  .basket-val
+    width: 18px
+    height: 18px
+
+
+  .basket-sum
+    font-size: 14px
+
+  .sale-line
+    font-size: 18px
+    padding: 6px 0
+
+@media only screen and (max-width : 575px)
+  input
+    height: 45px
+
+  .form-search
+    button
+      height: 45px
+
+  .popular-category-search h3
+    margin: 0 0 20px
+    font-size: 18px
+
 @media only screen and (max-width : 500px)
   .col-4
     width: 100%
@@ -226,7 +363,8 @@
     font-size: 16px
 
 
-
+  .basket-sum, header .phone-box
+    display: none
 
 @media only screen and (max-width : 420px)
   .timer
