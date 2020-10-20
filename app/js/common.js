@@ -17,7 +17,7 @@ $('.slider-products-top').slick({
 });
 
 // slick active
-$(window).on('load resize', function() {
+$(window).on('load resize', function () {
     if ($(window).width() < 768) {
         $('.list-products:not(.slick-initialized)').slick({
             infinite: true,
@@ -42,7 +42,7 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
 });
 
 // input search
-$('[name="search"]').click(function(){
+$('.form-search [name="search"]').click(function () {
     $('.search-dropDown').fadeIn();
 });
 
@@ -60,15 +60,15 @@ $(document).mouseup(function (e) { // событие клика по веб-до
 // menu category
 $(".menu-category__item").hover(function () {
     var id = $(this).attr('data-tab'),
-        content = $('.menu-subcategory[data-tab="'+ id +'"]');
+        content = $('.menu-subcategory[data-tab="' + id + '"]');
 
     $('.menu-subcategory.active').removeClass('active'); // 3
     content.addClass('active'); // 4
 });
 
 $('.catalog-button').click(function () {
-   $(this).toggleClass('click');
-   $('.catalog-wrapper').fadeToggle();
+    $(this).toggleClass('click');
+    $('.catalog-wrapper').fadeToggle();
 });
 
 $('.btn-catalog').click(function (e) {
@@ -78,8 +78,8 @@ $('.btn-catalog').click(function (e) {
 });
 
 $('.btn-burger').click(function () {
-   $('.overlay').fadeIn();
-   $('.mobile-menu').fadeIn();
+    $('.overlay').fadeIn();
+    $('.mobile-menu').fadeIn();
 });
 
 $('.btn-close, .overlay').click(function () {
@@ -88,12 +88,22 @@ $('.btn-close, .overlay').click(function () {
 });
 
 $('.btn-search-mobile').click(function () {
-    $('.form-search').fadeToggle();
+    $('.search-mobile').css({
+        top: 0,
+        opacity: 1
+    });
+});
+
+$('.close-search-mobile').click(function () {
+    $('.search-mobile').css({
+        top: '100%',
+        opacity: 0
+    });
 });
 
 $('.btn-filter').click(function () {
     $('.overlay').fadeIn();
-   $('.sidebar').fadeIn();
+    $('.sidebar').fadeIn();
 });
 
 $('.btn-close, .overlay').click(function () {
@@ -118,11 +128,13 @@ $(".slider-range").slider({
     step: 1, // шаг слайдера
     values: [15, 3200],  // начальные значения - позиции ползунков на шкале
 
-    slide: function( event, ui ) {
-        $( "input[name=price_s]" ).val(  ui.values[ 0 ] + ' ' + '₽'); // выводим  значение от
-        $( "input[name=price_f]" ).val(  ui.values[ 1 ] + ' ' + '₽'); // выводим  значение до
+    slide: function (event, ui) {
+        $("input[name=price_s]").val(ui.values[0] + ' ' + '₽'); // выводим  значение от
+        $("input[name=price_f]").val(ui.values[1] + ' ' + '₽'); // выводим  значение до
     },
-    stop: function(event, ui) { show(); } // выполняем действие  после остановки ползунка, в нашем случае функция show
+    stop: function (event, ui) {
+        show();
+    } // выполняем действие  после остановки ползунка, в нашем случае функция show
 });
 
 $(".dec1").val($(".slider-range").slider("value") + ' ' + '₽');
