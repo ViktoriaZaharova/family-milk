@@ -26,17 +26,21 @@ $('.slider-products-top').slick({
     nextArrow: '<button type="button" class="slick-next"></button>',
 });
 
-$('.menu').slick({
-    slidesToShow: 1,
-    variableWidth: true,
-    arrows: false,
-    infinite: false
-});
-
-
 
 // slick active
 $(window).on('load resize', function() {
+
+    if ($(window).width() < 850) {
+        $('.menu').slick({
+            slidesToShow: 1,
+            variableWidth: true,
+            arrows: false,
+            infinite: false
+        });
+    } else {
+        $(".menu.slick-initialized").slick("unslick");
+    }
+
     if ($(window).width() < 576) {
         $('.tabs__caption').slick({
             slidesToShow: 1,
@@ -44,8 +48,10 @@ $(window).on('load resize', function() {
             arrows: false,
             infinite: false
         });
+
+
     } else {
-        $(".tabs__caption.slick-initialized").slick("unslick");
+        $(".menu.slick-initialized").slick("unslick");
     }
 });
 // slick active
