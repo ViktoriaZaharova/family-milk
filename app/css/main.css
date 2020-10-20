@@ -1445,6 +1445,27 @@ footer {
 .footer-box:last-child h3 {
   margin: 0 0 13px; }
 
+.footer-box h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%; }
+
+.icon-drop {
+  display: none;
+  position: relative; }
+  .icon-drop:after {
+    content: '+';
+    display: inline-block;
+    font-size: 20px;
+    color: #543731; }
+
 .menu-document {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2812,6 +2833,20 @@ select {
     font-size: 24px; }
   .subscribe-wrapper .form-subscribe input {
     font-size: 13px; } }
+
+@media only screen and (max-width: 670px) {
+  .footer-box {
+    width: 100%; }
+    .footer-box:nth-child(-n+3) {
+      margin: 0; }
+  .icon-drop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .footer-open:nth-child(-n+3) {
+    margin: 0 0 20px; }
+  .footer-open .icon-drop:after {
+    content: '-'; } }
 
 @media only screen and (max-width: 620px) {
   .menu-document {

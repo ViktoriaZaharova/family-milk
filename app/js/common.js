@@ -121,6 +121,17 @@ $('.panel_heading .block_title').click(function () {
     $('.panel_heading .block_title').not(this).removeClass('in').next().slideUp();
 });
 
+$(window).on('load resize', function() {
+    if ($(window).width() < 670) {
+       $('.footer-menu').fadeOut();
+       $('.footer-box h3').click(function () {
+           $(this).siblings('.footer-menu').slideToggle().parents('.footer-box').toggleClass('footer-open');
+       });
+    } else {
+        $('.footer-menu').fadeIn();
+    }
+});
+
 $(".slider-range").slider({
     range: true,
     min: 0, // минимальное значение цены

@@ -337,6 +337,22 @@
     font-size: 13px
 
 
+@media only screen and (max-width : 670px)
+  .footer-box
+    width: 100%
+    &:nth-child(-n+3)
+      margin: 0
+
+  .icon-drop
+    display: flex
+
+  .footer-open
+    &:nth-child(-n+3)
+      margin: 0 0 20px
+    .icon-drop
+      &:after
+        content: '-'
+
 @media only screen and (max-width : 620px)
   .menu-document
     margin: 0 auto 10px

@@ -1158,7 +1158,20 @@ footer
   &:last-child
     h3
       margin: 0 0 13px
+  h3
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
 
+.icon-drop
+  display: none
+  position: relative
+  &:after
+    content: '+'
+    display: inline-block
+    font-size: 20px
+    color: $accent
 
 .menu-document
   display: flex
