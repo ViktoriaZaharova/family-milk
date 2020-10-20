@@ -197,6 +197,9 @@ a
     align-items: center
     justify-content: space-between
 
+.header-center-wrapper
+  display: flex
+  align-self: center
 
 .logo
   max-width: 96px
@@ -311,8 +314,10 @@ h2
   flex-direction: column
   align-items: center
   text-align: center
+  justify-content: space-between
   font-size: 12px
   color: $text
+  margin: 0 45px 0 0
 
 .header-links__icon
   margin: 0 auto 5px
@@ -413,6 +418,25 @@ h2
   width: 14px
   height: 14px
   margin: 0 0 20px auto
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 2px
+    height: 100%
+    left: 6px
+    background: $accent
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+.btn-close-banner
+  position: absolute
+  right: 5px
+  top: 0
+  width: 14px
+  height: 14px
+  display: none
   &:before, &:after
     content: ''
     position: absolute

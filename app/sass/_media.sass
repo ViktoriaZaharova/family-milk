@@ -15,6 +15,9 @@
   .slider-advantages__box
     font-size: 22px
 
+  .header-links
+    margin: 0 20px 0 0
+
 @media only screen and (max-width : 1080px)
   .footer-menu
     li
@@ -204,6 +207,7 @@
     justify-content: center
     font-size: 12px
     flex-direction: column
+    margin: 0 20px 0 0
 
   .form-search
     position: absolute
@@ -442,8 +446,23 @@
   .timer, .slider-products-top__wrapper .slick-dots li button
     font-size: 16px
 
-  .basket-sum, header .phone-box
+  .basket-sum, header .phone-box, .header-links__text, .basket-text
     display: none
+
+  .basket-icon, .header-links__icon
+    margin: 0
+
+  header
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    z-index: 4
+    background: #fbf8f6
+
+  .body-wrapper
+    padding: 120px 0 0
+
 
   .col-3
     width: 100%
@@ -463,6 +482,16 @@
 
   .subscribe-wrapper .form-subscribe input
     padding: 0 100px 0 15px
+
+  .sale-line
+    font-size: 14px
+
+  .btn-close-banner
+    display: flex
+
+  .slider-advantages__box
+    .btn
+      display: none
 
 @media only screen and (max-width : 420px)
   .timer

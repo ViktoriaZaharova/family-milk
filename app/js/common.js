@@ -101,6 +101,10 @@ $('.btn-close, .overlay').click(function () {
     $('.sidebar').fadeOut();
 });
 
+$('.btn-close-banner').click(function () {
+    $('.sale-line').fadeOut();
+});
+
 // accordeon
 $('.panel_heading .block_title').click(function () {
     $(this).toggleClass('in').next().slideToggle();

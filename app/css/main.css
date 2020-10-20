@@ -265,6 +265,13 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between; }
 
+.header-center-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center; }
+
 .logo {
   max-width: 96px;
   width: 100%;
@@ -412,8 +419,12 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 12px;
-  color: #1c1c1c; }
+  color: #1c1c1c;
+  margin: 0 45px 0 0; }
 
 .header-links__icon {
   margin: 0 auto 5px;
@@ -564,6 +575,27 @@ h2 {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg); }
   .btn-close:after {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
+
+.btn-close-banner {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  display: none; }
+  .btn-close-banner:before, .btn-close-banner:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 6px;
+    background: #543731; }
+  .btn-close-banner:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .btn-close-banner:after {
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg); }
 
@@ -2404,7 +2436,9 @@ select {
     max-width: none;
     width: calc(100% - 500px); }
   .slider-advantages__box {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .header-links {
+    margin: 0 20px 0 0; } }
 
 @media only screen and (max-width: 1080px) {
   .footer-menu li {
@@ -2577,7 +2611,8 @@ select {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    margin: 0 20px 0 0; }
   .form-search {
     position: absolute;
     top: 100%;
@@ -2785,8 +2820,19 @@ select {
     font-size: 14px; }
   .timer, .slider-products-top__wrapper .slick-dots li button {
     font-size: 16px; }
-  .basket-sum, header .phone-box {
+  .basket-sum, header .phone-box, .header-links__text, .basket-text {
     display: none; }
+  .basket-icon, .header-links__icon {
+    margin: 0; }
+  header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    background: #fbf8f6; }
+  .body-wrapper {
+    padding: 120px 0 0; }
   .col-3 {
     width: 100%; }
   .banner-title {
@@ -2799,7 +2845,15 @@ select {
     font-size: 11px;
     width: 100px; }
   .subscribe-wrapper .form-subscribe input {
-    padding: 0 100px 0 15px; } }
+    padding: 0 100px 0 15px; }
+  .sale-line {
+    font-size: 14px; }
+  .btn-close-banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .slider-advantages__box .btn {
+    display: none; } }
 
 @media only screen and (max-width: 420px) {
   .timer {
