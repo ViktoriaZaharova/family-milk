@@ -2752,7 +2752,7 @@ select {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .about {
-    padding: 60px 0 0; }
+    padding: 60px 0; }
   .col-4 {
     width: 50%; }
   .new-price {
@@ -2905,7 +2905,15 @@ select {
     .tabs__caption li {
       width: 180px;
       min-width: 180px;
-      margin: 0 20px 0 0; } }
+      margin: 0 20px 0 0; }
+  .about h2 {
+    text-align: left; }
+  .about h3 {
+    font-size: 16px; }
+  .about-content {
+    padding: 0;
+    border: none;
+      border-radius: 0; } }
 
 @media only screen and (max-width: 500px) {
   h2 {
