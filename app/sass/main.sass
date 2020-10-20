@@ -208,6 +208,9 @@ a
   align-items: center
   justify-content: center
 
+.logo-mobile
+  display: none
+
 .form-search
   display: flex
   align-items: center
@@ -379,6 +382,8 @@ h2
   height: 54px
   padding: 0 18px 0 20px
   cursor: pointer
+  &:hover
+    box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
 
 .catalog-button__icon
   display: flex
@@ -479,15 +484,23 @@ h2
   justify-content: space-between
   li
     a
+      border: solid 1px #aa9b98
+        radius: 5px
       font-size: 14px
       color: $text
       padding: 6.5px 7px
 
       &:hover
-        background: #7f6965
+        background: $accent
         color: #fff
         border-radius: 3px
         padding: 6.5px 7px
+        box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+
+.menu-visible-mobile
+  display: none
+  li
+    margin: 0 5px 0 0
 
 .catalog-wrapper
   position: absolute
@@ -907,11 +920,15 @@ h2
 
 .slider-products-card__img
   position: relative
-  width: 190px
-  height: 190px
+  width: 210px
+  height: 210px
   display: flex
   align-items: center
   justify-content: center
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 .sale-box
   position: absolute
@@ -931,7 +948,7 @@ h2
 
 
 .slider-products-card__content
-  width: calc(100% - 190px)
+  width: calc(100% - 210px)
   padding: 0 0 0 19px
 
 .rating
@@ -1522,9 +1539,9 @@ footer
 .mobile-menu
   position: fixed
   left: 0
-  top: 0
+  top: 165px
   width: 300px
-  height: 100%
+  height: calc(100% - 165px)
   overflow-y: auto
   z-index: 7
   background: $accent
@@ -1554,12 +1571,27 @@ footer
   justify-content: space-between
   width: 24px
   height: 18px
+  position: relative
   span
     width: 100%
     height: 3px
     background: $accent
+    transition: .3s ease
+
     &:last-child
       width: 80%
+
+.btn-burger.clicked
+  span
+    position: absolute
+    top: 7px
+    left: 0
+    &:first-child
+      transform: rotate(45deg)
+    &:nth-child(2)
+      transform: rotate(135deg)
+    &:last-child
+      width: 0
 
 .menu-mobile
   margin: 0 0 30px
@@ -1587,7 +1619,6 @@ footer
     content: '+'
 
 .dropDown-menu
-  margin: 20px 0 0
   position: relative
   li
     a
@@ -1616,9 +1647,9 @@ footer
 .menu-level2
   position: fixed
   left: -100%
-  top: 54px
+  top: 164px
   width: 300px
-  height: 100%
+  height: calc(100% - 164px)
   overflow-y: auto
   background: #fff
   z-index: 2
@@ -1754,6 +1785,7 @@ h1
       &:hover
         background: $accent
         color: #fff
+        box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
 
 .banner-horizontal
   margin: 17px 0 23px
@@ -2015,7 +2047,7 @@ select
     transform: scale(1,-1)
 
 .block_hover
-  margin: 20px 0 0
+  padding: 20px 0 0
   max-height: 386px
   overflow-y: auto
 

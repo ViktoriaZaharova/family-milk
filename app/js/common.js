@@ -24,6 +24,15 @@ $('.slider-products-top').slick({
     arrows: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
+    responsive: [
+        {
+            breakpoint: 420,
+            settings: {
+                arrows: false,
+                fade: true
+            }
+        }
+    ]
 });
 
 
@@ -110,14 +119,11 @@ $('.click-back').click(function () {
 // mobile menu
 
 $('.btn-burger').click(function () {
-    $('.overlay').fadeIn();
-    $('.mobile-menu').fadeIn();
+    $(this).toggleClass('clicked');
+    $('.mobile-menu').fadeToggle();
 });
 
-$('.btn-close, .overlay').click(function () {
-    $('.mobile-menu').fadeOut();
-    $('.overlay').fadeOut();
-});
+
 
 $('.btn-search-mobile').click(function () {
     $('.search-mobile').css({

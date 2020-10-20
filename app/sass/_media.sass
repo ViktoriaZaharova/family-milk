@@ -206,17 +206,29 @@
     max-width: none
 
   header
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    z-index: 4
+    background: #fff
+    min-height: 165px
     .form-search, .header-top, .catalog-button, .header-links-delivery
       display: none
 
   .header-bottom
-    .menu
-      width: 100%
-      flex: none
-      flex-wrap: nowrap
-      li
-        a
-          white-space: nowrap
+    display: none
+
+  .body-wrapper
+    padding: 165px 0 0
+
+  .menu-visible-mobile
+    display: flex
+    width: 100%
+
+    li
+      a
+        white-space: nowrap
 
   .phone-box
     display: flex
@@ -274,6 +286,10 @@
       font-size: 16px
 
 
+
+@media only screen and (max-width : 850px)
+  .menu-visible-mobile
+    flex: none
 
 @media only screen and (max-width : 768px)
   .about-box
@@ -456,6 +472,20 @@
     font-size: 18px
     padding: 6px 0
 
+  header
+    min-height: 115px
+
+  .body-wrapper
+    padding: 115px 0 0
+
+  .mobile-menu
+    top: 115px
+    height: calc(100% - 115px)
+
+  .menu-level2
+    top: 114px
+    height: calc(100% - 114px)
+
 @media only screen and (max-width : 575px)
   input
     height: 45px
@@ -592,11 +622,11 @@
 @media only screen and (max-width : 480px)
   .slider-products-card__content
     padding: 0 0 0 10px
-    width: calc(100% - 100px)
+    width: calc(100% - 140px)
 
   .slider-products-card__img
-    width: 100px
-    height: 100px
+    width: 140px
+    height: 140px
 
   .slider-products-card__title
     max-width: none
@@ -641,6 +671,9 @@
   .timer, .slider-products-top__wrapper .slick-dots li button
     font-size: 16px
 
+  .slider-products-top__wrapper
+    order: 1
+
   .basket-sum, header .phone-box, .header-links__text, .basket-text
     display: none
 
@@ -648,15 +681,18 @@
     margin: 0
 
   header
-    position: fixed
-    left: 0
-    top: 0
-    width: 100%
-    z-index: 4
-    background: #fff
+    min-height: 88px
+
+  .mobile-menu
+    top: 88px
+    height: calc(100% - 88px)
+
+  .menu-level2
+    top: 87px
+    height: calc(100% - 87px)
 
   .body-wrapper
-    padding: 143px 0 0
+    padding: 88px 0 0
 
   .banner-title
     font-size: 18px
@@ -704,6 +740,18 @@
   .main-home
     margin: 0 0 25px
 
+  .logo-pc
+    display: none
+
+  .logo-mobile
+    display: block
+
+  .logo
+    max-width: 100px
+
+  .slider-products-top__line, .slider-products-top
+    padding: 0 14px
+
 @media only screen and (max-width : 420px)
   .timer
     width: 100%
@@ -717,7 +765,7 @@
     font-size: 10px
 
   .product-card__body
-    padding: 15px 10px
+    padding: 10px
 
   .product-card .button-wrapper
     width: 35px
