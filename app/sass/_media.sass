@@ -350,13 +350,19 @@
       font-size: 12px
 
   .group-company__links
-    width: 49%
+    width: 33%
     margin: 0 0 15px
-    height: 70px
+    height: auto
+    flex-direction: column
+    align-items: center
+    text-align: center
+    font-size: 12px
 
-  .group-company
-    flex-wrap: wrap
-    justify-content: space-around
+  .group-company__icon
+    margin: 0 auto 10px
+    width: 30px
+    height: auto
+
 
   .logo
     max-width: 60px
@@ -414,31 +420,135 @@
   .list-products li a
     font-size: 12px
 
-@media only screen and (max-width : 500px)
-  .col-4
+  .tabs__caption
+    overflow-x: auto
+    flex-wrap: nowrap
+    justify-content: flex-start
     width: 100%
+    margin: 0 0 20px
+    li
+      width: 180px
+      min-width: 180px
+      margin: 0 20px 0 0
+
+@media only screen and (max-width : 500px)
 
   h2
     font-size: 30px
 
-  .group-company__links
-    width: 100%
-
   .slider-advantages__box
     font-size: 20px
 
-@media only screen and (max-width : 480px)
-  .slider-products-card
-    flex-direction: column
-    align-items: center
+  .product-card__img
+    height: 150px
 
-  .slider-products-card__content
+  .product-card__body
+    padding: 15px
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+
+  .product-card__title
+    font-size: 12px
+    height: 33px
     width: 100%
-    padding: 0
-    margin: 20px 0 0
+
+  .price
+    font-size: 16px
+    .units
+      font-size: 12.5px
+
+  .button-wrapper
+    margin: 0
+
+  .product-card
+    &:hover
+      .btn-hover
+        display: none
+    .button-wrapper
+      width: 40px
+      height: 40px
+
+      .btn
+        width: 100%
+        height: 100%
+        padding: 5px
+    .price-wrapper
+      width: calc(100% - 40px)
+
+  .text-btn
+    display: none
+
+  .btn-green .icon-basket
+    margin: 0
+
+  .new-price
+    font-size: 18px
+    .units
+      font-size: 12px
+      img
+        max-width: 8px
+
+  .product-card .old-price
+    font-size: 12.5px
+    margin: 0
+
+  .price-wrapper
+    flex-wrap: wrap
+    .new-price
+      width: 100%
+      order: 1
+
+  .rub-icon
+    margin-top: 0
+    width: 9px
+
+@media only screen and (max-width : 480px)
+  .slider-products-card__content
+    padding: 0 0 0 10px
+    width: calc(100% - 100px)
+
+  .slider-products-card__img
+    width: 100px
+    height: 100px
 
   .slider-products-card__title
     max-width: none
+    font-size: 14px
+
+  .rating
+    margin: 0 0 10px
+    font-size: 10px
+
+  .rating-list li
+    width: 12px
+    height: 11px
+
+  .old-price
+    font-size: 16px
+
+  .sale-value
+    font-size: 12px
+    width: 36px
+    height: 18px
+
+  .units
+    margin: 0 0 0 4px
+    font-size: 12px
+    img
+      max-width: 9px
+
+  .sum-value
+    font-size: 15px
+
+  .btn-green .icon-basket
+    width: 20px
+    height: 19px
+
+  .slider-products-card .btn
+    max-width: 180px
+    height: 45px
 
   .slider-products-top__title
     font-size: 14px
@@ -492,6 +602,26 @@
     .btn
       display: none
 
+  .slick-prev
+    background: transparent url("../img/arrow-left.png") no-repeat center
+      size: 6px
+    &:hover, &:focus
+      background: transparent url("../img/arrow-left.png") no-repeat center
+        size: 6px
+
+  .slick-next
+    background: transparent url("../img/arrow-right.png") no-repeat center
+      size: 6px
+    &:hover, &:focus
+      background: transparent url("../img/arrow-right.png") no-repeat center
+        size: 6px
+
+  .group-company__links
+    font-size: 10px
+
+  .main-home
+    margin: 0 0 25px
+
 @media only screen and (max-width : 420px)
   .timer
     width: 100%
@@ -503,3 +633,10 @@
 
   .sale-line
     font-size: 10px
+
+  .product-card__body
+    padding: 15px 10px
+
+  .product-card .button-wrapper
+    width: 35px
+    height: 35px
