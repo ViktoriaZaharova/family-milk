@@ -483,13 +483,13 @@ h2
       text-transform: uppercase
       font-size: 14px
       color: $text
-      padding: 14px 0
+      padding: 6.5px 7px
 
       &:hover
         background: #7f6965
         color: #fff
         border-radius: 3px
-        padding: 14px 20px
+        padding: 6.5px 7px
 
 .catalog-wrapper
   position: absolute
@@ -863,7 +863,7 @@ h2
         color: #fff
 
   .slick-arrow
-    top: 39%
+    top: 38%
 
 .slider-products-top__nav
   margin: 0 auto 0 15px
@@ -1094,6 +1094,7 @@ h2
 
 //footer
 footer
+  background: #fff
   border-top: 1px solid #aa9b98
   h3
     font-size: 15px
@@ -1733,6 +1734,9 @@ h1
       padding: 6.5px 7px
       border-radius: 5px
       border: solid 1px #aa9b98
+      &:hover
+        background: $accent
+        color: #fff
 
 .banner-horizontal
   margin: 17px 0 23px
@@ -1957,8 +1961,6 @@ select
     margin: 0 6px 0 0
     width: 5px
 
-.sidebar-item-category
-  background: #fdfbfa
 
 .sidebar-item
   border-radius: 5px
@@ -1987,7 +1989,7 @@ select
     margin: 0 0 0 auto
     width: 11px
     height: 6px
-    background: url("../img/arrow-bottom.png") no-repeat center
+    background: url("../img/arrow-top.png") no-repeat center
       size: contain
     transition: .3s ease
 
@@ -1997,7 +1999,49 @@ select
 
 .block_hover
   margin: 20px 0 0
+  max-height: 386px
+  overflow-y: auto
+
+.block_hover-range
+  max-height: none
+  overflow-y: visible
+
+.filter-selected
+  width: 100%
   display: none
+  align-items: stretch
+  flex-wrap: wrap
+  margin: 0 0 10px
+
+.filter-selected-item
+  display: flex
+  align-items: center
+  padding: 2px 3px
+  font-size: 12px
+  color: $text
+  margin: 0 3px 5px 0
+  border: 1px solid $hover
+    radius: 3px
+  &:last-child
+    margin-right: 0
+
+.selected-close
+  width: 10px
+  height: 10px
+  margin: 0 5px 0 0
+  position: relative
+  cursor: pointer
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 2px
+    height: 100%
+    left: 6px
+    background: $accent
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
 
 .menu-category-sidebar
   li
@@ -2104,6 +2148,15 @@ select
 
 .btn-filter
   display: none
+  align-items: center
+  background: #e8e1df
+  padding: 4px 8px
+  border-radius: 3px
+
+.btn-filter-val
+  color: $text
+  font-size: 12px
+  margin: 0 0 0 2px
 
 @import "media"
 // Всегда в конце

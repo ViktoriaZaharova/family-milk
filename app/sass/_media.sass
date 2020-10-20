@@ -154,6 +154,19 @@
     .btn-close
       display: flex
 
+  .sidebar-item__category
+    display: none
+
+  .filter-selected
+    display: flex
+
+  .block_hover
+    display: none
+
+  .block_title:after
+    background: url("../img/arrow-bottom.png") no-repeat center
+      size: contain
+
   .btn-filter
     display: flex
     font-size: 14px
@@ -299,13 +312,16 @@
     width: 50%
 
   .list-products
-    padding: 0 35px
-    .slick-next
-      right: 0
-    .slick-prev
-      left: 0
+    overflow-x: auto
+    width: 100%
+    flex-wrap: nowrap
     li
-      margin-bottom: 0
+      margin: 0 10px 0 0
+      flex: 1
+      white-space: nowrap
+      &:last-child
+        margin: 0
+
 
   .banner-title
     font-size: 22px
@@ -436,9 +452,9 @@
     font-size: 18px
 
   .sorting-wrapper
-    width: 100%
-    margin: 10px auto 0
-    order: 1
+    margin: 0 10px 0 auto
+    p
+      display: none
 
   .list-products li a
     font-size: 12px
@@ -464,6 +480,14 @@
     padding: 0
     border: none
       radius: 0
+
+  .select-sort
+    width: 160px
+    padding: 4px 8px
+    background: #e8e1df url("../img/arrow-bottom.png") 96% center no-repeat
+      size: 10px
+    border: none
+    border-radius: 3px
       
 @media only screen and (max-width : 500px)
 
@@ -674,3 +698,16 @@
   .product-card .button-wrapper
     width: 35px
     height: 35px
+
+  .btn-filter
+    font-size: 12px
+
+  .select-sort
+    font-size: 12px
+    width: 130px
+
+
+  .views-products__item
+    width: 23px
+    height: 23px
+    margin: 0 5px 0 0
