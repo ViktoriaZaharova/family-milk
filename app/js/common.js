@@ -5,17 +5,50 @@ $('.slider-advantages').slick({
     arrows: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
+    responsive: [
+        {
+            breakpoint: 420,
+            settings: {
+                arrows: false,
+                fade: true
+            }
+        }
+    ]
 });
 
 $('.slider-products-top').slick({
     slidesToShow: 1,
     dots: true,
     appendDots: '.slider-products-top__nav',
+    appendArrows: '.slider-products-top__arrows',
     arrows: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
 });
 
+$('.menu').slick({
+    slidesToShow: 1,
+    variableWidth: true,
+    arrows: false,
+    infinite: false
+});
+
+
+
+// slick active
+$(window).on('load resize', function() {
+    if ($(window).width() < 576) {
+        $('.tabs__caption').slick({
+            slidesToShow: 1,
+            variableWidth: true,
+            arrows: false,
+            infinite: false
+        });
+    } else {
+        $(".tabs__caption.slick-initialized").slick("unslick");
+    }
+});
+// slick active
 
 // tabs
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {

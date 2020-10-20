@@ -128,6 +128,9 @@
 
   .tabs__caption
     justify-content: space-around
+    li
+      font-size: 11px
+      width: 140px
 
   .group-company__links
     max-width: none
@@ -187,6 +190,11 @@
   .banner-box
     height: 300px
 
+  .menu
+    li
+      a
+        font-size: 13px
+
 @media only screen and (max-width : 920px)
   .slider-advantages
     width: 100%
@@ -198,8 +206,17 @@
     max-width: none
 
   header
-    .form-search, .header-top, .header-bottom, .catalog-button, .header-links-delivery
+    .form-search, .header-top, .catalog-button, .header-links-delivery
       display: none
+
+  .header-bottom
+    .menu
+      width: 100%
+      flex: none
+      flex-wrap: nowrap
+      li
+        a
+          white-space: nowrap
 
   .phone-box
     display: flex
@@ -460,16 +477,19 @@
     font-size: 12px
 
   .tabs__caption
-    overflow-x: auto
     flex-wrap: nowrap
-    justify-content: flex-start
+    flex: none
     width: 100%
     margin: 0 0 20px
     li
-      width: 180px
-      min-width: 180px
-      margin: 0 20px 0 0
-      
+      width: auto
+      max-width: none
+      margin: 0 5px 0 0
+      white-space: nowrap
+      height: auto
+      padding: 6.5px 7px
+      font-size: 14px
+
   .about 
     h2
       text-align: left
@@ -488,6 +508,13 @@
       size: 10px
     border: none
     border-radius: 3px
+
+  .footer-box-pc
+    display: none
+
+  .footer-box-mobile
+    display: block
+    width: 100%
       
 @media only screen and (max-width : 500px)
 
@@ -626,13 +653,10 @@
     top: 0
     width: 100%
     z-index: 4
-    background: #fbf8f6
+    background: #fff
 
   .body-wrapper
-    padding: 120px 0 0
-
-  .col-3
-    width: 100%
+    padding: 143px 0 0
 
   .banner-title
     font-size: 18px
@@ -711,3 +735,46 @@
     width: 23px
     height: 23px
     margin: 0 5px 0 0
+
+  .btn-close
+    margin: 35px 0 30px 0
+
+  .header-links__icon, .basket-icon
+    width: 24px
+    height: 25px
+
+  .slider-advantages
+    width: calc(100% + 40px)
+    margin: 0 -20px
+    padding: 0
+    border: none
+    .slick-dots
+      margin: 20px 0 0
+
+  .slider-advantages__box
+    padding: 30px 20px
+    border: solid 1px #aa9b98
+
+  .sidebar
+    width: 100%
+
+  .checkbox .checkbox-custom
+    width: 14px
+    height: 14px
+    min-width: 14px
+    margin: 0 10px 0 0
+
+  .checkbox
+    font-size: 12px
+    align-items: flex-start
+
+  .list-checkbox
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+    li
+      width: 49%
+      &:last-child
+        margin: 0 0 10px
+
