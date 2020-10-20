@@ -1523,13 +1523,18 @@ footer
   height: 100%
   overflow-y: auto
   z-index: 7
-  background: #fff
-  padding: 20px
+  background: #fbf8f6
   display: none
   .location
     margin: 0 0 20px
   .phone-box .phone
     font-size: 14px
+
+.mobile-menu__footer, .mobile-menu__body
+  padding: 20px
+
+.mobile-menu__body
+  background: #fff
 
 .btn-burger
   display: none
@@ -1558,23 +1563,83 @@ footer
       display: flex
       align-items: center
       &:after
-        content: '+'
+        content: '-'
         display: inline-block
         margin: 0 0 0 auto
         transition: .3s ease
     .btn-catalog.click
       &:after
-        content: '-'
+        content: '+'
 
 .dropDown-menu
   margin: 20px 0 0
-  display: none
+  position: relative
   li
     a
       display: flex
       align-items: center
       font-size: 14px
       color: $text
+
+.dropDown-menu__links
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translate(0,-50%)
+    width: 14px
+    height: 8px
+    background: url("../img/arrow-right.png") no-repeat center
+      size: contain
+
+
+.menu-level2
+  position: fixed
+  left: -100%
+  top: 54px
+  width: 300px
+  height: 100%
+  overflow-y: auto
+  background: #fff
+  z-index: 2
+  transition: .3s ease
+
+.banner-menu-level2
+  padding: 20px
+  max-height: 200px
+  overflow: hidden
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 30px auto
+
+.list-menu-level2
+
+  li
+    margin: 0
+    a
+      padding: 15px 20px
+      position: relative
+  .click-back
+    a
+      text-transform: uppercase
+      text-align: center
+      justify-content: center
+      background: #fbf8f6
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        left: 20px
+        top: 50%
+        transform: translate(0,-50%)
+        width: 14px
+        height: 8px
+        background: url("../img/arrow-left.png") no-repeat center
+          size: contain
 
 .icon-dropDownMenu
   width: 30px

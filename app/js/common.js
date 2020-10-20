@@ -74,8 +74,18 @@ $('.catalog-button').click(function () {
 $('.btn-catalog').click(function (e) {
     e.preventDefault();
     $(this).toggleClass('click').siblings('.dropDown-menu').fadeToggle();
-
 });
+
+// mobile menu
+$('.dropDown-menu__links').click(function (e) {
+    e.preventDefault();
+    $(this).siblings('.menu-level2').css('left', '0');
+});
+
+$('.click-back').click(function () {
+    $(this).parents('.menu-level2').css('left', '-100%');
+});
+// mobile menu
 
 $('.btn-burger').click(function () {
     $('.overlay').fadeIn();
