@@ -3008,8 +3008,14 @@ select {
     width: 26px; }
     .basket-icon img {
       max-height: 100%; }
-  .menu li a {
-    white-space: nowrap; }
+  .menu {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none; }
+    .menu li a {
+      white-space: nowrap; }
   .menu-subcategory__item-preview {
     width: 200px;
     font-size: 12px; }
@@ -3331,7 +3337,11 @@ select {
         -ms-flex: none;
             flex: none;
     width: 100%;
-    margin: 0 0 20px; }
+    margin: 0 0 20px;
+    overflow-x: auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
     .tabs__caption li {
       width: auto;
       max-width: none;

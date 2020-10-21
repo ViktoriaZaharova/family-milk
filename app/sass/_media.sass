@@ -288,8 +288,12 @@
     img
       max-height: 100%
 
-  .menu li a
-    white-space: nowrap
+  .menu
+    width: 100%
+    overflow-x: auto
+    flex: none
+    li a
+      white-space: nowrap
 
   .menu-subcategory__item-preview
     width: 200px
@@ -669,6 +673,8 @@
     flex: none
     width: 100%
     margin: 0 0 20px
+    overflow-x: auto
+    justify-content: flex-start
     li
       width: auto
       max-width: none

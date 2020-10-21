@@ -35,35 +35,6 @@ $('.slider-products-top').slick({
 });
 
 
-// slick active
-$(window).on('load resize', function() {
-
-    if ($(window).width() < 920) {
-        $('.menu').slick({
-            slidesToShow: 1,
-            variableWidth: true,
-            arrows: false,
-            infinite: false
-        });
-    } else {
-        $(".menu.slick-initialized").slick("unslick");
-    }
-
-    if ($(window).width() < 576) {
-        $('.tabs__caption').slick({
-            slidesToShow: 1,
-            variableWidth: true,
-            arrows: false,
-            infinite: false
-        });
-
-
-    } else {
-        $(".menu.slick-initialized").slick("unslick");
-    }
-});
-// slick active
-
 // tabs
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
     $(this)
