@@ -38,7 +38,7 @@ $('.slider-products-top').slick({
 // slick active
 $(window).on('load resize', function() {
 
-    if ($(window).width() < 850) {
+    if ($(window).width() < 920) {
         $('.menu').slick({
             slidesToShow: 1,
             variableWidth: true,

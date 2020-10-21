@@ -197,51 +197,17 @@
 
   .sidebar-close
     display: flex
-    font-size: 14px
+    font-size: 12px
     width: fit-content
-    margin: 0 0 20px auto
+    padding: 6.5px 7px
+    border-radius: 5px
+    margin: 0
     .selected-close
       width: 15px
       height: 15px
 
 @media only screen and (max-width : 920px)
-  .slider-advantages
-    width: 100%
-    min-height: auto
 
-  .slider-products-top__wrapper
-    width: 100%
-    margin: 30px auto 0
-    max-width: none
-
-  header
-    position: fixed
-    left: 0
-    top: 0
-    width: 100%
-    z-index: 4
-    background: #fff
-    min-height: 165px
-
-    .form-search, .header-top, .catalog-button, .header-links-delivery
-      display: none
-
-  .header-center
-    border-bottom: solid 1px #aa9b98
-
-  .header-bottom
-    display: none
-
-  .body-wrapper
-    padding: 165px 0 0
-
-  .menu-visible-mobile
-    display: flex
-    width: 100%
-
-    li
-      a
-        white-space: nowrap
 
   .phone-box
     display: flex
@@ -254,40 +220,6 @@
       &:last-child
         margin: 0
 
-  .btn-burger
-    display: flex
-
-  .header-center
-    padding: 10px 0
-
-  .location
-    font-size: 14px
-
-  .btn-search-mobile
-    display: flex
-    align-items: center
-    justify-content: center
-    font-size: 12px
-    flex-direction: column
-    margin: 0 20px 0 0
-
-  .form-search
-    position: absolute
-    top: 100%
-    left: 0
-    width: 100%
-    max-width: none
-    padding: 20px
-    background: #fff
-    z-index: 2
-    button
-      height: 54px
-      top: 20px
-      right: 20px
-
-  .search-dropDown
-    top: calc(100% + 75px)
-
   .category-item__img
     height: 200px
 
@@ -298,11 +230,113 @@
     p
       font-size: 16px
 
+  .schedule, .home-menu li a, .header-links, .basket-wrapper
+    font-size: 10px
 
+  .phone, .location, input
+    font-size: 12px
+
+  .phone-wrapper
+    max-width: 220px
+
+  .form-search
+    width: 250px
+    input
+      height: 40px
+    button
+      width: 50px
+
+  .whatsapp
+    font-size: 10px
+
+  .whatsapp-icon
+    width: 12px
+    margin: 0 5px 0 0
+
+  .logo
+    max-width: 80px
+
+  .catalog-button
+    height: 45px
+    font-size: 12px
+    width: 100px
+    padding: 0 8px
+
+  .catalog-button__icon
+    width: 18px
+    height: 16px
+    margin: 0 5px 0 0
+
+  .header-links
+    margin: 0 7px 0 0
+
+  .basket-sum
+    font-size: 14px
+
+  .header-links__icon
+    height: 18px
+    width: 26px
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-height: 100%
+
+  .basket-icon
+    height: 18px
+    width: 26px
+    img
+      max-height: 100%
+
+  .menu li a
+    white-space: nowrap
+
+  .menu-subcategory__item-preview
+    width: 200px
+    font-size: 12px
+
+  .menu-subcategory__item-preview-img
+    height: 200px
+
+  .menu-subcategory__item
+    width: calc(100% - 200px)
+    margin: 0 0 15px
+
+  .menu-subcategory__links
+    font-size: 14px
+
+  .menu-category
+    padding: 0
+
+  .catalog-wrapper__content
+    width: calc(100% - 285px)
+
+  .main-home
+    margin: 0 0 20px
+
+  .slider-advantages__box
+    font-size: 20px
+
+  .dishes
+    margin: 40px 0 0
 
 @media only screen and (max-width : 850px)
   .menu-visible-mobile
     flex: none
+
+  .form-search
+    width: 200px
+    input
+      padding: 0 50px 0 10px
+
+  .phone
+    font-size: 11px
+
+  .location
+    font-size: 10px
+
+  .phone-wrapper
+    max-width: 200px
 
 @media only screen and (max-width : 768px)
   .about-box
@@ -317,16 +351,23 @@
     justify-content: flex-start
 
   .about
-    padding: 60px 0
+    padding: 30px 0
+
+  .tabs__caption li
+    margin: 0 0 10px
+
+  h2
+    font-size: 32px
+    margin: 0 auto 20px
 
   .col-4
-    width: 50%
+    width: 33.3%
 
   .new-price
     font-size: 20px
 
   .product-card__img
-    height: 220px
+    height: 200px
 
   .col-banner-box
     width: 100%
@@ -335,7 +376,7 @@
     height: 200px
 
   .dishes
-    margin: 60px 0 0
+    margin: 30px 0 0
 
   .group-company__icon
     width: 40px
@@ -344,6 +385,8 @@
   .group-company__links
     font-size: 14px
     padding: 10px
+    height: auto
+    margin: 0 0 20px
 
   .sum-value
     font-size: 20px
@@ -354,8 +397,11 @@
   .old-price
     font-size: 18px
 
-  .col-3
-    width: 50%
+  .logo-pc
+    display: none
+
+  .logo-mobile
+    display: block
 
   .list-products
     overflow-x: auto
@@ -398,6 +444,98 @@
   .subscribe-wrapper .form-subscribe input
     font-size: 13px
 
+  .btn-green
+    font-size: 12.5px
+
+  .btn-hover .links-white
+    font-size: 11px
+
+
+
+
+
+@media only screen and (max-width : 760px)
+  .slider-advantages
+    width: 100%
+    min-height: auto
+
+  .slider-products-top__wrapper
+    width: 100%
+    margin: 30px auto 0
+    max-width: none
+
+  .mobile-menu, .overlay
+    top: 109px
+    height: calc(100% - 109px)
+
+  .body-wrapper
+    padding: 109px 0 0
+
+  header
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    z-index: 4
+    background: #fff
+    min-height: 109px
+
+    .form-search, .header-top, .catalog-button, .header-links-delivery
+      display: none
+
+  .header-center
+    padding: 10px 0
+    border-bottom: solid 1px #aa9b98
+
+  .logo
+    max-width: 100px
+
+  .phone
+
+    font-size: 14px
+
+  .header-links, .basket-wrapper
+    font-size: 12px
+
+  .header-links
+    margin: 0 10px 0 0
+
+  .header-bottom
+    display: none
+
+  .menu-visible-mobile
+    display: flex
+    width: 100%
+
+    li
+      a
+        white-space: nowrap
+
+  .btn-burger
+    display: flex
+
+  .btn-search-mobile
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 12px
+    flex-direction: column
+    margin: 0 20px 0 0
+
+  .form-search
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    max-width: none
+    padding: 20px
+    background: #fff
+    z-index: 2
+    button
+      height: 54px
+      top: 20px
+      right: 20px
+
 
 @media only screen and (max-width : 670px)
   .footer-box
@@ -405,7 +543,7 @@
     &:nth-child(-n+3)
       margin: 0
     &:nth-child(4)
-      margin: 0 0 10px
+      margin: 0 0 13px
 
   .icon-drop
     display: flex
@@ -416,6 +554,11 @@
     .icon-drop
       &:after
         content: '-'
+
+  .col-3, .col-4
+    width: 50%
+
+
 
 
 
@@ -454,7 +597,7 @@
 
 
   .logo
-    max-width: 60px
+    max-width: 90px
 
   .phone-box .phone
     font-size: 12px
@@ -490,14 +633,15 @@
     padding: 6px 0
 
   header
-    min-height: 115px
+    min-height: 95px
 
   .body-wrapper
-    padding: 115px 0 0
+    padding: 95px 0 0
 
   .mobile-menu, .overlay, .menu-level2
-    top: 115px
-    height: calc(100% - 115px)
+    top: 95px
+    height: calc(100% - 95px)
+
 
 
 @media only screen and (max-width : 575px)
@@ -633,14 +777,18 @@
     margin-top: 0
     width: 9px
 
+  .slider-products-card
+    .text-btn
+      display: block
+
 @media only screen and (max-width : 480px)
   .slider-products-card__content
     padding: 0 0 0 10px
-    width: calc(100% - 135px)
+    width: calc(100% - 145px)
 
   .slider-products-card__img
-    width: 135px
-    height: 135px
+    width: 145px
+    height: 145px
 
   .slider-products-card__title
     max-width: none
@@ -753,11 +901,7 @@
   .main-home
     margin: 0 0 30px
 
-  .logo-pc
-    display: none
 
-  .logo-mobile
-    display: block
 
   .logo
     max-width: 80px
@@ -819,6 +963,9 @@
 
   .sorting-wrapper
     margin: 0 0 0 auto
+
+  .sidebar-close
+    font-size: 14px
 
 
 @media only screen and (max-width : 420px)
@@ -942,13 +1089,14 @@
 
 
 @media only screen and (max-width : 340px)
-  .slider-products-card__img
-    width: 115px
-    height: 115px
+  .slider-products-card__title
+    margin: 0 0 5px
 
-  .slider-products-card__content
-    width: calc(100% - 115px)
-
-  .slider-products-card .btn
-    height: 45px
-    margin: 10px 0 0
+  .slider-products-card
+    .btn
+      height: 40px
+      margin: 10px 0 0
+    .new-price
+      font-size: 16px
+    .old-price
+      font-size: 14px
