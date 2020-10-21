@@ -910,6 +910,8 @@ h2
     max-width: 200px
   .button-wrapper
     margin: 10px 0 0
+  .new-price
+    width: 100%
 
 .units
   margin: 3px 0 0 5px
@@ -2083,6 +2085,9 @@ select
   &:last-child
     margin-right: 0
 
+.sidebar-close
+  display: none
+
 .selected-close
   width: 10px
   height: 10px
@@ -2184,17 +2189,6 @@ select
   .checkbox-inp:checked + .checkbox-custom
     background: $green
     border-color: $green
-    &::before
-      content: ""
-      display: block
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%,-50%)
-      width: 12px
-      height: 9px
-      background: url("../img/checkbox.png") no-repeat center
-        size: contain
   .label-val
     color: #888888
 
@@ -2207,9 +2201,17 @@ select
 .btn-filter
   display: none
   align-items: center
-  background: #e8e1df
-  padding: 4px 8px
-  border-radius: 3px
+  padding: 6.5px 7px
+  border-radius: 5px
+  font-size: 14px
+  border: solid 1px #aa9b98
+  transition: .3s ease
+  &:hover
+    background: $accent
+    color: #fff
+    box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+    .btn-filter-val
+      color: #fff
 
 .btn-filter-val
   color: $text

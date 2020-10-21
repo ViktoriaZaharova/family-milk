@@ -195,6 +195,15 @@
       a
         font-size: 13px
 
+  .sidebar-close
+    display: flex
+    font-size: 14px
+    width: fit-content
+    margin: 0 0 20px auto
+    .selected-close
+      width: 15px
+      height: 15px
+
 @media only screen and (max-width : 920px)
   .slider-advantages
     width: 100%
@@ -213,9 +222,12 @@
     z-index: 4
     background: #fff
     min-height: 165px
-    border-bottom: solid 1px #aa9b98
+
     .form-search, .header-top, .catalog-button, .header-links-delivery
       display: none
+
+  .header-center
+    border-bottom: solid 1px #aa9b98
 
   .header-bottom
     display: none
@@ -392,6 +404,8 @@
     width: 100%
     &:nth-child(-n+3)
       margin: 0
+    &:nth-child(4)
+      margin: 0 0 10px
 
   .icon-drop
     display: flex
@@ -402,6 +416,8 @@
     .icon-drop
       &:after
         content: '-'
+
+
 
 @media only screen and (max-width : 620px)
   .menu-document
@@ -797,6 +813,12 @@
   .basket-wrapper
     padding: 0 0 0 15px
     border-left: solid 1px #aa9b98
+
+  .views-products
+    display: none
+
+  .sorting-wrapper
+    margin: 0 0 0 auto
 
 
 @media only screen and (max-width : 420px)
