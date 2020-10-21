@@ -1142,8 +1142,9 @@ h2 {
       -ms-flex-align: stretch;
           align-items: stretch; }
   .slider-products-card .btn {
-    margin: 20px 0 0;
     max-width: 200px; }
+  .slider-products-card .button-wrapper {
+    margin: 10px 0 0; }
 
 .units {
   margin: 3px 0 0 5px;
@@ -1246,7 +1247,7 @@ h2 {
 .slider-products-card__title {
   font-size: 18px;
   color: #1c1c1c;
-  margin: 0 0 25px;
+  margin: 0 0 15px;
   width: 100%; }
 
 .sale-value {
@@ -1272,14 +1273,13 @@ h2 {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
-
-.price-wrapper-mobile .new-price {
-  display: none; }
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .old-price {
   color: #aeaeae;
-  font-size: 22px;
+  font-size: 18px;
   margin: 0 9px 0 0;
   position: relative; }
   .old-price:before {
@@ -2079,7 +2079,7 @@ footer {
 .list-menu-level2 li {
   margin: 0; }
   .list-menu-level2 li a {
-    padding: 15px 20px;
+    padding: 9px 20px;
     position: relative; }
 
 .list-menu-level2 .click-back a {
@@ -2103,7 +2103,7 @@ footer {
       background-size: contain; }
 
 .icon-dropDownMenu {
-  width: 30px;
+  width: 20px;
   margin: 0 10px 0 0; }
 
 .overlay {
@@ -3335,12 +3335,12 @@ select {
   .basket-icon, .header-links__icon {
     margin: 0; }
   header {
-    min-height: 88px; }
+    min-height: 73px; }
   .mobile-menu, .overlay, .menu-level2 {
-    top: 88px;
-    height: calc(100% - 88px); }
+    top: 73px;
+    height: calc(100% - 73px); }
   .body-wrapper {
-    padding: 88px 0 0; }
+    padding: 73px 0 0; }
   .banner-title {
     font-size: 18px; }
   .sidebar h3 {
@@ -3381,7 +3381,7 @@ select {
   .logo-mobile {
     display: block; }
   .logo {
-    max-width: 100px; }
+    max-width: 80px; }
   .slider-products-top__line, .slider-products-top {
     padding: 0 14px; }
   h2 {
@@ -3404,7 +3404,7 @@ select {
           -ms-flex-align: stretch;
               align-items: stretch; }
   header .logo {
-    padding: 12px 0;
+    padding: 6px 0;
     margin: 0 auto; }
   .btn-burger {
     border-right: solid 1px #aa9b98; }
@@ -3428,6 +3428,8 @@ select {
     border-left: solid 1px #aa9b98; } }
 
 @media only screen and (max-width: 420px) {
+  header .logo {
+    padding: 9px 0; }
   .slider-products-top__line {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3450,9 +3452,6 @@ select {
     margin: 0 5px 0 0; }
   .btn-close {
     margin: 35px 0 30px 0; }
-  .header-links__icon, .basket-icon {
-    width: 24px;
-    height: 25px; }
   .slider-advantages {
     width: calc(100% + 40px);
     margin: 0 -20px;
