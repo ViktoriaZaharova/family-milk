@@ -119,6 +119,7 @@ $('.click-back').click(function () {
 
 $('.btn-burger').click(function () {
     $(this).toggleClass('clicked');
+    $('.overlay').fadeToggle();
     $('.mobile-menu').fadeToggle();
 });
 
@@ -143,7 +144,7 @@ $('.btn-filter').click(function () {
     $('.sidebar').fadeIn();
 });
 
-$('.sidebar-close, .overlay').click(function () {
+$('.sidebar-close').click(function () {
     $('.overlay').fadeOut();
     $('.sidebar').fadeOut();
 });

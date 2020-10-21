@@ -10,7 +10,7 @@
 
   .slider-advantages
     max-width: none
-    width: calc(100% - 500px)
+    width: calc(100% - 470px)
 
   .slider-advantages__box
     font-size: 22px
@@ -213,6 +213,7 @@
     z-index: 4
     background: #fff
     min-height: 165px
+    border-bottom: solid 1px #aa9b98
     .form-search, .header-top, .catalog-button, .header-links-delivery
       display: none
 
@@ -478,13 +479,10 @@
   .body-wrapper
     padding: 115px 0 0
 
-  .mobile-menu
+  .mobile-menu, .overlay, .menu-level2
     top: 115px
     height: calc(100% - 115px)
 
-  .menu-level2
-    top: 114px
-    height: calc(100% - 114px)
 
 @media only screen and (max-width : 575px)
   input
@@ -622,15 +620,20 @@
 @media only screen and (max-width : 480px)
   .slider-products-card__content
     padding: 0 0 0 10px
-    width: calc(100% - 110px)
+    width: calc(100% - 135px)
 
   .slider-products-card__img
-    width: 110px
-    height: 110px
+    width: 135px
+    height: 135px
 
   .slider-products-card__title
     max-width: none
     font-size: 14px
+    margin: 0 0 10px
+
+  .slider-products-card
+    .btn
+      height: 50px
 
   .rating
     margin: 0 0 10px
@@ -661,24 +664,6 @@
     width: 20px
     height: 19px
 
-  .slider-products-card
-    .btn
-      width: 40px
-      height: 40px
-      margin: 0
-      .sum-value, .units
-        display: none
-    .price-wrapper
-      width: calc(100% - 40px)
-
-  .price-wrapper-mobile .new-price
-    display: flex
-
-  .slider-products-card__content
-    display: flex
-    align-items: flex-start
-    flex-wrap: wrap
-    justify-content: space-between
 
   .slider-products-top__title
     font-size: 14px
@@ -698,13 +683,10 @@
   header
     min-height: 88px
 
-  .mobile-menu
+  .mobile-menu, .overlay, .menu-level2
     top: 88px
     height: calc(100% - 88px)
 
-  .menu-level2
-    top: 87px
-    height: calc(100% - 87px)
 
   .body-wrapper
     padding: 88px 0 0
@@ -785,14 +767,43 @@
     font-size: 9px
     padding: 5px
 
+  .header-center
+    padding: 0
+    .container
+      align-items: stretch
+
+  header
+    .logo
+      padding: 12px 0
+      margin: 0 auto
+
+  .btn-burger
+    border-right: solid 1px #aa9b98
+
+  .btn-search-mobile
+    margin: 0
+    padding: 0 15px
+    border-right: solid 1px #aa9b98
+
+  .header-center-wrapper
+    align-items: stretch
+
+  .header-links
+    margin: 0
+    padding: 0 15px
+    justify-content: center
+    border-left: solid 1px #aa9b98
+
+  .basket-wrapper
+    padding: 0 0 0 15px
+    border-left: solid 1px #aa9b98
+
+
 @media only screen and (max-width : 420px)
-  .timer
-    width: 100%
-    margin: 10px auto 0
-    text-align: center
 
   .slider-products-top__line
     flex-wrap: wrap
+    margin: 0 0 20px
 
   .sale-line
     font-size: 10px
@@ -876,3 +887,47 @@
 
   footer
     margin: 30px 0 0
+
+  .slider-price input
+    font-size: 12px
+    height: 30px
+
+  .slider-range
+    margin: 20px 0 0
+
+  .slider-products-top__title
+    font-size: 12px
+
+  .slider-products-top__nav
+    margin: 0 auto 0 5px
+
+  .timer, .slider-products-top__wrapper .slick-dots li button
+    font-size: 14px
+
+  .col-4, .col-3
+    padding: 0 5px
+
+  .row
+    margin: 0 -5px
+
+  .menu li a, .list-products li a
+    font-size: 14px
+    padding: 6.5px 7px
+
+  .list-products li
+    margin: 0 5px 0 0
+
+
+
+
+@media only screen and (max-width : 340px)
+  .slider-products-card__img
+    width: 115px
+    height: 115px
+
+  .slider-products-card__content
+    width: calc(100% - 115px)
+
+  .slider-products-card .btn
+    height: 45px
+    margin: 10px 0 0
