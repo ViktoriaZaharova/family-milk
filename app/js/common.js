@@ -7,7 +7,7 @@ $('.slider-advantages').slick({
     nextArrow: '<button type="button" class="slick-next"></button>',
     responsive: [
         {
-            breakpoint: 420,
+            breakpoint: 421,
             settings: {
                 arrows: false,
                 fade: true
@@ -26,10 +26,9 @@ $('.slider-products-top').slick({
     nextArrow: '<button type="button" class="slick-next"></button>',
     responsive: [
         {
-            breakpoint: 420,
+            breakpoint: 421,
             settings: {
                 arrows: false,
-                fade: true
             }
         }
     ]
@@ -144,7 +143,7 @@ $('.btn-filter').click(function () {
     $('.sidebar').fadeIn();
 });
 
-$('.btn-close, .overlay').click(function () {
+$('.sidebar-close, .overlay').click(function () {
     $('.overlay').fadeOut();
     $('.sidebar').fadeOut();
 });

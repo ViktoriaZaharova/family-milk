@@ -505,7 +505,7 @@ h2
 .catalog-wrapper
   position: absolute
   left: 0
-  top: calc(100% + 10px)
+  top: 100%
   background: #fff
   z-index: 2
   width: 100%
@@ -618,7 +618,7 @@ h2
 .search-dropDown
   position: absolute
   left: 0
-  top: calc(100% + 15px)
+  top: 100%
   background: #fff
   z-index: 2
   width: 100%
@@ -682,8 +682,7 @@ h2
   display: flex
   align-items: center
   flex-wrap: wrap
-  justify-content: flex-start
-  padding: 0 0 0 22%
+  justify-content: center
   margin: 0 0 42px
 
   p
@@ -997,6 +996,10 @@ h2
 .price-wrapper
   display: flex
   align-items: center
+
+.price-wrapper-mobile
+  .new-price
+    display: none
 
 .old-price
   color: #aeaeae
@@ -1480,7 +1483,7 @@ footer
     position: absolute
     top: 30px
     left: -50px
-    z-index: 2
+    z-index: 1
     overflow: hidden
     -webkit-transform: rotate(-45deg)
     transform: rotate(-45deg)
@@ -2065,8 +2068,8 @@ select
 .filter-selected-item
   display: flex
   align-items: center
-  padding: 2px 3px
-  font-size: 12px
+  padding: 2px
+  font-size: 10px
   color: $text
   margin: 0 3px 5px 0
   border: 1px solid $hover
@@ -2077,7 +2080,7 @@ select
 .selected-close
   width: 10px
   height: 10px
-  margin: 0 5px 0 0
+  margin: 0 3px 0 0
   position: relative
   cursor: pointer
   &:before, &:after

@@ -152,7 +152,7 @@
     height: 100%
     overflow-y: auto
     background: #fff
-    padding: 20px
+    padding: 20px 15px
     z-index: 10
     .btn-close
       display: flex
@@ -622,11 +622,11 @@
 @media only screen and (max-width : 480px)
   .slider-products-card__content
     padding: 0 0 0 10px
-    width: calc(100% - 140px)
+    width: calc(100% - 110px)
 
   .slider-products-card__img
-    width: 140px
-    height: 140px
+    width: 110px
+    height: 110px
 
   .slider-products-card__title
     max-width: none
@@ -661,9 +661,24 @@
     width: 20px
     height: 19px
 
-  .slider-products-card .btn
-    max-width: 180px
-    height: 45px
+  .slider-products-card
+    .btn
+      width: 40px
+      height: 40px
+      margin: 0
+      .sum-value, .units
+        display: none
+    .price-wrapper
+      width: calc(100% - 40px)
+
+  .price-wrapper-mobile .new-price
+    display: flex
+
+  .slider-products-card__content
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    justify-content: space-between
 
   .slider-products-top__title
     font-size: 14px
@@ -738,7 +753,7 @@
     font-size: 10px
 
   .main-home
-    margin: 0 0 25px
+    margin: 0 0 30px
 
   .logo-pc
     display: none
@@ -751,6 +766,24 @@
 
   .slider-products-top__line, .slider-products-top
     padding: 0 14px
+
+  h2
+    margin: 0 auto 20px
+
+  .dishes, .group-company
+    margin: 30px 0 0
+
+  .about
+    padding: 30px 0
+
+  .group-company__icon
+    width: 20px
+    min-width: 20px
+    margin: 0 auto 5px
+
+  .group-company__links
+    font-size: 9px
+    padding: 5px
 
 @media only screen and (max-width : 420px)
   .timer
@@ -800,8 +833,14 @@
       margin: 20px 0 0
 
   .slider-advantages__box
-    padding: 30px 20px
+    padding: 20px
     border: solid 1px #aa9b98
+    min-height: 250px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
 
   .sidebar
     width: 100%
@@ -810,7 +849,7 @@
     width: 14px
     height: 14px
     min-width: 14px
-    margin: 0 10px 0 0
+    margin: 0 5px 0 0
 
   .checkbox
     font-size: 12px
@@ -826,3 +865,14 @@
       &:last-child
         margin: 0 0 10px
 
+  .slider-advantages__title
+    margin: 0
+
+  .slider-advantages .slick-dots li
+    width: 37px
+
+  .about, .subscribe
+    display: none
+
+  footer
+    margin: 30px 0 0
