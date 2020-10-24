@@ -295,6 +295,38 @@ button
     margin: 0 0 0 7px
     width: 25px
     height: 22px
+    img
+      width: 100%
+
+
+
+.btn-border
+  color: $green
+  font-size: 19px
+  font-weight: 500
+  border-radius: 5px
+  border: solid 1px $green
+  &:hover
+    background: $green
+    color: #fff
+
+.button-group
+  display: flex
+  align-items: stretch
+  justify-content: flex-start
+  flex-wrap: wrap
+  width: 100%
+  .btn
+    max-width: 246px
+    margin: 0 29px 0 0
+    height: 66px
+    font-size: 19px
+    .icon-basket
+      width: 28px
+      height: 25px
+    &:last-child
+      margin: 0
+
 
 h2
   width: 100%
@@ -382,6 +414,7 @@ h2
   height: 54px
   padding: 0 18px 0 20px
   cursor: pointer
+
   &:hover
     box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
 
@@ -423,6 +456,7 @@ h2
   width: 14px
   height: 14px
   margin: 0 0 20px auto
+
   &:before, &:after
     content: ''
     position: absolute
@@ -430,8 +464,10 @@ h2
     height: 100%
     left: 6px
     background: $accent
+
   &:before
     transform: rotate(45deg)
+
   &:after
     transform: rotate(135deg)
 
@@ -440,6 +476,7 @@ h2
   height: 20px
   margin: 0 15px 0 0
   position: relative
+
   &:before, &:after
     content: ''
     position: absolute
@@ -447,8 +484,10 @@ h2
     height: 100%
     left: 6px
     background: $accent
+
   &:before
     transform: rotate(45deg)
+
   &:after
     transform: rotate(135deg)
 
@@ -459,6 +498,7 @@ h2
   width: 14px
   height: 14px
   display: none
+
   &:before, &:after
     content: ''
     position: absolute
@@ -466,8 +506,10 @@ h2
     height: 100%
     left: 6px
     background: $accent
+
   &:before
     transform: rotate(45deg)
+
   &:after
     transform: rotate(135deg)
 
@@ -482,10 +524,13 @@ h2
   display: flex
   align-items: stretch
   justify-content: flex-start
+
   li
     margin: 5px 5px 5px 0
+
     &:last-child
       margin-right: 0
+
     a
       border: solid 1px #aa9b98
         radius: 5px
@@ -502,6 +547,7 @@ h2
 
 .menu-visible-mobile
   display: none
+
   li
     margin: 0 5px 0 0
 
@@ -515,6 +561,7 @@ h2
   box-shadow: 0 10px 15px 0 rgba(84, 55, 49, 0.1)
   padding: 28px 0 30px
   display: none
+
   .container
     align-items: stretch
 
@@ -556,6 +603,7 @@ h2
   &:hover
     color: #fff
     background: #7f6965
+
     .menu-category__links-icon
       filter: brightness(0) invert(1)
 
@@ -577,6 +625,7 @@ h2
 
 .menu-subcategory__links
   color: #7c7c7c
+
   &:hover
     text-decoration: underline
     font-weight: 500
@@ -585,8 +634,10 @@ h2
 .menu-subcategory__item
   margin: 0 0 28px
   width: calc(100% - 488px)
+
   &:last-child
     margin: 0
+
   &:hover
     .menu-subcategory__item-preview
       display: block
@@ -613,6 +664,7 @@ h2
   align-items: center
   justify-content: center
   margin: 0 auto 19px
+
   img
     width: 100%
     height: 100%
@@ -640,27 +692,35 @@ h2
   overflow-y: auto
   transition: .5s ease
   opacity: 0
+
   .frequent-queries
     flex-direction: column
     align-items: flex-start
     padding: 0 0 0 35px
+
     p
       margin: 0 0 10px
+
   .frequent-queries__icon
     margin: 0 5px 0 0
+
   .frequent-queries__result
     width: 100%
     flex-direction: column
     align-items: flex-start
+
   .frequent-queries__tag
     font-size: 14px
     margin: 0 0 10px
+
   .popular-category-search
     padding: 0 0 0 35px
+
     h3
       text-align: left
       margin: 0 0 20px
       text-transform: none
+
   .category-item
     font-size: 14px
 
@@ -672,6 +732,7 @@ h2
 
 .form-search__mobile
   width: 100%
+
   input
     border: none
       bottom: 1px solid $accent
@@ -842,6 +903,7 @@ h2
   width: 100%
   padding: 15px 0
   position: relative
+
   .slick-dots
     position: relative
     bottom: 0
@@ -908,8 +970,10 @@ h2
 
   .btn
     max-width: 200px
+
   .button-wrapper
     margin: 10px 0 0
+
   .new-price
     width: 100%
 
@@ -917,6 +981,7 @@ h2
   margin: 3px 0 0 5px
   display: flex
   align-items: center
+
   img
     max-width: 12px
 
@@ -930,6 +995,7 @@ h2
   display: flex
   align-items: center
   justify-content: center
+
   img
     width: 100%
     height: 100%
@@ -1080,7 +1146,6 @@ h2
   justify-content: flex-start
 
 
-
 //group-company
 .group-company
   width: 100%
@@ -1115,6 +1180,7 @@ h2
 footer
   background: #fff
   border-top: 1px solid #aa9b98
+
   h3
     font-size: 15px
     font-weight: 500
@@ -1179,6 +1245,7 @@ footer
   &:last-child
     h3
       margin: 0 0 13px
+
   h3
     display: flex
     align-items: center
@@ -1191,6 +1258,7 @@ footer
 .icon-drop
   display: none
   position: relative
+
   &:after
     content: '+'
     display: inline-block
@@ -1391,9 +1459,11 @@ footer
   font-size: 24px
   display: flex
   align-items: center
+
   .units
     margin: 0 0 0 6px
     font-size: 16.5px
+
     img
       width: 12px
 
@@ -1439,7 +1509,7 @@ footer
 
 .btn-hover__add
   width: 62px
-  height: 52px
+  height: 100%
 
 //dishes
 .dishes
@@ -1499,9 +1569,11 @@ footer
   color: #c81947
   display: flex
   align-items: center
+
   .units
     font-size: 16.5px
     margin: 0 0 0 6px
+
     img
       width: 12px
 
@@ -1541,7 +1613,7 @@ footer
 
 .phone-box, .btn-search-mobile
   display: none
-  
+
 .mobile-menu
   position: fixed
   left: 0
@@ -1556,11 +1628,14 @@ footer
   .location
     margin: 0 0 20px
     color: #fff
+
     img
       filter: brightness(0) invert(1)
+
   .phone-box .phone
     font-size: 14px
     color: #fff
+
     img
       filter: brightness(0) invert(1)
 
@@ -1587,6 +1662,7 @@ footer
     transition: .3s ease
     margin: 0 0 4px
     display: block
+
     &:last-child
       width: 70%
       margin: 0
@@ -1595,12 +1671,15 @@ footer
   span
     position: absolute
     top: 50%
-    transform: translate(0,-50%)
+    transform: translate(0, -50%)
     left: 0
+
     &:first-child
       transform: rotate(45deg)
+
     &:nth-child(2)
       transform: rotate(135deg)
+
     &:last-child
       width: 0
 
@@ -1609,8 +1688,10 @@ footer
 
   li
     margin: 0 0 15px
+
     &:last-child
       margin: 0
+
     a
       color: #fff
 
@@ -1619,6 +1700,7 @@ footer
   position: relative
   display: flex
   align-items: center
+
   &:after
     content: '-'
     display: inline-block
@@ -1631,6 +1713,7 @@ footer
 
 .dropDown-menu
   position: relative
+
   li
     a
       display: flex
@@ -1643,12 +1726,13 @@ footer
   padding: 7px 0
   font-size: 14px
   color: $accent
+
   &:after
     content: ''
     position: absolute
     right: 0
     top: 50%
-    transform: translate(0,-50%)
+    transform: translate(0, -50%)
     width: 20px
     height: 12px
     background: url("../img/arrow-right.png") no-repeat center
@@ -1680,9 +1764,11 @@ footer
 
   li
     margin: 0
+
     a
       padding: 9px 20px
       position: relative
+
   .click-back
     a
       text-transform: uppercase
@@ -1690,12 +1776,13 @@ footer
       justify-content: center
       background: #fbf8f6
       position: relative
+
       &:before
         content: ''
         position: absolute
         left: 20px
         top: 50%
-        transform: translate(0,-50%)
+        transform: translate(0, -50%)
         width: 14px
         height: 8px
         background: url("../img/arrow-left.png") no-repeat center
@@ -1719,6 +1806,7 @@ footer
 //page catalog
 .breadcrumbs-section
   margin: 15px 0 24px
+
   .container
     align-items: center
 
@@ -1727,9 +1815,11 @@ footer
   align-items: center
   flex-wrap: wrap
   font-size: 13px
+
   li
     a
       color: #1c1c1c
+
       &:after
         content: ''
         display: inline-block
@@ -1738,20 +1828,29 @@ footer
         height: 8px
         background: url("../img/arrow-right.png") no-repeat center
           size: contain
+
     span
       color: #858585
+
+    .breadcrumb-links
+      span
+        color: #006761
+        border-bottom: 1px dotted #006761
 
 
 .sidebar
   width: 270px
+
   .btn-close
     display: none
+
   h3
     display: flex
     align-items: center
     margin: 0 0 15px
     font-size: 20px
     font-weight: 500
+
     .icon
       margin: 0 5px 0 0
       display: flex
@@ -1764,6 +1863,7 @@ footer
   align-items: center
   justify-content: space-between
   margin: 0 0 15px
+
   h3
     margin: 0
 
@@ -1792,16 +1892,20 @@ h1
   display: flex
   align-items: stretch
   flex-wrap: wrap
+
   li
     margin: 0 5px 5px 0
+
     &:last-child
       margin-right: 0
+
     a
       color: $text
       font-size: 14px
       padding: 6.5px 7px
       border-radius: 5px
       border: solid 1px #aa9b98
+
       &:hover
         background: $accent
         color: #fff
@@ -1818,6 +1922,7 @@ h1
   display: flex
   align-items: center
   flex-wrap: wrap
+
   &:before
     content: ''
     position: absolute
@@ -1832,7 +1937,7 @@ h1
   position: absolute
   left: 50%
   top: 50%
-  transform: translate(-50%,-50%)
+  transform: translate(-50%, -50%)
 
 .banner-title
   position: relative
@@ -1853,11 +1958,14 @@ h1
   background: #fff
   border-radius: 5px
   padding: 39px 145px 0
+
   h2
     font-size: 32px
     margin: 0 auto 27px
+
   .form-subscribe
     margin: 30px auto 17px
+
     input
       height: 52px
       font-size: 15px
@@ -1866,6 +1974,7 @@ h1
 
       &::placeholder
         color: #888888
+
     button
       width: 136px
       font-size: 12px
@@ -1873,18 +1982,21 @@ h1
 .list-check
   font-size: 17px
   font-weight: 500
+
   li
     position: relative
     padding: 0 0 0 26px
     margin: 0 0 15px
+
     &:last-child
       margin: 0
+
     &:before
       content: ''
       position: absolute
       left: 0
       top: 50%
-      transform: translate(0,-50%)
+      transform: translate(0, -50%)
       width: 21px
       height: 21px
       background: url("../img/check.png") no-repeat center
@@ -1904,6 +2016,7 @@ h1
 .sorting-wrapper
   display: flex
   align-items: center
+
   p
     color: #888888
     font-size: 14px
@@ -1944,19 +2057,24 @@ select
   padding: 3px 6px
   cursor: pointer
   transition: .3s ease
+
   &:last-child
     margin: 0
+
   .icon-svg
     fill: #aa9b98
+
   &:hover
     background: #aa9b98
     border-color: #aa9b98
+
     .icon-svg
       fill: #fff
 
 .views-products__item.active
   background: $accent
   border-color: $accent
+
   .icon-svg
     fill: #fff
 
@@ -1979,18 +2097,23 @@ select
   display: flex
   align-items: stretch
   flex-wrap: wrap
+
   li
     margin: 0 5px 0 0
+
     &:last-child
       margin: 0
+
     a
       border-radius: 5px
       color: #aa9b98
       font-size: 15px
       padding: 6.5px 13px
+
     .active
       color: #fff
       background: $green
+
     .links-next
       background: #e8e8e8
       color: $green
@@ -2000,6 +2123,7 @@ select
   align-items: center
   flex-wrap: wrap
   font-size: 13px
+
   input
     height: 31px
     border-radius: 5px
@@ -2007,15 +2131,18 @@ select
     background-color: #ffffff
     padding: 0
     text-align: center
+
   label
     width: 47px
     margin: 0 8px 0 7px
+
   button
     border-radius: 5px
     background-color: #aa9b98
     font-size: 13px
     color: #fff
     padding: 8px 14px
+
     &:hover
       background: $accent
 
@@ -2026,6 +2153,7 @@ select
   width: 100%
   color: #858585
   font-size: 13px
+
   img
     margin: 0 6px 0 0
     width: 5px
@@ -2036,12 +2164,14 @@ select
   border: solid 1px #aa9b98
   width: 100%
   margin: 0 0 30px
+
   &:last-child
     margin: 0
 
 .sidebar-box
   padding: 15px 20px
   border-bottom: 1px solid #aa9b98
+
   &:last-child
     border: none
 
@@ -2052,6 +2182,7 @@ select
   display: flex
   align-items: center
   cursor: pointer
+
   &:after
     content: ''
     display: inline-block
@@ -2064,7 +2195,7 @@ select
 
 .block_title.in
   &:after
-    transform: scale(1,-1)
+    transform: scale(1, -1)
 
 .block_hover
   padding: 20px 0 0
@@ -2091,6 +2222,7 @@ select
   margin: 0 3px 5px 0
   border: 1px solid $hover
     radius: 3px
+
   &:last-child
     margin-right: 0
 
@@ -2103,6 +2235,7 @@ select
   margin: 0 3px 0 0
   position: relative
   cursor: pointer
+
   &:before, &:after
     content: ''
     position: absolute
@@ -2110,19 +2243,24 @@ select
     height: 100%
     left: 6px
     background: $accent
+
   &:before
     transform: rotate(45deg)
+
   &:after
     transform: rotate(135deg)
 
 .menu-category-sidebar
   li
     margin: 0 0 15px
+
     &:last-child
       margin: 0
+
     a
       font-size: 14px
       color: $text
+
       &:hover
         text-decoration: underline
 
@@ -2131,6 +2269,7 @@ select
   align-items: center
   flex-wrap: wrap
   justify-content: space-between
+
   input
     padding: 0
     width: 100px
@@ -2138,6 +2277,7 @@ select
     text-align: center
     font-size: 16px
     color: #1c1c1c
+
     &::placeholder
       color: #1c1c1c
 
@@ -2177,8 +2317,10 @@ select
   justify-content: flex-start
   color: $text
   font-size: 14px
+
   .checkbox-inp
     display: none
+
   .checkbox-custom
     position: relative
     width: 26px
@@ -2191,19 +2333,23 @@ select
     cursor: pointer
     transition: .3s ease
     margin: 0 10px 0 0
+
   .label
     display: inline-block
     vertical-align: middle
     cursor: pointer
+
   .checkbox-inp:checked + .checkbox-custom
     background: $green
     border-color: $green
+
   .label-val
     color: #888888
 
 .list-checkbox
   li
     margin: 0 0 10px
+
     &:last-child
       margin: 0
 
@@ -2215,10 +2361,12 @@ select
   font-size: 14px
   border: solid 1px #aa9b98
   transition: .3s ease
+
   &:hover
     background: $accent
     color: #fff
     box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+
     .btn-filter-val
       color: #fff
 
@@ -2226,6 +2374,241 @@ select
   color: $text
   font-size: 12px
   margin: 0 0 0 2px
+
+//product page
+.recommended-products
+  margin: 0 0 60px
+
+.product-description
+  margin: 44px 0 60px
+  .tabs__caption
+    width: fit-content
+    border-bottom: 2px solid #eae6e5
+    li
+      font-size: 20px
+      text-transform: none
+      width: auto
+      max-width: none
+      flex: auto
+      margin: 0 40px 0 0
+      border: none
+        radius: 0
+      padding: 0 0 7px
+      position: relative
+      &:last-child
+        margin: 0
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -2px
+        width: 100%
+        height: 2px
+        transition: .3s ease
+        background: transparent
+    .active
+      color: $green
+      background: transparent
+      &:before
+        background: $green
+  .tabs__content
+    padding: 28px 0
+
+
+.product-photo
+  position: relative
+  width: 488px
+  height: 488px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 5px
+
+.product-photo__img
+  width: 100%
+  height: 100%
+  overflow: hidden
+  border-radius: 5px
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.product-content
+  width: calc(100% - 528px)
+  border-radius: 5px
+  border: solid 1px #eae6e5
+  margin: 0 0 0 auto
+  padding: 15px
+  .button-group
+    margin: 22px 0 0
+
+.product-content__wrap
+  border-radius: 5px
+  border: solid 1px #eae6e5
+  padding: 24px 30px
+
+.products-characteristics
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 17px 0
+
+.article-item
+  margin: 0 30px 0 0
+  display: flex
+  align-items: center
+  color: #898989
+  font-size: 15px
+
+  p
+    font-weight: 500
+    color: #1c1c1c
+    margin: 0 0 0 10px
+
+.brand-item
+  display: flex
+  align-items: center
+  color: #898989
+  font-size: 15px
+
+  p
+    font-weight: 500
+    color: #1c1c1c
+    margin: 0 0 0 10px
+    text-decoration: underline
+
+.availability
+  display: flex
+  align-items: center
+  color: #1c1c1c
+  font-size: 15px
+  margin: 0 0 0 auto
+  span
+    margin: 0 6px 0 0
+
+.cost-product
+  width: 100%
+  display: flex
+  align-items: center
+  .price-wrapper
+    margin: 0 19px 0 0
+  .new-price
+    font-size: 41px
+    img
+      width: 20px
+      margin: 5px 0 0 7px
+  .old-price
+    font-size: 25.5px
+    display: flex
+    align-items: center
+    margin: 0 10px 0 11px
+    img
+      width: 11px
+      margin: 3px 0 0 6px
+
+.sale-val
+  font-size: 24.5px
+  color: #1c1c1c
+
+.saving
+  height: 26px
+  border-radius: 5px
+  border: solid 2px #f4d1da
+  display: flex
+  align-items: center
+  font-size: 14px
+  padding: 0 8px
+  color: #1c1c1c
+  img
+    margin: 0 0 0 3px
+    width: 7px
+
+.cost-description
+  width: 100%
+  font-size: 13px
+  font-weight: 300
+  line-height: 1.62
+  padding: 13px 50px 13px 17px
+  border-radius: 5px
+  background-color: #fbf8f6
+  margin: 20px 0
+
+.product-content__info
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  .whatsapp
+    font-size: 15px
+
+.availability-in-stores
+  color: $green
+  display: flex
+  align-items: center
+  margin: 0 0 0 60px
+
+.availability-in-stores__icon
+  margin: 0 8px 0 0
+  width: 33px
+
+//set-products
+.set-products
+  margin: 0 0 60px
+  .product-card__title
+    font-size: 13px
+    margin: 0 0 15px
+  .product-card__img
+    height: 224px
+  .button-wrapper
+    margin: 21px 0 0
+  .btn-green
+    height: 42px
+    font-size: 14.5px
+  .btn-hover__body
+    font-size: 12px
+  .btn-hover__add
+    height: 100%
+  h2
+    font-size: 25.5px
+    text-align: left
+    margin: 0 0 17px
+    padding: 0 0 20px
+    color: #006761
+    max-width: 200px
+    width: 100%
+    border-bottom: 1px solid #eae6e5
+
+.set-products__total
+  font-size: 15px
+  font-weight: 500
+  margin: 0 0 20px
+  .price
+    margin: 19px 0 0
+    font-size: 24px
+    font-weight: normal
+    img
+      width: 12px
+      margin: 0 0 0 5px
+
+
+
+.set-products__content
+  width: 244px
+  padding: 0 20px 0 0
+  .btn
+    height: 42px
+    max-width: 200px
+    font-size: 14.5px
+
+
+.set-products__wrapper
+  width: calc(100% - 244px)
+
+
+
 
 @import "media"
 // Всегда в конце
