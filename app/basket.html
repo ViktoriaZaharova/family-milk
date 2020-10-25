@@ -1358,7 +1358,7 @@
                                 <label><input type="text" placeholder="Укажите адрес" name="address"></label>
 
                                 <div class="checkout-item__wrapper-box"><a href="#modal__location"
-                                                                           class="btn-location open-modal"><img
+                                                                           class="btn-location open_modal"><img
                                         src="img/location-green.png" alt=""></a>
                                 </div>
                             </div>
@@ -1607,6 +1607,98 @@
     </footer>
 
     <div class="overlay"></div>
+
+    <div class="modal__div" id="modal__location">
+        <div class="modal__wrapper">
+            <div class="modal__close"><img src="img/delete.png" alt=""></div>
+
+            <form method="post" class="form-modal">
+                <div class="tabs">
+                    <ul class="tabs__caption">
+                        <li class="active">Доставка</li>
+                        <li>Самовывоз</li>
+                    </ul>
+                    <div class="tabs__content active">
+
+                        <div class="form-wrapper">
+                            <label class="w-100">
+                                <span class="input-title">Город, улица, дом, корпус, строение</span>
+                                <input type="text" name="address">
+                            </label>
+                            <label class="checkbox">
+                                <input class="checkbox-inp" type="checkbox" name="checkbox">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Частный дом</span>
+                            </label>
+
+                            <div class="label-group">
+                                <label>
+                                    <span class="input-title">Квартира <span class="question-icon">?</span></span>
+                                    <input type="text" name="address">
+                                </label>
+                                <label>
+                                    <span class="input-title">Подъезд</span>
+                                    <input type="text" name="address">
+                                </label>
+                                <label>
+                                    <span class="input-title">Этаж</span>
+                                    <input type="text" name="address">
+                                </label>
+                                <label>
+                                    <span class="input-title">Домофон</span>
+                                    <input type="text" name="address">
+                                </label>
+                                <label>
+                                    <span class="input-title">Лифт</span>
+                                    <select name="select" class="select-menu">
+                                        <option value="Есть">Есть</option>
+                                        <option value="Нет">Нет</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="maps-delivery">
+                            <iframe src="https://yandex.ru/map-widget/v1/-/CKUDFSPV"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="tabs__content">
+                        <div class="form-wrapper">
+                            <div class="input-title">Пункты самовывоза</div>
+                            <label class="radio">
+                                <input class="radio-inp" type="radio" name="radio" checked>
+                                <span class="radio-custom"></span>
+                                <span class="label">Адрес пункта самовывоза</span>
+                                <span class="icon-location"><img src="img/location-brown.png" alt=""></span>
+                            </label>
+
+                            <label class="radio">
+                                <input class="radio-inp" type="radio" name="radio">
+                                <span class="radio-custom"></span>
+                                <span class="label">Адрес пункта самовывоза</span>
+                                <span class="icon-location"><img src="img/location-brown.png" alt=""></span>
+                            </label>
+
+                            <label class="radio">
+                                <input class="radio-inp" type="radio" name="radio">
+                                <span class="radio-custom"></span>
+                                <span class="label">Адрес пункта самовывоза</span>
+                                <span class="icon-location"><img src="img/location-brown.png" alt=""></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-modal__bottom">
+                    <button type="submit" class="btn btn-green">Сохранить</button>
+                    <button type="button" class="btn btn-border btn-cancel">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay"></div>
 </div>
 
 <script src="js/jquery.min.js"></script>

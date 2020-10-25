@@ -144,7 +144,7 @@ $(window).on('load resize', function() {
 
 $('.dropDown-select').click(function () {
     $(this).toggleClass('open');
-})
+});
 
 $('.select-menu').selectmenu()
     .selectmenu( "menuWidget" )
@@ -168,3 +168,40 @@ $(".slider-range").slider({
 
 $(".dec1").val($(".slider-range").slider("value") + ' ' + '₽');
 $(".dec2").val($(".slider-range").slider("value") + ' ' + '₽');
+
+
+// модальные окна (несколько)
+$(document).ready(function () {
+    var overlay = $('.modal-overlay');
+    var open_modal = $('.open_modal');
+    var close = $('.modal__close, .modal-overlay, .btn-cancel');
+    var modal = $('.modal__div');
+
+    open_modal.click(function (event) {
+        event.preventDefault();
+        var div = $(this).attr('href');
+        overlay.fadeIn(400,
+            function () {
+                $(div)
+                    .css('display', 'flex')
+                    .animate({
+                        opacity: 1,
+                        top: '50%'
+                    }, 200);
+            });
+    });
+
+    close.click(function () {
+        modal
+            .animate({
+                    opacity: 0,
+                    top: '45%'
+                }, 200,
+                function () {
+                    $(this).css('display', 'none');
+                    overlay.fadeOut(400);
+                }
+            );
+    });
+});
+//end
