@@ -2743,14 +2743,36 @@ select
   display: block
 
 .sentence
-  width: 100%
-  overflow-y: auto
-  white-space: nowrap
   display: flex
   align-items: center
-  padding: 0 0 16px
+  flex-wrap: wrap
   margin: 0 0 22px
   font-size: 13px
+  p
+    width: 100%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+.sentence-line
+  width: 100%
+  height: 10px
+  border-radius: 4px
+  border: solid 1px #eae6e5
+  background-color: #ffffff
+  position: relative
+  margin: 16px 0 0
+  overflow: hidden
+
+.sentence-bg
+  height: 6px
+  background-color: #aa9b98
+  position: absolute
+  left: 2px
+  top: 50%
+  transform: translate(0,-50%)
+  width: 249px
+  border-radius: 4px 0 0 4px
 
 .sentence-value
   color: $green
@@ -2758,6 +2780,7 @@ select
   display: flex
   align-items: center
   font-weight: 500
+  white-space: nowrap
   img
     margin: 0 0 0 5px
 
@@ -3277,6 +3300,36 @@ select
 
 .ui-selectmenu-menu
   z-index: 101
+
+.delivery-date
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  margin: 0 0 10px
+
+.delivery-date__item
+  height: 31px
+  border-radius: 5px
+  border: solid 1px #aa9b98
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 0 9px
+  color: #1c1c1c
+  font-size: 14px
+  margin: 0 10px 0 0
+  cursor: pointer
+  &:hover
+    background: #aa9b98
+    color: #fff
+  &:last-child
+    margin: 0
+
+.delivery-date__item.active
+  background: #aa9b98
+  color: #fff
 
 @import "media"
 // Всегда в конце

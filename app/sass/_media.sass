@@ -53,6 +53,13 @@
     h2
       max-width: none
 
+  .checkout
+    width: 390px
+
+  .basket-section
+    width: calc(100% - 390px)
+
+
 @media only screen and (max-width : 1080px)
   .footer-menu
     li
@@ -271,6 +278,13 @@
 
 
 @media only screen and (max-width : 920px)
+  .checkout
+    width: 100%
+
+  .basket-section
+    width: 100%
+    padding: 0
+    margin: 0 0 30px
 
 
   .phone-box
@@ -632,7 +646,7 @@
     &:nth-child(4)
       margin: 0 0 13px
     h3
-      border-bottom: 2px solid #d1d1d1
+      border-bottom: 1px solid #d1d1d1
 
   .icon-drop
     display: flex
@@ -1234,7 +1248,29 @@
   .list-products li
     margin: 0 5px 0 0
 
+  .consent
+    padding: 20px
 
+  .form-checkout button
+    font-size: 14px
+
+  .promo-wrapper
+    flex-direction: column
+    align-items: center
+    label
+      max-width: 100%
+      width: 100%
+      margin: 0 0 10px
+
+  .card-product-line .product-card__img
+    width: 120px
+
+  .card-product-line__content
+    width: calc(100% - 120px)
+    padding: 20px 10px
+
+  .checkout-item h4
+    font-size: 15px
 
 
 @media only screen and (max-width : 340px)

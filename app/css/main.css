@@ -3219,18 +3219,47 @@ select {
   display: block; }
 
 .sentence {
-  width: 100%;
-  overflow-y: auto;
-  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 0 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 0 22px;
   font-size: 13px; }
+  .sentence p {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+.sentence-line {
+  width: 100%;
+  height: 10px;
+  border-radius: 4px;
+  border: solid 1px #eae6e5;
+  background-color: #ffffff;
+  position: relative;
+  margin: 16px 0 0;
+  overflow: hidden; }
+
+.sentence-bg {
+  height: 6px;
+  background-color: #aa9b98;
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 249px;
+  border-radius: 4px 0 0 4px; }
 
 .sentence-value {
   color: #289074;
@@ -3241,7 +3270,8 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 500; }
+  font-weight: 500;
+  white-space: nowrap; }
   .sentence-value img {
     margin: 0 0 0 5px; }
 
@@ -3870,6 +3900,47 @@ select {
 .ui-selectmenu-menu {
   z-index: 101; }
 
+.delivery-date {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 10px; }
+
+.delivery-date__item {
+  height: 31px;
+  border-radius: 5px;
+  border: solid 1px #aa9b98;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0 9px;
+  color: #1c1c1c;
+  font-size: 14px;
+  margin: 0 10px 0 0;
+  cursor: pointer; }
+  .delivery-date__item:hover {
+    background: #aa9b98;
+    color: #fff; }
+  .delivery-date__item:last-child {
+    margin: 0; }
+
+.delivery-date__item.active {
+  background: #aa9b98;
+  color: #fff; }
+
 @media only screen and (max-width: 1210px) {
   .tabs__caption li {
     font-size: 14px;
@@ -3908,7 +3979,11 @@ select {
   .set-products {
     margin: 0 0 20px; }
     .set-products h2 {
-      max-width: none; } }
+      max-width: none; }
+  .checkout {
+    width: 390px; }
+  .basket-section {
+    width: calc(100% - 390px); } }
 
 @media only screen and (max-width: 1080px) {
   .footer-menu li {
@@ -4089,6 +4164,12 @@ select {
     margin: 0 0 20px; } }
 
 @media only screen and (max-width: 920px) {
+  .checkout {
+    width: 100%; }
+  .basket-section {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 30px; }
   .phone-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4415,7 +4496,7 @@ select {
     .footer-box:nth-child(4) {
       margin: 0 0 13px; }
     .footer-box h3 {
-      border-bottom: 2px solid #d1d1d1; }
+      border-bottom: 1px solid #d1d1d1; }
   .icon-drop {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4919,7 +5000,30 @@ select {
     font-size: 14px;
     padding: 6.5px 7px; }
   .list-products li {
-    margin: 0 5px 0 0; } }
+    margin: 0 5px 0 0; }
+  .consent {
+    padding: 20px; }
+  .form-checkout button {
+    font-size: 14px; }
+  .promo-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .promo-wrapper label {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 0 10px; }
+  .card-product-line .product-card__img {
+    width: 120px; }
+  .card-product-line__content {
+    width: calc(100% - 120px);
+    padding: 20px 10px; }
+  .checkout-item h4 {
+    font-size: 15px; } }
 
 @media only screen and (max-width: 340px) {
   .slider-products-card__title {
