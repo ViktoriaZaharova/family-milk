@@ -2678,6 +2678,9 @@ select {
     color: #1c1c1c; }
     .menu-category-sidebar li a:hover {
       text-decoration: underline; }
+  .menu-category-sidebar li .active {
+    color: #289074;
+    text-decoration: underline; }
 
 .slider-price {
   display: -webkit-box;
@@ -3621,7 +3624,7 @@ select {
 .overflow-select {
   max-height: 200px; }
 
-select {
+.basket-wrapper select {
   outline: none;
   border-radius: 5px;
   border: solid 1px #aa9b98;
@@ -4141,42 +4144,15 @@ select {
     max-width: none; }
     .group-company__text br {
       display: none; }
-  .sidebar {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 300px;
-    height: 100%;
-    overflow-y: auto;
-    background: #fff;
-    padding: 20px 15px;
-    z-index: 10; }
-    .sidebar .btn-close {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-  .sidebar-item__category {
-    display: none; }
-  .filter-selected {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .block_hover {
-    display: none; }
-  .block_title:after {
-    background: url("../img/arrow-bottom.png") no-repeat center;
-      background-size: contain; }
-  .btn-filter {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 14px; }
-    .btn-filter img {
-      margin: 0 10px 0 0; }
-  .wrapper-content {
+  .form-pagination {
     width: 100%;
-    padding: 0; }
+    margin: 10px 0 0; }
+  .sidebar {
+    width: 220px; }
+  .wrapper-content {
+    width: calc(100% - 220px); }
+  .slider-price input {
+    width: 70px; }
   .block_title {
     font-size: 15px; }
   .col-banner-box {
@@ -4187,39 +4163,7 @@ select {
   .banner-box {
     height: 300px; }
   .menu li a {
-    font-size: 13px; }
-  .sidebar-close {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 12px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 6.5px 7px;
-    border-radius: 5px;
-    margin: 0; }
-    .sidebar-close .selected-close {
-      width: 15px;
-      height: 15px; }
-  .product-content {
-    width: 100%;
-    padding: 0;
-    border: none; }
-    .product-content h1, .product-content .products-characteristics {
-      display: none; }
-  .product-content__wrap {
-    padding: 20px; }
-  .product-photo {
-    margin: 30px auto; }
-  .product-info-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-  .products-characteristics {
-    margin: 0 0 20px; } }
+    font-size: 13px; } }
 
 @media only screen and (max-width: 920px) {
   .checkout {
@@ -4557,7 +4501,75 @@ select {
     .form-search button {
       height: 54px;
       top: 20px;
-      right: 20px; } }
+      right: 20px; }
+  .sidebar {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    padding: 20px 15px;
+    z-index: 10; }
+    .sidebar .btn-close {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .sidebar-item__category {
+    display: none; }
+  .filter-selected {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .block_hover {
+    display: none; }
+  .block_title:after {
+    background: url("../img/arrow-bottom.png") no-repeat center;
+      background-size: contain; }
+  .btn-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px; }
+    .btn-filter img {
+      margin: 0 10px 0 0; }
+  .sidebar-close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 6.5px 7px;
+    border-radius: 5px;
+    margin: 0; }
+    .sidebar-close .selected-close {
+      width: 15px;
+      height: 15px; }
+  .product-content {
+    width: 100%;
+    padding: 0;
+    border: none; }
+    .product-content h1, .product-content .products-characteristics {
+      display: none; }
+  .product-content__wrap {
+    padding: 20px; }
+  .product-photo {
+    margin: 30px auto; }
+  .product-info-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .products-characteristics {
+    margin: 0 0 20px; }
+  .wrapper-content {
+    width: 100%;
+    padding: 0; } }
 
 @media only screen and (max-width: 670px) {
   .footer-box {
