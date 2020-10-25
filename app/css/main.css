@@ -2886,6 +2886,16 @@ select {
       background: #eeeeee;
       color: #bababa;
       cursor: inherit; }
+  .promo-wrapper .label-promo input {
+    color: #1c1c1c; }
+    .promo-wrapper .label-promo input::-webkit-input-placeholder {
+      color: #1c1c1c; }
+    .promo-wrapper .label-promo input::-moz-placeholder {
+      color: #1c1c1c; }
+    .promo-wrapper .label-promo input::-ms-input-placeholder {
+      color: #1c1c1c; }
+    .promo-wrapper .label-promo input::placeholder {
+      color: #1c1c1c; }
 
 .list-checkbox li {
   margin: 0 0 10px; }
@@ -3431,7 +3441,8 @@ select {
 .input-error {
   color: #e3000b;
   font-size: 11px;
-  font-weight: 300; }
+  font-weight: 300;
+  text-align: right; }
 
 .label-no-checked input {
   border-color: #e3000b;
@@ -4022,7 +4033,11 @@ select {
   .checkout {
     width: 390px; }
   .basket-section {
-    width: calc(100% - 390px); } }
+    width: calc(100% - 390px); }
+  .error-promo {
+    max-width: none;
+    margin: 10px 0 0;
+    width: 100%; } }
 
 @media only screen and (max-width: 1080px) {
   .footer-menu li {
@@ -5090,7 +5105,12 @@ select {
     width: calc(100% - 120px);
     padding: 20px 10px; }
   .checkout-item h4 {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .checkout-item__wrapper .w-50 {
+    width: 100%;
+    margin: 0 0 10px; }
+    .checkout-item__wrapper .w-50:last-child {
+      margin: 0; } }
 
 @media only screen and (max-width: 340px) {
   .slider-products-card__title {
