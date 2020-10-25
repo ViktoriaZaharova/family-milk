@@ -142,6 +142,14 @@ $(window).on('load resize', function() {
     }
 });
 
+$('.dropDown-select').click(function () {
+    $(this).toggleClass('open');
+})
+
+$('.select-menu').selectmenu()
+    .selectmenu( "menuWidget" )
+    .addClass( "overflow-select" );
+
 $(".slider-range").slider({
     range: true,
     min: 0, // минимальное значение цены

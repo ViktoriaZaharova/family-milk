@@ -2346,6 +2346,99 @@ select
   .label-val
     color: #888888
 
+.radio
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  color: $text
+  font-size: 15px
+
+  .radio-inp
+    display: none
+
+  .radio-custom
+    position: relative
+    min-width: 30px
+    width: 30px
+    height: 30px
+    display: inline-block
+    vertical-align: middle
+    border: solid 1px #aa9b98
+      radius: 50%
+    background: #ffffff
+    cursor: pointer
+    margin: 0 10px 0 0
+
+  .label
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+
+  .radio-inp:checked + .radio-custom
+    border-color: $green
+    border-width: 2px
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      width: 12px
+      height: 12px
+      background-color: #289074
+      border-radius: 50%
+
+.checkout-item-pay
+  .checkout-item__wrapper
+    justify-content: flex-start
+  .radio
+    width: auto
+    margin: 0 34px 0 0
+    &:last-child
+      margin: 0
+    .label
+      max-width: 225px
+
+.promo-wrapper
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 20px 0 0
+  label
+    max-width: 178px
+    position: relative
+    margin: 0 17px 0 0
+    .input-icon
+      position: absolute
+      top: 50%
+      transform: translate(0,-50%)
+      right: 20px
+      width: 23px
+      height: 16px
+    input
+      border: dashed 2px #ffa131
+      color: #ffa131
+      font-size: 15px
+      padding: 0 43px 0 20px
+      &::placeholder
+        color: #ffa131
+  button, .btn
+    max-width: 126px
+    height: 46px
+    font-size: 15px
+    font-weight: normal
+    &:disabled
+      border-color: #eeeeee
+      background: #eeeeee
+      color: #bababa
+      cursor: inherit
+
+
+
+
 .list-checkbox
   li
     margin: 0 0 10px
@@ -2612,12 +2705,416 @@ select
 
 //page basket
 .wrapper-basket
-  margin: 20px 0 0
+  margin: 20px 0 90px
+  h3
+    margin: 0 0 25px
+    font-size: 20px
+    font-weight: 500
+    color: #1c1c1c
+
+
+.basket-value
+  color: #888888
+  margin: 0 0 0 5px
 
 .consent
-  padding: 14px 19px 17px
+  padding: 14px 100px 17px 19px
   background: #f7f3f1
+  a
+    display: inline
+    color: $green
 
+
+.consent-text
+  margin: 10px 0 0
+  font-size: 11px
+  font-weight: 300
+  display: block
+
+.sentence
+  width: 100%
+  overflow-y: auto
+  white-space: nowrap
+  display: flex
+  align-items: center
+  padding: 0 0 16px
+  margin: 0 0 22px
+  font-size: 13px
+
+.sentence-value
+  color: $green
+  margin: 0 5px
+  display: flex
+  align-items: center
+  font-weight: 500
+  img
+    margin: 0 0 0 5px
+
+.form-checkout
+  button
+    height: 52px
+    font-size: 16.5px
+
+.total-sum
+  display: flex
+  align-items: center
+  margin: 0 0 0 5px
+  font-size: 18.5px
+  img
+    width: 9px
+    margin: 0 0 0 5px
+
+.checkout
+  width: 590px
+  border-radius: 5px
+  border: solid 1px #eae6e5
+  height: 949px
+  overflow-y: auto
+  h3
+    margin: 0 0 8px
+  .checkbox
+    font-size: 13px
+    align-items: flex-start
+    .checkbox-custom
+      width: 22px
+      height: 22px
+      min-width: 22px
+      margin: 0 9px 0 0
+
+.option-delivery
+  .checkbox
+    align-items: center
+  .label
+    font-size: 15px
+    display: flex
+    align-items: center
+
+.question-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 19px
+  height: 19px
+  border: solid 1px #aa9b98
+    radius: 50%
+  font-size: 13px
+  color: #7a6763
+  margin: 0 0 0 5px
+
+.checkout-footer
+  padding: 18px 19px 20px
+
+.checkout-body
+  padding: 20px 20px 13px
+
+.checkout-item
+  padding: 17px 0
+  border-bottom: 1px solid #eae6e5
+  &:last-child
+    margin: 0
+
+  h4
+    font-size: 17px
+    font-weight: 500
+
+.checkout-item__wrapper
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+  label, .dropDown-select
+    width: calc(100% - 56px)
+    position: relative
+  input
+    width: 100%
+    height: 46px
+    border-radius: 5px
+    border: solid 1px #aa9b98
+    padding: 0 20px
+    color: #1c1c1c
+    &::placeholder
+      color: #1c1c1c
+  .w-100
+    width: 100%
+  .w-50
+    width: 49%
+  .mb-10
+    margin-bottom: 10px
+
+.input-description
+  position: absolute
+  top: 50%
+  transform: translate(0,-50%)
+  right: 19px
+  color: #bababa
+  font-size: 11px
+  font-weight: 300
+
+.checkout-item-contacts
+  input
+    color: #bababa
+    &::placeholder
+      color: #bababa
+
+.checkout-item__wrapper-box
+  width: 46px
+  margin: 0 0 0 auto
+  .price
+    font-size: 18px
+    img
+      width: 9px
+      margin: 0 0 0 4px
+
+.btn-location
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 46px
+  height: 46px
+  border-radius: 5px
+  border: solid 1px #289074
+  transition: .3s ease
+  &:hover
+    background: $green
+    img
+      filter: brightness(0) invert(1)
+
+
+.checkout-item__title
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 0 0 12px
+
+.dropDown-select
+  width: 100%
+  position: relative
+  height: 46px
+  border-radius: 5px
+  border: solid 1px #aa9b98
+  cursor: pointer
+
+.dropDown-select.open
+  box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
+  .dropDown-select__item
+    border-bottom: none
+    position: relative
+    z-index: 3
+    &:after
+      transform: rotate(180deg)
+  .dropDown-select__wrap
+    display: block
+
+.dropDown-select__item
+  background: #fff
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 20px
+  color: #1c1c1c
+  font-size: 15px
+  overflow: hidden
+  border-radius: 5px
+  height: 100%
+  &:after
+    content: ''
+    width: 11px
+    height: 6px
+    background: url("../img/arrow-bottom.png") no-repeat center
+      size: 11px
+    display: inline-block
+
+.dropDown-select__wrap
+  width: 100%
+  position: absolute
+  top: 100%
+  left: 0
+  z-index: 2
+  background: #fff
+  border-radius: 0 0 5px 5px
+  box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
+  border: solid 1px #aa9b98
+    top: none
+  padding: 0 20px
+  display: none
+
+.dropDown-select__list
+  width: 100%
+  li
+    border-top: 1px solid #eae6e5
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 14px 0
+    color: #1c1c1c
+    font-size: 15px
+    transition: .3s ease
+    &:hover
+      color: $green
+      .price
+        &:after
+          content: ''
+          display: inline-block
+          width: 9px
+          height: 11px
+          background: url("../img/rub-green.png") no-repeat center
+            size: contain
+          margin: 0 0 0 4px
+        img
+          display: none
+  .price
+    font-size: 18px
+    img
+      width: 9px
+      margin: 0 0 0 4px
+
+
+
+.label-text
+  display: block
+  color: #898989
+  font-size: 13px
+  margin: 5px 0 0
+
+.overflow-select
+  max-height: 200px
+
+select
+  outline: none
+  border-radius: 5px
+  border: solid 1px #aa9b98
+  width: 100%
+  height: 100%
+
+
+.basket-section
+  width: calc(100% - 590px)
+  padding: 20px 20px 0 0
+  .banner-horizontal
+    height: 98px
+    margin: 0 0 20px
+
+.card-product-line
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  margin: 0 0 10px
+  border-radius: 6px
+  border: solid 1px #eae6e5
+  overflow: hidden
+  &:last-child
+    margin: 0
+  .product-card__img
+    width: 140px
+    height: auto
+    border-radius: 0
+  .product-card__title
+    min-height: auto
+    margin: 0 0 19px
+    height: auto
+
+.card-product-line__content
+  width: calc(100% - 140px)
+  padding: 20px 25px
+
+.card-product-line__bottom
+  width: 100%
+  margin: 17px 0 0
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.quantity
+  width: 70px
+  height: 33px
+  margin: 0 15px 0 0
+
+.btn-delete
+  margin: 0 12px
+
+.ui-selectmenu-button
+  width: 100%
+  box-sizing: border-box
+  padding: 8px 15px 8px 14px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.ui-selectmenu-button.ui-button
+  width: 100%
+
+.ui-selectmenu-text
+  margin-right: 0
+  font-size: 13px
+
+.ui-button .ui-icon
+  background: url("../img/arrow-bottom.png") no-repeat center
+    size: 11px
+
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon
+  background: url("../img/arrow-top.png") no-repeat center
+    size: 11px
+
+.ui-icon
+  width: 11px
+  height: 6px
+  order: 1
+
+.ui-corner-all, .ui-corner-right, .ui-corner-br
+  border-radius: 5px
+
+.ui-corner-all, .ui-widget.ui-widget-content
+  border: solid 1px #aa9b98
+  background: transparent
+
+.ui-selectmenu-button
+  &:hover
+    background: #fff
+    box-shadow: 0px 3px 15px 0 rgba(84, 55, 49, 0.1)
+    outline: none
+  &:focus
+    background: #fff
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus
+  outline: none
+  background: #fff
+
+.ui-corner-bottom
+  border-radius: 0 0 5px 5px
+
+.ui-selectmenu-open
+  .ui-widget.ui-widget-content
+    background: #fff
+    box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
+    border: solid 1px #aa9b98
+      top: none
+
+.ui-selectmenu-button-open.ui-corner-all, .ui-selectmenu-button-open.ui-corner-top, .ui-selectmenu-button-open.ui-corner-right, .ui-selectmenu-button-open.ui-corner-tr
+  border-radius: 5px 5px 0 0
+  background: #fff
+  border: solid 1px #aa9b98
+    bottom: none
+
+.ui-menu .ui-menu-item-wrapper
+  padding: 13px 19px
+  border: none
+    top: solid 1px #aa9b98
+  color: #1c1c1c
+  font-size: 15px
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover
+  border-color: #aa9b98
+  background: transparent
+  color: $green
+
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active
+  margin: 0
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr
+  border-radius: 5px
 
 @import "media"
 // Всегда в конце
