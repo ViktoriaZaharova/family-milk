@@ -420,6 +420,9 @@
   .phone-wrapper
     max-width: 200px
 
+  .form-modal__bottom .btn
+    max-width: 48%
+
 @media only screen and (max-width : 768px)
   .about-box
     width: 100%
@@ -554,6 +557,17 @@
   .product-description .tabs__caption li
     font-size: 16px
     margin: 0 20px 0 0
+
+  .label-group
+    justify-content: flex-start
+    label
+      margin: 0 0 5px
+      width: 33.3%
+      max-width: none
+      padding: 0 5px
+
+  .icon-location
+    right: 10px
 
 @media only screen and (max-width : 760px)
   .slider-advantages
@@ -1130,6 +1144,18 @@
   .availability, .availability-in-stores
     width: 100%
     margin: 10px 0 0 0
+
+  .form-modal__bottom
+    flex-direction: column
+    align-items: center
+    .btn
+      max-width: none
+      margin: 0 0 10px
+      &:last-child
+        margin: 0
+
+  .label-group label
+    width: 50%
 
 @media only screen and (max-width : 420px)
   header .logo

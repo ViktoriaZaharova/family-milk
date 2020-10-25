@@ -4295,7 +4295,9 @@ select {
   .location {
     font-size: 10px; }
   .phone-wrapper {
-    max-width: 200px; } }
+    max-width: 200px; }
+  .form-modal__bottom .btn {
+    max-width: 48%; } }
 
 @media only screen and (max-width: 768px) {
   .about-box {
@@ -4409,7 +4411,18 @@ select {
     font-size: 13px; }
   .product-description .tabs__caption li {
     font-size: 16px;
-    margin: 0 20px 0 0; } }
+    margin: 0 20px 0 0; }
+  .label-group {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .label-group label {
+      margin: 0 0 5px;
+      width: 33.3%;
+      max-width: none;
+      padding: 0 5px; }
+  .icon-location {
+    right: 10px; } }
 
 @media only screen and (max-width: 760px) {
   .slider-advantages {
@@ -4894,7 +4907,22 @@ select {
     font-size: 14px; }
   .availability, .availability-in-stores {
     width: 100%;
-    margin: 10px 0 0 0; } }
+    margin: 10px 0 0 0; }
+  .form-modal__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .form-modal__bottom .btn {
+      max-width: none;
+      margin: 0 0 10px; }
+      .form-modal__bottom .btn:last-child {
+        margin: 0; }
+  .label-group label {
+    width: 50%; } }
 
 @media only screen and (max-width: 420px) {
   header .logo {
