@@ -4045,7 +4045,11 @@ select {
     border-radius: 5px;
     border: solid 1px #b3b3b3;
     left: 10px;
-    top: 10px; }
+    top: 10px;
+    -webkit-transition: .3s ease;
+    transition: .3s ease; }
+  .help-box:hover:before {
+    opacity: 0; }
 
 .help-box__title {
   font-size: 22px;
