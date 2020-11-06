@@ -587,7 +587,8 @@ h2
 .menu-category
   height: 563px
   position: relative
-  padding: 0 33px 0 10px
+  padding: 0 23px 0 10px
+  border-right: 1px solid #aa9b98
 
 
 .menu-category__links
@@ -596,21 +597,32 @@ h2
   color: $text
   font-size: 14px
   width: 100%
-  padding: 14px 10px
+  padding: 14px 15px
   border-radius: 5px
   position: relative
-
+  &:before
+    content: ''
+    position: absolute
+    right: 3px
+    top: 50%
+    transform: translate(0,-50%)
+    width: 10px
+    height: 10px
+    background: url("../img/arrow-right.png") no-repeat center
+      size: contain
+    transition: .3s ease
   &:hover
     color: #fff
     background: #7f6965
-
+    &:before
+      filter: brightness(0) invert(1)
     .menu-category__links-icon
       filter: brightness(0) invert(1)
 
 .menu-category__links-icon
   width: 21px
   height: 23px
-  margin: 0 9px 0 0
+  margin: 0 7px 0 0
 
 .catalog-wrapper__content
   width: calc(100% - 328px)
@@ -3374,6 +3386,137 @@ select
 .delivery-date__item.active
   background: #aa9b98
   color: #fff
+
+//help page
+.wrapper-help, .wrapper-about
+  margin: 0 0 77px
+
+.wrapper-about
+  .help-box
+    height: 100%
+
+.sidebar-menu__links
+  color: #1c1c1c
+  font-size: 14px
+
+.sidebar-menu__item
+  margin: 0 0 18px
+  &:last-child
+    margin: 0
+
+.help-box
+  border-radius: 5px
+  border: solid 1px #b3b3b3
+  background: #ffffff
+  z-index: 1
+  position: relative
+  margin: 0 0 20px
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    border-radius: 5px
+    border: solid 1px #b3b3b3
+    left: 10px
+    top: 10px
+
+.help-box__title
+  font-size: 22px
+  font-weight: 500
+  margin: 0 0 25px
+  color: #1c1c1c
+  min-height: 49px
+
+.help-box__body
+  position: relative
+  z-index: 1
+  background: #ffffff
+  border-radius: 5px
+  padding: 24px 15px 17px 18px
+  width: 100%
+  height: 100%
+
+.help-box__icon
+  fill: #289074
+  max-width: 114px
+  height: 114px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-start
+
+.help-box-menu
+  margin: 26px 0 0
+  li
+    margin: 0 0 15px
+    &:last-child
+      margin: 0
+    a
+      color: #1c1c1c
+      font-size: 15px
+
+.banner-callback
+  margin: 10px 0 0
+  padding: 35px 30px
+  background: url("../img/bg2.png") no-repeat center
+    size: cover
+  border: solid 1px #aa9b98
+  background-color: #543731
+  color: #fff
+  border-radius: 5px
+  h3
+    font-size: 30px
+    font-weight: 500
+    margin: 0 0 24px
+    span
+      font-weight: normal
+      display: block
+
+.banner-callback__links
+  display: flex
+  align-items: center
+  color: #fff
+  strong
+    font-weight: 500
+
+.banner-callback__icon
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  background: #289074
+  width: 40px
+  height: 40px
+  min-width: 40px
+  padding: 10px
+  fill: #fff
+  margin: 0 15px 0 0
+
+.line-wrapper
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 21px 0 0
+  .banner-callback__links
+    margin: 0 52px 0 0
+    &:last-child
+      margin: 0
+    &:hover
+      .banner-callback__text
+        text-decoration: none
+  .banner-callback__text
+    color: #29b1e3
+    text-decoration: underline
+
+
+.banner-callback__icon-whatsapp
+  width: 40px
+  height: 40px
+  min-width: 40px
+  margin: 0 15px 0 0
+
 
 @import "media"
 // Всегда в конце
