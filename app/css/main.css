@@ -4036,7 +4036,9 @@ select {
   background: #ffffff;
   z-index: 1;
   position: relative;
-  margin: 0 0 20px; }
+  margin: 0 0 20px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
   .help-box:before {
     content: '';
     position: absolute;
@@ -4048,8 +4050,11 @@ select {
     top: 10px;
     -webkit-transition: .3s ease;
     transition: .3s ease; }
-  .help-box:hover:before {
-    opacity: 0; }
+  .help-box:hover {
+    -webkit-box-shadow: 0 0 10px rgba(84, 85, 49, 0.5);
+            box-shadow: 0 0 10px rgba(84, 85, 49, 0.5); }
+    .help-box:hover:before {
+      opacity: 0; }
 
 .help-box__title {
   font-size: 22px;
