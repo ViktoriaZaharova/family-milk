@@ -3523,6 +3523,141 @@ select
   min-width: 40px
   margin: 0 15px 0 0
 
+//delivery page
+.delivery-banner
+  width: 100%
+  overflow: hidden
+  border-radius: 5px
+  height: 212px
+  position: relative
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  h3
+    font-size: 24px
+    font-weight: bold
+    margin: 0 0 15px
+    text-transform: uppercase
+  .box-text
+    width: 100%
+    font-weight: normal
+    font-size: 16px
+    line-height: normal
+
+.delivery-banner__content
+  color: #fff
+  z-index: 1
+  position: relative
+  max-width: 506px
+  width: 100%
+  padding: 30px 52px 27px 27px
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    right: 34px
+    height: 100%
+    width: calc(100% + 30px)
+    background: #289074
+    transform: skewX(-18deg)
+  >*
+    position: relative
+
+.delivery-banner-img
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translate(0,-50%)
+  max-width: 521px
+  width: 100%
+
+.stages-delivery
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  margin: 70px 0 0
+
+.stage-delivery
+  width: 25%
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  margin: 0 0 63px
+  font-size: 14px
+  color: #1c1c1c
+  line-height: 1.71
+  &:last-child
+    .stage-delivery__icon
+      &:before
+        display: none
+
+.stage-delivery__icon
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 25px 15px
+  width: 88px
+  height: 88px
+  border: solid 1px #289074
+    radius: 50%
+  margin: 0 auto 17px
+  position: relative
+  background: #ffffff
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    transform: translate(0,-50%)
+    right: -130px
+    width: 125px
+    height: 1px
+    border: dashed 1px #289074
+  .icon-svg
+    fill: #289074
+
+.tabs-delivery
+  .tabs__caption
+    li
+      width: 49%
+      max-width: none
+      height: 61px
+      border: solid 1px #289074
+        radius: 0
+      color: #1c1c1c
+      font-size: 18px
+      text-transform: none
+    .active
+      background: #289074
+      color: #fff
+      font-weight: 500
+  .tabs__content
+    font-size: 14px
+    line-height: 1.71
+    font-weight: normal
+    p
+      margin: 0
+    .box-text
+      font-size: 14px
+      font-weight: normal
+      margin: 0 0 28px
+
+.list-dots
+  li
+    position: relative
+    display: flex
+    align-items: flex-start
+    margin: 0 0 20px
+    &:before
+      content: ''
+      min-width: 9px
+      width: 9px
+      height: 9px
+      background: #289074
+      border-radius: 50%
+      margin: 7px 10px 0 0
 
 @import "media"
 // Всегда в конце

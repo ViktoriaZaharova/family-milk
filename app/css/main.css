@@ -4171,6 +4171,168 @@ select {
   min-width: 40px;
   margin: 0 15px 0 0; }
 
+.delivery-banner {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  height: 212px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .delivery-banner h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 15px;
+    text-transform: uppercase; }
+  .delivery-banner .box-text {
+    width: 100%;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: normal; }
+
+.delivery-banner__content {
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  max-width: 506px;
+  width: 100%;
+  padding: 30px 52px 27px 27px; }
+  .delivery-banner__content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 34px;
+    height: 100%;
+    width: calc(100% + 30px);
+    background: #289074;
+    -webkit-transform: skewX(-18deg);
+            transform: skewX(-18deg); }
+  .delivery-banner__content > * {
+    position: relative; }
+
+.delivery-banner-img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  max-width: 521px;
+  width: 100%; }
+
+.stages-delivery {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 70px 0 0; }
+
+.stage-delivery {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 0 0 63px;
+  font-size: 14px;
+  color: #1c1c1c;
+  line-height: 1.71; }
+  .stage-delivery:last-child .stage-delivery__icon:before {
+    display: none; }
+
+.stage-delivery__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 15px;
+  width: 88px;
+  height: 88px;
+  border: solid 1px #289074;
+    border-radius: 50%;
+  margin: 0 auto 17px;
+  position: relative;
+  background: #ffffff; }
+  .stage-delivery__icon:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    right: -130px;
+    width: 125px;
+    height: 1px;
+    border: dashed 1px #289074; }
+  .stage-delivery__icon .icon-svg {
+    fill: #289074; }
+
+.tabs-delivery .tabs__caption li {
+  width: 49%;
+  max-width: none;
+  height: 61px;
+  border: solid 1px #289074;
+    border-radius: 0;
+  color: #1c1c1c;
+  font-size: 18px;
+  text-transform: none; }
+
+.tabs-delivery .tabs__caption .active {
+  background: #289074;
+  color: #fff;
+  font-weight: 500; }
+
+.tabs-delivery .tabs__content {
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: normal; }
+  .tabs-delivery .tabs__content p {
+    margin: 0; }
+  .tabs-delivery .tabs__content .box-text {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 28px; }
+
+.list-dots li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 0 20px; }
+  .list-dots li:before {
+    content: '';
+    min-width: 9px;
+    width: 9px;
+    height: 9px;
+    background: #289074;
+    border-radius: 50%;
+    margin: 7px 10px 0 0; }
+
 @media only screen and (max-width: 1210px) {
   .tabs__caption li {
     font-size: 14px;
@@ -4491,7 +4653,19 @@ select {
   .help-box-menu li {
     margin: 0 0 10px; }
     .help-box-menu li a {
-      font-size: 13px; } }
+      font-size: 13px; }
+  .stage-delivery {
+    width: 50%;
+    margin: 0 0 30px; }
+    .stage-delivery br {
+      display: none; }
+  .stage-delivery__icon:before {
+    display: none; }
+  .stages-delivery {
+    margin: 30px 0 0; }
+  .delivery-banner__content {
+    max-width: 460px;
+    padding: 20px 32px 27px 27px; } }
 
 @media only screen and (max-width: 768px) {
   .about-box {
@@ -4968,7 +5142,34 @@ select {
     .line-wrapper .banner-callback__links {
       margin: 0 0 20px; }
   .wrapper-help, .wrapper-about {
-    margin: 0 0 30px; } }
+    margin: 0 0 30px; }
+  .delivery-banner {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .delivery-banner h3 {
+      font-size: 20px;
+      margin: 0 0 15px; }
+    .delivery-banner .box-text {
+      font-size: 14px; }
+  .delivery-banner__content {
+    max-width: none;
+    width: 100%;
+    background: #289074;
+    padding: 20px; }
+    .delivery-banner__content:before {
+      display: none; }
+  .delivery-banner-img {
+    position: relative;
+    max-width: none;
+    -webkit-transform: none;
+            transform: none;
+    top: 0; } }
 
 @media only screen and (max-width: 500px) {
   h2 {
@@ -5052,7 +5253,23 @@ select {
   .cost-product .old-price {
     font-size: 16px; }
     .cost-product .old-price img {
-      width: 7px; } }
+      width: 7px; }
+  .tabs-delivery .tabs__caption {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .tabs-delivery .tabs__caption li {
+      width: 100%;
+      margin: 0 0 10px;
+      height: 54px;
+      font-size: 16px; }
+  .tabs-delivery .col-3 {
+    width: 100%; }
+  .list-dots li {
+    margin: 0 0 10px; }
+  .stage-delivery__icon {
+    width: 60px;
+    height: 60px;
+    padding: 10px; } }
 
 @media only screen and (max-width: 480px) {
   .slider-products-card__content {

@@ -399,6 +399,23 @@
       a
         font-size: 13px
 
+  .stage-delivery
+    width: 50%
+    margin: 0 0 30px
+    br
+      display: none
+
+  .stage-delivery__icon
+    &:before
+      display: none
+
+  .stages-delivery
+    margin: 30px 0 0
+
+  .delivery-banner__content
+    max-width: 460px
+    padding: 20px 32px 27px 27px
+
 @media only screen and (max-width : 768px)
   .about-box
     width: 100%
@@ -922,6 +939,31 @@
   .wrapper-help, .wrapper-about
     margin: 0 0 30px
 
+  .delivery-banner
+    height: auto
+    flex-direction: column
+    align-items: flex-start
+    h3
+      font-size: 20px
+      margin: 0 0 15px
+    .box-text
+      font-size: 14px
+
+  .delivery-banner__content
+    max-width: none
+    width: 100%
+    background: #289074
+    padding: 20px
+    &:before
+      display: none
+
+  .delivery-banner-img
+    position: relative
+    max-width: none
+    transform: none
+    top: 0
+
+
 
 @media only screen and (max-width : 500px)
 
@@ -1019,6 +1061,26 @@
     font-size: 16px
     img
       width: 7px
+
+  .tabs-delivery
+    .tabs__caption
+      flex-wrap: wrap
+      li
+        width: 100%
+        margin: 0 0 10px
+        height: 54px
+        font-size: 16px
+    .col-3
+      width: 100%
+
+  .list-dots
+    li
+      margin: 0 0 10px
+
+  .stage-delivery__icon
+    width: 60px
+    height: 60px
+    padding: 10px
 
 @media only screen and (max-width : 480px)
   .slider-products-card__content
