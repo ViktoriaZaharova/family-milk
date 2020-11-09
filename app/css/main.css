@@ -2777,6 +2777,7 @@ select {
   .checkbox .checkbox-custom {
     position: relative;
     width: 26px;
+    min-width: 26px;
     height: 26px;
     display: inline-block;
     vertical-align: middle;
@@ -3341,8 +3342,8 @@ select {
             align-items: flex-start; }
     .checkout .checkbox .checkbox-custom {
       width: 22px;
-      height: 22px;
       min-width: 22px;
+      height: 22px;
       margin: 0 9px 0 0; }
 
 .option-delivery .checkbox {
@@ -4365,6 +4366,13 @@ select {
     text-align: center;
     margin: 24px auto 49px;
     font-weight: 500; }
+  .window-box .btn {
+    height: 61px;
+    font-size: 18px; }
+  .window-box .btn-border {
+    color: #1c1c1c; }
+    .window-box .btn-border:hover {
+      color: #fff; }
 
 .window-box__body {
   position: relative;
@@ -4383,7 +4391,18 @@ select {
 
 .form {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
   .form label {
     margin: 0 0 40px; }
   .form input {
@@ -4391,7 +4410,11 @@ select {
       border-radius: 5px;
     background-color: #ffffff;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    font-size: 16px;
+    font-weight: bold;
+    color: #181818;
+    padding: 0 25px; }
   .form .input-title {
     font-size: 16px;
     margin: 0 0 14px;
@@ -4409,9 +4432,60 @@ select {
     border-radius: 5px;
     border: solid 1px #b3b3b3;
     width: 100%; }
-  .form button {
-    height: 61px;
-    font-size: 18px; }
+  .form .button-group {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .form .button-group .btn {
+      width: 100%;
+      max-width: none;
+      margin: 0 auto 20px; }
+      .form .button-group .btn:last-child {
+        margin: 0 auto; }
+  .form .line-wrapper .input-title {
+    width: auto; }
+  .form .line-wrapper a {
+    margin: 0 0 14px auto; }
+  .form .checkbox {
+    margin: 0 0 13px;
+    font-size: 13px; }
+    .form .checkbox .checkbox-custom {
+      width: 17px;
+      min-width: 17px;
+      height: 17px;
+      margin: 0 15px 0 0;
+      border: none;
+      background: #4ea68e; }
+    .form .checkbox .checkbox-inp:checked + .checkbox-custom {
+      -webkit-box-shadow: 0px 3px 5px 0 rgba(84, 55, 49, 0.46);
+              box-shadow: 0px 3px 5px 0 rgba(84, 55, 49, 0.46);
+      background: #4ea68e; }
+      .form .checkbox .checkbox-inp:checked + .checkbox-custom:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        width: 9px;
+        height: 8px;
+        background: url("../img/check-mark.png") no-repeat center;
+          background-size: 9px; }
+    .form .checkbox a {
+      display: inline;
+      text-decoration: underline;
+      color: #1c1c1c; }
+
+.form-registration .recapcha {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 40px 0 0; }
+  .form-registration .recapcha img {
+    margin: 0; }
+
+.links-accent {
+  color: #289074; }
 
 .input-wrapper {
   position: relative;
@@ -4458,6 +4532,41 @@ select {
           justify-content: center; }
   .recapcha img {
     margin: 0 auto; }
+
+.window-box-welcome {
+  max-width: 700px; }
+  .window-box-welcome .window-box__body {
+    padding: 40px 90px 50px; }
+
+.window-box-successful .description-title {
+  text-align: center;
+  margin: 0 auto 39px; }
+
+.window-box-successful h1 {
+  margin: 0 auto 19px; }
+
+.input-wrapper-error input {
+  border-bottom-color: #d63030;
+  border-bottom-width: 2px; }
+
+.error-box {
+  width: 100%;
+  color: #d63030;
+  font-size: 12px;
+  margin: 20px 0 0;
+  display: block; }
+
+.window-box-registration {
+  max-width: none; }
+  .window-box-registration .window-box__body {
+    padding: 50px 60px; }
+
+.col-form {
+  width: 48.5%; }
+
+.input-wrapper-border input {
+  border-bottom-color: #543731;
+  border-bottom-width: 2px; }
 
 @media only screen and (max-width: 1210px) {
   .tabs__caption li {
@@ -4934,7 +5043,9 @@ select {
     width: 48%;
     margin: 0 0 20px; }
     .wrapper-help .help-box:last-child {
-      margin: 0 0 20px; } }
+      margin: 0 0 20px; }
+  .window-box-registration .window-box__body {
+    padding: 30px 20px; } }
 
 @media only screen and (max-width: 760px) {
   .slider-advantages {
@@ -5307,11 +5418,22 @@ select {
     -webkit-transform: none;
             transform: none;
     top: 0; }
-  .form button {
+  .window-box .btn {
     height: 45px;
     font-size: 16px; }
   .window-box h6 {
-    margin: 20px auto 25px; } }
+    margin: 20px auto 25px; }
+  .window-box .line-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .window-box-welcome .window-box__body {
+    padding: 30px 20px; }
+  .col-form {
+    width: 100%; }
+  .form-registration .recapcha {
+    margin: 30px 0; } }
 
 @media only screen and (max-width: 500px) {
   h2 {
