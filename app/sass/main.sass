@@ -3463,7 +3463,9 @@ select
       font-size: 15px
 
 .banner-callback
-  margin: 10px 0 0
+  max-width: 895px
+  width: 100%
+  margin: 10px auto 0
   padding: 35px 30px
   background: url("../img/bg2.png") no-repeat center
     size: cover
@@ -3524,6 +3526,10 @@ select
   margin: 0 15px 0 0
 
 //delivery page
+.wrapper-delivery
+  .wrapper-content
+    margin: 0 0 29px
+
 .delivery-banner
   width: 100%
   overflow: hidden
@@ -3658,6 +3664,125 @@ select
       background: #289074
       border-radius: 50%
       margin: 7px 10px 0 0
+
+//wrapper-window
+.wrapper-window
+  margin: 99px auto 50px
+
+.window-box
+  margin: 0 auto 59px
+  position: relative
+  max-width: 762px
+  width: 100%
+  border-radius: 10px
+  border: solid 1px #b3b3b3
+  &:before
+    content: ''
+    position: absolute
+    border-radius: 10px
+    border: solid 1px #b3b3b3
+    width: 100%
+    height: 100%
+    top: 10px
+    left: 10px
+  h1
+    text-align: center
+    width: 100%
+    margin: 0 auto 47px
+  h6
+    text-align: center
+    margin: 24px auto 49px
+    font-weight: 500
+
+.window-box__body
+  position: relative
+  width: 100%
+  height: 100%
+  background: #ffffff
+  border-radius: 10px
+  padding: 29px 120px 50px
+
+.btn-close-window
+  position: absolute
+  width: 21px
+  height: 21px
+  top: 30px
+  right: 30px
+
+.form
+  width: 100%
+  margin: 0 auto
+  label
+    margin: 0 0 40px
+  input
+    border: solid 1px #b3b3b3
+      radius: 5px
+    background-color: #ffffff
+    position: relative
+    z-index: 1
+  .input-title
+    font-size: 16px
+    margin: 0 0 14px
+    width: 100%
+    color: #1c1c1c
+  .label-message
+    margin: 0 auto 20px
+    .input-title
+      text-align: center
+      justify-content: center
+  textarea
+    height: 100px
+    border-radius: 5px
+    border: solid 1px #b3b3b3
+    width: 100%
+
+  button
+    height: 61px
+    font-size: 18px
+
+.input-wrapper
+  position: relative
+  width: 100%
+  height: 100%
+  display: block
+
+  &:hover
+    &:before
+      opacity: 0
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    border: solid 1px #b3b3b3
+      radius: 5px
+    top: 10px
+    left: 10px
+    transition: .3s ease
+
+.canceling-number
+  margin: 0 auto
+  text-align: center
+
+.window-box-cancel
+
+  max-width: 552px
+  h1
+    margin: 0 auto 19px
+  .window-box__body
+    padding: 39px 16px 40px
+  .form
+    button
+      height: 43px
+
+.recapcha
+  margin: 0 auto 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    margin: 0 auto
+
 
 @import "media"
 // Всегда в конце

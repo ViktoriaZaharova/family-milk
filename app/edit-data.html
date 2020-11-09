@@ -1239,228 +1239,144 @@
 
     </header>
 
-    <div class="breadcrumbs-section">
+    <div class="wrapper wrapper-window">
         <div class="container">
-            <ul class="breadcrumb">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">Компания</a></li>
-                <li><span>Доставка</span></li>
-            </ul>
+
+            <div class="w-100">
+                <div class="window-box">
+                    <div class="window-box__body">
+                        <a href="#" class="btn-close-window"><img src="img/close.png" alt=""></a>
+                        <h1>Изменить данные</h1>
+
+                        <form method="post" class="form">
+                            <label>
+                                <span class="input-title">Фамилия, Имя</span>
+                                <span class="input-wrapper"><input type="text" name="name"></span>
+                            </label>
+                            <label>
+                                <span class="input-title">E-mail</span>
+                                <span class="input-wrapper"><input type="text" name="mail"></span>
+                            </label>
+                            <label>
+                                <span class="input-title">Телефон</span>
+                                <span class="input-wrapper"><input type="text" name="phone"></span>
+                            </label>
+                            <label>
+                                <span class="input-title">Адрес доставки</span>
+                                <span class="input-wrapper"><input type="text" name="address"></span>
+                            </label>
+                            <button type="submit" class="btn btn-green">Сохранить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100">
+                <div class="banner-callback">
+                    <h3>Не нашли ответ на свой вопрос?
+                        <span>Спросите наших специалистов</span>
+                    </h3>
+
+                    <a href="tel:+78126977777" class="banner-callback__links">
+                        <span class="banner-callback__icon"><svg class="icon-svg"><use
+                                xlink:href="img/sprite.svg#phone"></use></svg></span>
+                        <span class="banner-callback__text">Звоните <strong>+7 (812) 697 77 77</strong></span>
+                    </a>
+
+                    <div class="line-wrapper">
+                        <a href="#" class="banner-callback__links">
+                            <span class="banner-callback__icon"><svg class="icon-svg"><use
+                                    xlink:href="img/sprite.svg#chat"></use></svg></span>
+                            <span class="banner-callback__text">Начните онлайн чат</span>
+                        </a>
+
+                        <a href="#" class="banner-callback__links">
+                            <span class="banner-callback__icon-whatsapp"><svg class="icon-svg"><use
+                                    xlink:href="img/sprite.svg#whatsapp"></use></svg></span>
+                            <span class="banner-callback__text">Whatsapp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="wrapper wrapper-delivery">
-        <div class="container">
-            <div class="sidebar">
 
-                <div class="sidebar-item sidebar-item__category">
-                    <div class="sidebar-box">
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu__item">
-                                <a class="sidebar-menu__links" href="#">Как сделать заказ</a>
-                            </li>
-                            <li class="sidebar-menu__item">
-                                <a class="sidebar-menu__links" href="#">Оплата</a>
-                            </li>
-                            <li class="sidebar-menu__item">
-                                <a class="sidebar-menu__links" href="#">Доставка</a>
-                            </li>
-                            <li class="sidebar-menu__item">
-                                <a class="sidebar-menu__links" href="#">Самовывоз</a>
-                            </li>
-                            <li class="sidebar-menu__item">
-                                <a class="sidebar-menu__links" href="#">Обмен и возврат</a>
-                            </li>
-                        </ul>
-                    </div>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-box-mobile">
+                    <h3>Подписаться на рассылку</h3>
+
+                    <form method="post" class="form-subscribe">
+                        <label><input type="text" placeholder="Email" required></label>
+                        <button type="submit">Подписаться</button>
+                    </form>
                 </div>
 
-            </div>
-
-            <div class="wrapper-content">
-                <div class="line-title">
-                    <h1>Доставка</h1>
-                </div>
-
-                <div class="delivery-banner">
-                    <div class="delivery-banner__content">
-                        <h3>Доставка в Санкт-Петербурге
-                            и Ленинградской области
-                        </h3>
-                        <div class="box-text">
-                            <p>Мы ценим комфорт наших покупателей,<br>поэтому быстро и бережно доставляем<br>
-                                заказы в удобное место и время.</p>
-                        </div>
-                    </div>
-                    <img src="img/bg3.jpg" alt="" class="delivery-banner-img">
-                </div>
-
-                <div class="stages-delivery">
-                    <div class="stage-delivery">
-                        <div class="stage-delivery__icon">
-                            <svg class="icon-svg">
-                                <use xlink:href="img/sprite.svg#help4"></use>
-                            </svg>
-                        </div>
-                        <div class="stage-delivery__body">
-                            <p>Бережная транспортировка
-                                товара на специально
-                                оборудованных автомобилях</p>
-                        </div>
-                    </div>
-
-                    <div class="stage-delivery">
-                        <div class="stage-delivery__icon">
-                            <svg class="icon-svg">
-                                <use xlink:href="img/sprite.svg#delivery1"></use>
-                            </svg>
-                        </div>
-                        <div class="stage-delivery__body">
-                            <p>Обязательный звонок<br>
-                                курьера за час до <br>
-                                доставки товара</p>
-                        </div>
-                    </div>
-
-                    <div class="stage-delivery">
-                        <div class="stage-delivery__icon">
-                            <svg class="icon-svg">
-                                <use xlink:href="img/sprite.svg#delivery2"></use>
-                            </svg>
-                        </div>
-                        <div class="stage-delivery__body">
-                            <p>Доставка товара до указанного
-                                Вами места в квартире или
-                                офиса независимо от этажа
-                                и наличия лифта</p>
-                        </div>
-                    </div>
-
-                    <div class="stage-delivery">
-                        <div class="stage-delivery__icon">
-                            <svg class="icon-svg">
-                                <use xlink:href="img/sprite.svg#delivery3"></use>
-                            </svg>
-                        </div>
-                        <div class="stage-delivery__body">
-                            <p>Распаковка и <br>
-                                демонстрация <br>
-                                товара</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tabs tabs-delivery">
-                    <ul class="tabs__caption">
-                        <li class="active">Курьерская доставка</li>
-                        <li>Самовывоз</li>
+                <div class="footer-box">
+                    <h3>Помощь покупателю
+                        <span class="icon-drop"></span>
+                    </h3>
+                    <ul class="footer-menu">
+                        <li><a href="#">Как зарегистрироваться</a></li>
+                        <li><a href="#">Как сделать заказ</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Самовывоз</a></li>
+                        <li><a href="#">Сервисная служба</a></li>
+                        <li><a href="#">Обмен и возврат</a></li>
                     </ul>
-
-                    <div class="tabs__content active">
-                        <div class="box-text">
-                            <p>Доставка осуществляется по районам доставки по графику - Вторник, Четверг и Пятница.</p>
-                            <p>При наличии товаров в полном объеме возможна доставка день в день.</p>
-                        </div>
-
-                        <div class="w-100">
-                            <div class="row">
-                                <div class="col-3">
-                                    <ul class="list-dots">
-                                        <li>Петроградский район</li>
-                                        <li>Выборгский район</li>
-                                        <li>Калининский район</li>
-                                    </ul>
-                                </div>
-                                <div class="col-3">
-                                    <ul class="list-dots">
-                                        <li>Красногвардейский район</li>
-                                        <li>Центральный район</li>
-                                        <li>Василеоостровский район</li>
-                                    </ul>
-                                </div>
-                                <div class="col-3">
-                                    <ul class="list-dots">
-                                        <li>Всеволожский район: Энколово, Юкки,
-                                            Порошкино, Сертолово, Левашово, Песочный,
-                                            Сярьги,Токсово, Кузьмолово, Агалатово,
-                                            Вартемяги, Дранишники
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="box-text">
-                            <p>При сумме заказа свыше 15 000 рублей единовременно – возможна доставка в любой район
-                                города (внутри КАД).</p>
-                            <p>Доставка осуществляется только на собственных автомобилях компании при соблюдении
-                                температурного режима доставки</p>
-                        </div>
-
-                    </div>
-
-                    <div class="tabs__content">
-                        <div class="box-text">
-                            <p>Самостоятельно забрать свой заказ вы можете в нашем магазине по адресу: Ленинградская
-                                обл., д. Порошкино, Ленинградское шоссе, д. 25Б.Магазин работает с 9:00 до 21:00.При
-                                онлайн-оплате на сайте возможен самовывоз в магазинах по адресам:·</p>
-                        </div>
-
-                        <div class="w-100">
-                            <div class="row">
-                                <div class="col-3">
-                                    <ul class="list-dots">
-                                        <li>Греческий проспект 12</li>
-                                    </ul>
-                                </div>
-                                <div class="col-3">
-                                    <ul class="list-dots">
-                                        <li>пр. Энгельса 97</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="w-100">
-                        <div class="banner-callback">
-                            <h3>Не нашли ответ на свой вопрос?
-                                <span>Спросите наших специалистов</span>
-                            </h3>
-
-                            <a href="tel:+78126977777" class="banner-callback__links">
-                            <span class="banner-callback__icon"><svg class="icon-svg"><use
-                                    xlink:href="img/sprite.svg#phone"></use></svg></span>
-                                <span class="banner-callback__text">Звоните <strong>+7 (812) 697 77 77</strong></span>
-                            </a>
-
-                            <div class="line-wrapper">
-                                <a href="#" class="banner-callback__links">
-                                <span class="banner-callback__icon"><svg class="icon-svg"><use
-                                        xlink:href="img/sprite.svg#chat"></use></svg></span>
-                                    <span class="banner-callback__text">Начните онлайн чат</span>
-                                </a>
-
-                                <a href="#" class="banner-callback__links">
-                                <span class="banner-callback__icon-whatsapp"><svg class="icon-svg"><use
-                                        xlink:href="img/sprite.svg#whatsapp"></use></svg></span>
-                                    <span class="banner-callback__text">Whatsapp</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
+                <div class="footer-box">
+                    <h3>Информация
+                        <span class="icon-drop"></span>
+                    </h3>
+                    <ul class="footer-menu">
+                        <li><a href="#">Адреса магазинов, пункты</a></li>
+                        <li><a href="#">Статус заказа</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Гарантии</a></li>
+                        <li><a href="#">Бонусная программа</a></li>
+                        <li><a href="#">Кредит</a></li>
+                        <li><a href="#">Подарочные карты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h3>Компания
+                        <span class="icon-drop"></span>
+                    </h3>
 
+                    <ul class="footer-menu">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Ресторан</a></li>
+                        <li><a href="#">Производство</a></li>
+                        <li><a href="#">Поставщикам</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h3>На связи 24/7</h3>
 
-        <footer>
-            <div class="footer-top">
-                <div class="container">
-                    <div class="footer-box-mobile">
-                        <h3>Подписаться на рассылку</h3>
+                    <a href="whatsapp://send?phone=+78126977777" class="whatsapp">
+                        <span class="whatsapp-icon"><img src="img/whatsapp.png" alt=""></span>
+                        <span class="whatsapp-text">Напишите нам в WhatsApp</span>
+                    </a>
+                    <a href="tel:+78126977777" class="phone"><span class="phone-icon"><img src="img/smartphone.png"
+                                                                                           alt=""></span>+7
+                        (812) 697 77 77</a>
+                    <a href="tel:+79214160369" class="phone"><span class="phone-icon"><img src="img/smartphone.png"
+                                                                                           alt=""></span>+7
+                        (921) 416 03 69</a>
+                    <a href="mailto:" class="mail">
+                        <span class="mail-icon"><img src="img/mail.png" alt=""></span>
+                        Форма обратной связи</a>
+                </div>
+                <div class="footer-box">
+
+                    <div class="footer-box-pc">
+                        <h3>Новости и акции</h3>
 
                         <form method="post" class="form-subscribe">
                             <label><input type="text" placeholder="Email" required></label>
@@ -1468,120 +1384,50 @@
                         </form>
                     </div>
 
-                    <div class="footer-box">
-                        <h3>Помощь покупателю
-                            <span class="icon-drop"></span>
-                        </h3>
-                        <ul class="footer-menu">
-                            <li><a href="#">Как зарегистрироваться</a></li>
-                            <li><a href="#">Как сделать заказ</a></li>
-                            <li><a href="#">Оплата</a></li>
-                            <li><a href="#">Доставка</a></li>
-                            <li><a href="#">Самовывоз</a></li>
-                            <li><a href="#">Сервисная служба</a></li>
-                            <li><a href="#">Обмен и возврат</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-box">
-                        <h3>Информация
-                            <span class="icon-drop"></span>
-                        </h3>
-                        <ul class="footer-menu">
-                            <li><a href="#">Адреса магазинов, пункты</a></li>
-                            <li><a href="#">Статус заказа</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Гарантии</a></li>
-                            <li><a href="#">Бонусная программа</a></li>
-                            <li><a href="#">Кредит</a></li>
-                            <li><a href="#">Подарочные карты</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-box">
-                        <h3>Компания
-                            <span class="icon-drop"></span>
-                        </h3>
+                    <h3>Мы в соцсетях</h3>
+                    <ul class="list-social">
+                        <li><a href="#"><img src="img/vk.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ok.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/insta.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/fb.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/youtube.png" alt=""></a></li>
+                    </ul>
 
-                        <ul class="footer-menu">
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Ресторан</a></li>
-                            <li><a href="#">Производство</a></li>
-                            <li><a href="#">Поставщикам</a></li>
-                            <li><a href="#">Гарантия</a></li>
-                            <li><a href="#">Вакансии</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-box">
-                        <h3>На связи 24/7</h3>
+                    <h3>Принимаем к оплате</h3>
 
-                        <a href="whatsapp://send?phone=+78126977777" class="whatsapp">
-                            <span class="whatsapp-icon"><img src="img/whatsapp.png" alt=""></span>
-                            <span class="whatsapp-text">Напишите нам в WhatsApp</span>
-                        </a>
-                        <a href="tel:+78126977777" class="phone"><span class="phone-icon"><img src="img/smartphone.png"
-                                                                                               alt=""></span>+7
-                            (812) 697 77 77</a>
-                        <a href="tel:+79214160369" class="phone"><span class="phone-icon"><img src="img/smartphone.png"
-                                                                                               alt=""></span>+7
-                            (921) 416 03 69</a>
-                        <a href="mailto:" class="mail">
-                            <span class="mail-icon"><img src="img/mail.png" alt=""></span>
-                            Форма обратной связи</a>
-                    </div>
-                    <div class="footer-box">
-
-                        <div class="footer-box-pc">
-                            <h3>Новости и акции</h3>
-
-                            <form method="post" class="form-subscribe">
-                                <label><input type="text" placeholder="Email" required></label>
-                                <button type="submit">Подписаться</button>
-                            </form>
-                        </div>
-
-                        <h3>Мы в соцсетях</h3>
-                        <ul class="list-social">
-                            <li><a href="#"><img src="img/vk.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/ok.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/insta.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/fb.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/youtube.png" alt=""></a></li>
-                        </ul>
-
-                        <h3>Принимаем к оплате</h3>
-
-                        <ul class="list-payment">
-                            <li><a href="#"><img src="img/applepay.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/gpay.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/pay.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/mastercard.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/visa.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/mir.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="copyright">© «Это у нас», 2020</div>
-
-                    <ul class="menu-document">
-                        <li><a href="#">Политика конциденциальности</a></li>
-                        <li><a href="#">Публичная оферта</a></li>
-                        <li><a href="#">Карта сайта</a></li>
+                    <ul class="list-payment">
+                        <li><a href="#"><img src="img/applepay.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/gpay.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/pay.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/mastercard.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/visa.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/mir.png" alt=""></a></li>
                     </ul>
                 </div>
             </div>
-        </footer>
+        </div>
 
-        <div class="overlay"></div>
-    </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">© «Это у нас», 2020</div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-    <script src="js/libs.min.js"></script>
-    <script src="js/common.js"></script>
+                <ul class="menu-document">
+                    <li><a href="#">Политика конциденциальности</a></li>
+                    <li><a href="#">Публичная оферта</a></li>
+                    <li><a href="#">Карта сайта</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
 
 </body>
 </html>
