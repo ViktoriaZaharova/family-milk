@@ -4963,6 +4963,32 @@ select {
   .variable-payment__box-body ul {
     margin: 0 0 30px; }
 
+.error-page {
+  margin: 100px 0; }
+  .error-page .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .error-page h3 {
+    font-size: 26px;
+    font-weight: 500; }
+  .error-page .num {
+    margin: 49px 0;
+    color: #289074;
+    font-size: 172px;
+    font-weight: bold; }
+
+.error-page-content {
+  max-width: 415px;
+  margin: 0 32px 0 0;
+  width: 100%; }
+  .error-page-content .btn {
+    max-width: 230px;
+    margin: 29px 0 0; }
+
 @media only screen and (max-width: 1210px) {
   .tabs__caption li {
     font-size: 14px;
@@ -5467,7 +5493,16 @@ select {
   .shops-box {
     min-height: auto; }
   .mb-50 {
-    margin: 0 0 30px; } }
+    margin: 0 0 30px; }
+  .error-page-img {
+    max-width: 200px; }
+  .error-page-content {
+    max-width: 300px; }
+  .error-page h3 {
+    font-size: 20px; }
+  .error-page .num {
+    margin: 20px 0;
+    font-size: 100px; } }
 
 @media only screen and (max-width: 760px) {
   .slider-advantages {
@@ -5714,7 +5749,18 @@ select {
     padding: 95px 0 0; }
   .mobile-menu, .overlay, .menu-level2 {
     top: 95px;
-    height: calc(100% - 95px); } }
+    height: calc(100% - 95px); }
+  .error-page-img {
+    max-width: 150px; }
+  .error-page-content {
+    max-width: 250px; }
+  .error-page {
+    margin: 40px 0; }
+    .error-page h3 {
+      font-size: 18px; }
+    .error-page .num {
+      margin: 20px 0;
+      font-size: 70px; } }
 
 @media only screen and (max-width: 575px) {
   input {
@@ -6119,7 +6165,15 @@ select {
   .label-group label {
     width: 50%; }
   .category-item__img {
-    height: 140px; } }
+    height: 140px; }
+  .error-page-content {
+    max-width: none;
+    margin: 20px auto 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .error-page-img {
+    margin: 0 auto; } }
 
 @media only screen and (max-width: 420px) {
   header .logo {
