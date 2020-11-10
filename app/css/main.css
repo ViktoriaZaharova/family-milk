@@ -4863,6 +4863,9 @@ select {
 .company-text {
   margin: 0 0 28px;
   line-height: 1.5; }
+  .company-text .links-blue {
+    font-weight: normal;
+    margin: 0 0 27px; }
 
 @media only screen and (max-width: 1210px) {
   .tabs__caption li {
