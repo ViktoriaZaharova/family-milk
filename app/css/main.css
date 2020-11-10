@@ -4673,6 +4673,113 @@ select {
           justify-content: space-between;
   padding: 0 0 14px; }
 
+.shops-box {
+  min-height: 449px;
+  margin: 0; }
+
+.shops-box__body {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.shops-box__body-content {
+  padding: 24px 14px 15px; }
+
+.shops-box__image {
+  position: relative;
+  width: 100%;
+  height: 166px;
+  overflow: hidden;
+  border-radius: 0 0 5px 5px;
+  color: #1c1c1c;
+  font-size: 14px;
+  margin: auto 0 0; }
+  .shops-box__image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.shops-box__image-title {
+  position: absolute;
+  width: 98px;
+  height: 24px;
+  border-radius: 3px;
+  bottom: 20px;
+  left: 20px; }
+  .shops-box__image-title:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%; }
+  .shops-box__image-title span {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.shops-box-title {
+  color: #1c1c1c;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 17px; }
+
+.shops-characteristics {
+  color: #1c1c1c;
+  font-size: 14px;
+  line-height: 1.4; }
+  .shops-characteristics a {
+    color: #1c1c1c; }
+  .shops-characteristics li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 12px; }
+    .shops-characteristics li:last-child {
+      margin: 0; }
+  .shops-characteristics .icon {
+    min-width: 16px;
+    width: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 2px 10px 0 0; }
+
+.mb-50 {
+  margin: 0 0 50px; }
+
 @media only screen and (max-width: 1210px) {
   .tabs__caption li {
     font-size: 14px;
@@ -4846,8 +4953,12 @@ select {
     font-size: 14px; }
   .banner-callback h3 {
     font-size: 26px; }
-  .help-box__body {
+  .help-box__body, .shops-box__body-content {
     padding: 15px; }
+  .shops-box-title {
+    font-size: 16px; }
+  .shops-box__body {
+    padding: 0; }
   .help-box__title {
     font-size: 18px; }
   .basket-order__box {
@@ -4856,7 +4967,13 @@ select {
     margin: 30px 0; }
     .wrapper-basket-order .container {
       -ms-flex-pack: distribute;
-          justify-content: space-around; } }
+          justify-content: space-around; }
+  .shops-characteristics {
+    font-size: 12px;
+    line-height: 1.2; }
+  .shops-characteristics .icon {
+    width: 12px;
+    min-width: 12px; } }
 
 @media only screen and (max-width: 920px) {
   .checkout {
@@ -4974,7 +5091,9 @@ select {
   .slider-advantages__box {
     font-size: 20px; }
   .dishes {
-    margin: 40px 0 0; } }
+    margin: 40px 0 0; }
+  .shops-characteristics {
+    font-size: 11px; } }
 
 @media only screen and (max-width: 850px) {
   .menu-visible-mobile {
@@ -5157,7 +5276,11 @@ select {
     .wrapper-help .help-box:last-child {
       margin: 0 0 20px; }
   .window-box-registration .window-box__body {
-    padding: 30px 20px; } }
+    padding: 30px 20px; }
+  .shops-box {
+    min-height: auto; }
+  .mb-50 {
+    margin: 0 0 30px; } }
 
 @media only screen and (max-width: 760px) {
   .slider-advantages {
@@ -6007,7 +6130,9 @@ select {
     margin: 0 0 15px;
     font-size: 16px; }
   .wrapper-delivery .wrapper-content {
-    margin: 0; } }
+    margin: 0; }
+  .wrapper-shops .col-3 {
+    width: 100%; } }
 
 @media only screen and (max-width: 340px) {
   .slider-products-card__title {
