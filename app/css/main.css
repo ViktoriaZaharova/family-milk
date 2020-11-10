@@ -4860,6 +4860,10 @@ select {
        object-fit: cover;
     border-radius: 5px; }
 
+.company-text {
+  margin: 0 0 28px;
+  line-height: 1.5; }
+
 @media only screen and (max-width: 1210px) {
   .tabs__caption li {
     font-size: 14px;
