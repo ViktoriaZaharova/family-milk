@@ -194,7 +194,7 @@ $('[name="phone"]').inputmask({"mask": "+7 999 999 99 99"});
 $(document).ready(function () {
     var overlay = $('.modal-overlay');
     var open_modal = $('.open_modal');
-    var close = $('.modal__close, .modal-overlay, .btn-cancel');
+    var close = $('.modal__close, .modal-overlay, .btn-cancel, .btn-close-window');
     var modal = $('.modal__div');
 
     open_modal.click(function (event) {

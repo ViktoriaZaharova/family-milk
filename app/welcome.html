@@ -1255,7 +1255,7 @@
                             <label>
                                 <span class="line-wrapper">
                                     <span class="input-title">Пароль*</span>
-                                    <a href="#" class="links-accent">Забыли пароль ?</a>
+                                    <a href="#modal__password" class="links-accent open_modal">Забыли пароль ?</a>
                                 </span>
                                 <span class="input-wrapper"><input type="text" name="password" value="····" required></span>
                             </label>
@@ -1416,13 +1416,38 @@
             </div>
         </div>
     </footer>
-
     <div class="overlay"></div>
+
 </div>
+
+<div class="modal__div modal__div-window" id="modal__password">
+    <div class="modal__wrapper">
+        <div class="window-box">
+            <div class="window-box__body">
+                <a href="#" class="btn-close-window"><img src="img/close.png" alt=""></a>
+                <h1>Восстановление пароля</h1>
+
+                <form method="post" class="form">
+                    <label>
+                        <span class="input-title">Электронная почта*</span>
+                        <span class="input-wrapper"><input type="text" name="password" required></span>
+                    </label>
+                    <div class="recapcha"><img src="img/capcha.jpg" alt=""></div>
+                    <button type="submit" class="btn btn-green">Восстановить пароль</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay"></div>
+
+
 
 <script src="js/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/common.js"></script>
 
