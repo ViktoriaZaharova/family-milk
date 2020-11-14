@@ -838,17 +838,19 @@ h2
   border: solid 1px #aa9b98
   max-width: 730px
   min-height: 284px
+
   width: 100%
-  padding: 40px 109px 20px
+  //padding: 40px 109px 20px
 
   .slick-dots
-    position: relative
-    bottom: 0
+    position: absolute
+    z-index: 1
+    bottom: 20px
     width: 100%
     display: flex
     align-items: center
     justify-content: center
-    margin: 45px 0 0
+    //margin: 45px 0 0
 
     li
       width: 31px
@@ -871,8 +873,15 @@ h2
   display: flex
   flex-direction: column
   align-items: flex-start
+  justify-content: center
   font-size: 28px
   color: #301f1c
+  max-height: 284px
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 .slider-advantages__title
   margin: 0 0 23px
@@ -4444,6 +4453,26 @@ select
 .modal__div-window
   .window-box
     margin: 30px auto
+
+.category-links
+  border: solid 1px #aa9b98
+    radius: 5px
+  padding: 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  height: 100%
+  color: #000
+  font-weight: 500
+  &:hover
+    box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+    color: $accent
+
+.category-links__text
+  margin: 10px auto 0
+
 
 @import "media"
 // Всегда в конце
