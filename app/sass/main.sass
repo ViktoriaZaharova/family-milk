@@ -4457,18 +4457,43 @@ select
 .category-links
   border: solid 1px #aa9b98
     radius: 5px
-  padding: 20px
+
+  background: #fff
+  height: 100%
+  color: #000
+  font-weight: 500
+  position: relative
+  &:hover
+    box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+    color: $accent
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    border-radius: 5px
+    border: solid 1px #b3b3b3
+    left: 10px
+    top: 10px
+    transition: .3s ease
+  &:hover
+    box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+    &:before
+      opacity: 0
+
+.category-links__body
+  width: 100%
+  height: 100%
+  border-radius: 5px
   display: flex
   flex-direction: column
   align-items: center
   justify-content: center
   text-align: center
-  height: 100%
-  color: #000
-  font-weight: 500
-  &:hover
-    box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
-    color: $accent
+  position: relative
+  z-index: 1
+  background: #fff
+  padding: 20px
 
 .category-links__text
   margin: 10px auto 0
