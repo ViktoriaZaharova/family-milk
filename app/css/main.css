@@ -6040,7 +6040,9 @@ select {
   .footer-open .icon-drop:after {
     content: '-'; }
   .col-3, .col-4 {
-    width: 50%; } }
+    width: 50%; }
+  .footer-menu {
+    display: none; } }
 
 @media only screen and (max-width: 620px) {
   .menu-document {
@@ -6757,6 +6759,9 @@ select {
     padding: 0 0 20px; }
   .category-links {
     font-size: 12px; }
+    .category-links:before {
+      left: 5px;
+      top: 5px; }
   .category-links__body {
     padding: 20px 5px; }
   .category-links__icon {
