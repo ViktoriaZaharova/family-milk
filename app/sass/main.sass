@@ -3,49 +3,31 @@
 
 *
   -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
   box-sizing: border-box
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
   &:before, &:after
     -webkit-box-sizing: border-box
-    -moz-box-sizing: border-box
     box-sizing: border-box
 
-*::-webkit-input-placeholder
-  color: #666
-  opacity: 1
+  &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder
+    color: #666
+    opacity: 1
 
-*:-moz-placeholder
-  color: #666
-  opacity: 1
-
-*::-moz-placeholder
-  color: #666
-  opacity: 1
-
-*:-ms-input-placeholder
-  color: #666
-  opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-  color: #666
-
-body input:required:valid,
-body textarea:required:valid
-  color: #666
+body
+  input:focus:required:invalid, textarea:focus:required:invalid, input:required:valid, textarea:required:valid
+    color: #666
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   margin: 0
   padding: 0
   border: 0
-  font-size: 100%
-  font: inherit
+  font-size: 13px
   vertical-align: baseline
 
-/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
   display: block
 
@@ -55,9 +37,15 @@ ol, ul
 blockquote, q
   quotes: none
 
-blockquote:before, blockquote:after, q:before, q:after
-  content: ''
-  content: none
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
 
 table
   border-collapse: collapse
@@ -68,10 +56,9 @@ body
   min-width: 320px
   position: relative
   line-height: normal
-  font-family: $default-font
+  font-family: "Stolzl", sans-serif
   background: #fff
-  color: $text
-
+  color: #1c1c1c
 
 html, body
   overflow-x: hidden
@@ -87,6 +74,7 @@ img
 a
   display: block
   text-decoration: none
+  -webkit-transition: .3s ease
   transition: .3s ease
   outline: none
 
@@ -98,37 +86,53 @@ a
   width: 100%
   margin: 0 auto
   padding: 0 15px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   position: relative
 
-//header
 .sale-line
   width: 100%
   background: #fbf8f6
   text-align: center
-  padding: 11px 0
+  //padding: 11px 0
   text-transform: uppercase
   font-size: 28px
-  color: $accent
-  font-family: $title-font
-  border-bottom: 1px solid #aa9b98
-
+  color: #543731
+  font-family: "EdoSZHQ", sans-serif
+  border-bottom: 1px solid #ececec
+  position: relative
   p
     width: 100%
     text-align: center
 
 
+.sale-line__banner
+  width: 100%
+
+
 .header-top
   padding: 14px 0 17px
+  margin: 0 0 18px
 
   .container
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
 
 .home-menu
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
   li
@@ -139,24 +143,41 @@ a
 
     a
       font-size: 14px
-      color: $text
+      color: #1c1c1c
 
 .location
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   font-size: 14px
-  color: $text
+  color: #1c1c1c
 
 .location-icon
   margin: 0 4px 0 0
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
 .phone-wrapper
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   max-width: 280px
   width: 100%
@@ -164,55 +185,84 @@ a
 
 .schedule
   color: #858585
-  font-size: 12px
+  font-size: 10px
   position: absolute
   left: 0
   bottom: -15px
-  font-family: 'MyriadPro', sans-serif
 
 .phone
-  color: $text
+  color: #1c1c1c
   font-size: 14px
 
 .whatsapp
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
-  color: $green
+  color: #289074
   font-size: 14px
 
   &:hover
-    color: $text
-
+    color: #1c1c1c
 
 .whatsapp-icon
   margin: 0 8px 0 0
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
 .header-center
   position: relative
 
   .container
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
 
 .header-center-wrapper
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
 
 .logo
-  max-width: 96px
+  max-width: 135px
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
-.logo-mobile
+/*.logo-mobile {
+/*  display: none; }
+
+.logo-pc
   display: none
 
 .form-search
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   max-width: 497px
   width: 100%
@@ -224,28 +274,38 @@ a
     top: 0
     width: 72px
     height: 100%
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
     border: solid 1px #aa9b98
-      radius: 0 5px 5px 0
-
+    border-radius: 0 5px 5px 0
+    .icon-svg
+      fill: #4b312c
+      max-width: 21px
+      height: 21px
   input
     border: solid 1px #aa9b98
-      radius: 5px
+    border-radius: 5px
 
 input
   font-family: $default-font
   font-size: 14px
-  color: $accent
+  color: #543731
+  -webkit-box-sizing: border-box
   box-sizing: border-box
   outline: none
   padding: 0 72px 0 20px
   height: 54px
   width: 100%
 
-  &::placeholder
-    color: $accent
+  &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
+    color: #543731
 
 label
   display: block
@@ -255,19 +315,29 @@ label
 button
   background: transparent
   outline: none
-  font-family: $default-font
+  font-family: "Stolzl", sans-serif
+  -webkit-box-sizing: border-box
   box-sizing: border-box
   cursor: pointer
+  -webkit-transition: .3s ease
   transition: .3s ease
+  -webkit-box-shadow: none
   box-shadow: none
   border: none
 
 .btn
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   font-size: 14px
-  font-family: $default-font
+  font-family: "Stolzl", sans-serif
+  -webkit-transition: .3s ease
   transition: .3s ease
   text-align: center
   border-radius: 5px
@@ -277,7 +347,7 @@ button
 .btn-accent
   font-size: 14px
   color: #fff
-  background: $accent
+  background: #543731
   max-width: 194px
 
   &:hover
@@ -288,45 +358,54 @@ button
   border-radius: 5px
   font-size: 16.5px
   font-weight: 500
-  background: $green
+  background: #289074
   color: #fff
 
   .icon-basket
     margin: 0 0 0 7px
     width: 25px
     height: 22px
-    img
-      width: 100%
 
-
+    svg
+      fill: #fff
 
 .btn-border
-  color: $green
+  color: #289074
   font-size: 19px
   font-weight: 500
   border-radius: 5px
-  border: solid 1px $green
+  border: solid 1px #289074
+
   &:hover
-    background: $green
+    background: #289074
     color: #fff
 
 .button-group
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -webkit-box-pack: start
+  -ms-flex-pack: start
   justify-content: flex-start
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   width: 100%
+
   .btn
     max-width: 246px
     margin: 0 29px 0 0
     height: 66px
     font-size: 19px
+
     .icon-basket
       width: 28px
       height: 25px
+
     &:last-child
       margin: 0
-
 
 h2
   width: 100%
@@ -334,8 +413,8 @@ h2
   margin: 0 auto 40px
   text-transform: uppercase
   font-size: 42px
-  font-family: $title-font
-  color: $accent
+  font-family: "EdoSZHQ", sans-serif
+  color: #543731
 
 .mb-20
   margin-bottom: 20px
@@ -343,41 +422,85 @@ h2
 .w-100
   width: 100%
 
-//header
 .header-links
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   text-align: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   font-size: 12px
-  color: $text
+  color: #1c1c1c
   margin: 0 45px 0 0
 
 .header-links__icon
   margin: 0 auto 5px
   height: 26px
+  width: 26px
+  .icon-svg
+    fill: #543731
+
+.header-links-delivery
+  .header-links__icon
+    width: 45px
+    height: 26px
+
+
 
 .basket-wrapper
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
-  color: $text
+  flex-direction: column
+  justify-content: center
+  color: #1c1c1c
   font-size: 12px
 
 .basket-box
   position: relative
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   text-align: center
+
+.basket-text
+  display: none
 
 .basket-icon
   position: relative
   margin: 0 auto 6px
   height: 26px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
+  .icon-svg
+    width: 29px
+    height: 26px
+    fill: #543731
 
 .basket-val
   position: absolute
@@ -388,27 +511,44 @@ h2
   border-radius: 50%
   color: #fff
   text-align: center
-  background: $green
+  background: #289074
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
 .basket-sum
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
-  font-size: 18px
-  margin: 0 0 0 3px
+  font-size: 13px
+
+/*margin: 0 0 0 3px;
 
 .currency-icon
   margin: 0 0 0 4px
   width: 9px
 
 .catalog-button
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   color: #fff
-  background: $accent
+  background: #289074
   border-radius: 5px
   width: 157px
   height: 54px
@@ -416,12 +556,22 @@ h2
   cursor: pointer
 
   &:hover
+    -webkit-box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
     box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
 
 .catalog-button__icon
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   width: 22px
   min-width: 22px
@@ -434,22 +584,23 @@ h2
     display: block
     height: 2px
     background: #fff
+    -webkit-transition: .3s ease
     transition: .3s ease
 
-.catalog-button.click
-  .catalog-button__icon
-    span
-      position: absolute
-      top: 8px
+.catalog-button.click .catalog-button__icon span
+  position: absolute
+  top: 8px
 
-      &:nth-child(2)
-        width: 0
+  &:nth-child(2)
+    width: 0
 
-      &:first-child
-        transform: rotate(45deg)
+  &:first-child
+    -webkit-transform: rotate(45deg)
+    transform: rotate(45deg)
 
-      &:last-child
-        transform: rotate(135deg)
+  &:last-child
+    -webkit-transform: rotate(135deg)
+    transform: rotate(135deg)
 
 .btn-close
   position: relative
@@ -463,12 +614,14 @@ h2
     width: 2px
     height: 100%
     left: 6px
-    background: $accent
+    background: #543731
 
   &:before
+    -webkit-transform: rotate(45deg)
     transform: rotate(45deg)
 
   &:after
+    -webkit-transform: rotate(135deg)
     transform: rotate(135deg)
 
 .close-search-mobile
@@ -483,12 +636,14 @@ h2
     width: 2px
     height: 100%
     left: 6px
-    background: $accent
+    background: #543731
 
   &:before
+    -webkit-transform: rotate(45deg)
     transform: rotate(45deg)
 
   &:after
+    -webkit-transform: rotate(135deg)
     transform: rotate(135deg)
 
 .btn-close-banner
@@ -505,24 +660,32 @@ h2
     width: 2px
     height: 100%
     left: 6px
-    background: $accent
+    background: #543731
 
   &:before
+    -webkit-transform: rotate(45deg)
     transform: rotate(45deg)
 
   &:after
+    -webkit-transform: rotate(135deg)
     transform: rotate(135deg)
 
 .slick-slide
   outline: none
 
 .header-bottom
-  padding: 3px 0
+  padding: 13px 0 3px
 
 .menu
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -webkit-box-pack: start
+  -ms-flex-pack: start
   justify-content: flex-start
 
   li
@@ -532,18 +695,18 @@ h2
       margin-right: 0
 
     a
-      border: solid 1px #aa9b98
-        radius: 5px
-      font-size: 14px
-      color: $text
-      padding: 6.5px 7px
+      box-shadow: 0 0 5px rgb(166, 166, 163)
+      border-radius: 5px
+      font-size: 13px
+      color: #1c1c1c
+      padding: 10px 10px
 
       &:hover
-        background: $accent
+        background: #543731
         color: #fff
-        border-radius: 3px
-        padding: 6.5px 7px
-        box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+        border-radius: 5px
+        padding: 10px 10px
+        box-shadow: 0 0 5px rgb(166, 166, 163)
 
 .menu-visible-mobile
   display: none
@@ -556,13 +719,16 @@ h2
   left: 0
   top: 100%
   background: #fff
-  z-index: 2
+  z-index: 5
   width: 100%
+  -webkit-box-shadow: 0 10px 15px 0 rgba(84, 55, 49, 0.1)
   box-shadow: 0 10px 15px 0 rgba(84, 55, 49, 0.1)
   padding: 28px 0 30px
   display: none
 
   .container
+    -webkit-box-align: stretch
+    -ms-flex-align: stretch
     align-items: stretch
 
 .scrollbar
@@ -583,46 +749,53 @@ h2
     width: 5px
     background: #fff
 
-
 .menu-category
   height: 563px
   position: relative
-  padding: 0 23px 0 10px
+  padding: 0 13px 0 10px
   border-right: 1px solid #aa9b98
 
-
 .menu-category__links
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
-  color: $text
+  color: #1c1c1c
   font-size: 14px
   width: 100%
-  padding: 14px 15px
+  padding: 14px 40px 14px 15px
   border-radius: 5px
   position: relative
+
   &:before
     content: ''
     position: absolute
-    right: 3px
+    right: 13px
     top: 50%
-    transform: translate(0,-50%)
+    -webkit-transform: translate(0, -50%)
+    transform: translate(0, -50%)
     width: 10px
     height: 10px
     background: url("../img/arrow-right.png") no-repeat center
-      size: contain
+    background-size: contain
+    -webkit-transition: .3s ease
     transition: .3s ease
+
   &:hover
     color: #fff
     background: #7f6965
-    &:before
-      filter: brightness(0) invert(1)
-    .menu-category__links-icon
+
+    &:before, .menu-category__links-icon
+      -webkit-filter: brightness(0) invert(1)
       filter: brightness(0) invert(1)
 
 .menu-category__links-icon
   width: 21px
   height: 23px
   margin: 0 7px 0 0
+  display: none
 
 .catalog-wrapper__content
   width: calc(100% - 328px)
@@ -632,11 +805,13 @@ h2
   display: none
   position: relative
 
-.menu-subcategory.active
-  display: block
+  &.active
+    display: block
 
 .menu-subcategory__links
   color: #7c7c7c
+  font-size: 14px
+  padding: 14px 0
 
   &:hover
     text-decoration: underline
@@ -644,15 +819,14 @@ h2
     color: #1c1c1c
 
 .menu-subcategory__item
-  margin: 0 0 28px
+  /*margin: 0 0 28px;
   width: calc(100% - 488px)
 
   &:last-child
     margin: 0
 
-  &:hover
-    .menu-subcategory__item-preview
-      display: block
+  &:hover .menu-subcategory__item-preview
+    display: block
 
 .menu-subcategory__item-preview
   position: absolute
@@ -672,14 +846,21 @@ h2
   height: 248px
   border-radius: 5px
   overflow: hidden
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   margin: 0 auto 19px
 
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
 
 .search-dropDown
@@ -689,6 +870,7 @@ h2
   background: #fff
   z-index: 2
   width: 100%
+  -webkit-box-shadow: 0 10px 15px 0 rgba(84, 55, 49, 0.1)
   box-shadow: 0 10px 15px 0 rgba(84, 55, 49, 0.1)
   display: none
 
@@ -702,11 +884,17 @@ h2
   top: 100%
   height: 100%
   overflow-y: auto
+  -webkit-transition: .5s ease
   transition: .5s ease
   opacity: 0
 
   .frequent-queries
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
     flex-direction: column
+    -webkit-box-align: start
+    -ms-flex-align: start
     align-items: flex-start
     padding: 0 0 0 35px
 
@@ -718,7 +906,12 @@ h2
 
   .frequent-queries__result
     width: 100%
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
     flex-direction: column
+    -webkit-box-align: start
+    -ms-flex-align: start
     align-items: flex-start
 
   .frequent-queries__tag
@@ -738,7 +931,11 @@ h2
 
 .search-mobile__line
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   margin: 0 0 20px
 
@@ -747,17 +944,24 @@ h2
 
   input
     border: none
-      bottom: 1px solid $accent
-      radius: 0
+    border-bottom: 1px solid #543731
+    border-radius: 0
     height: 45px
     padding: 0 10px
     font-size: 14px
 
 .frequent-queries
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   margin: 0 0 42px
 
@@ -767,12 +971,21 @@ h2
     margin: 0 27px 0 0
 
 .frequent-queries__result
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
 .frequent-queries__tag
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   color: #1c1c1c
   font-size: 16px
@@ -785,31 +998,49 @@ h2
   margin: 0 0 0 5px
   width: 16px
   height: 16px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
-.popular-category-search
-  h3
-    text-align: center
-    width: 100%
-    margin: 0 auto 40px
-    text-transform: uppercase
-    font-size: 20px
-    color: #543731
+.popular-category-search h3
+  text-align: center
+  width: 100%
+  margin: 0 auto 40px
+  text-transform: uppercase
+  font-size: 20px
+  color: #543731
 
 .category-item
   margin: 0 0 29px
   text-align: center
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   color: #1c1c1c
   font-size: 16px
 
 .category-item__img
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   overflow: hidden
   margin: 0 auto 18px
@@ -821,39 +1052,47 @@ h2
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
 
-//main
 .main-home
-  margin: 0 0 48px
+  margin: 0 0 40px
 
   .container
+    -webkit-box-align: stretch
+    -ms-flex-align: stretch
     align-items: stretch
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
 
 .slick-dotted.slick-slider
   margin-bottom: 0
 
 .slider-advantages
-  border: solid 1px #aa9b98
+  /*border: solid 1px #aa9b98;
   max-width: 730px
   min-height: 284px
-
   width: 100%
-  //padding: 40px 109px 20px
+  margin: 10px 0 0
 
   .slick-dots
     position: absolute
     z-index: 1
     bottom: 20px
     width: 100%
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
-    //margin: 45px 0 0
 
     li
-      width: 31px
+      width: 50px
       height: 3px
       border-radius: 1.5px
       background-color: #d4cdcb
@@ -866,21 +1105,33 @@ h2
         display: none
 
     .slick-active
-      background: $accent
+      background: #543731
 
 .slider-advantages__box
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   font-size: 28px
   color: #301f1c
   max-height: 284px
   overflow: hidden
+
   img
     width: 100%
     height: 100%
+    border-radius: 5px
+    -o-object-fit: cover
     object-fit: cover
 
 .slider-advantages__title
@@ -889,41 +1140,50 @@ h2
 .slick-arrow
   z-index: 1
   opacity: 1
-  width: 32px
-  height: 32px
-  border-radius: 3px
+  width: 40px
+  height: 40px
+  border-radius: 0
   border: solid 1px #bababa
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
   &:before
     display: none
 
 .slick-next
-  background: #dddad7 url("../img/arrow-right.png") no-repeat center
-    size: 6px
+  background: rgba(255, 255, 255, 0.6) url("../img/arrow-right.png") no-repeat center
+  background-size: 10px
   right: 11px
 
   &:hover, &:focus
-    background: #dddad7 url("../img/arrow-right.png") no-repeat center
-      size: 6px
+    background: rgba(255, 255, 255, 0.6) url("../img/arrow-right.png") no-repeat center
+    background-size: 10px
 
 .slick-prev
-  background: #dddad7 url("../img/arrow-left.png") no-repeat center
-    size: 6px
+  background: rgba(255, 255, 255, 0.6) url("../img/arrow-left.png") no-repeat center
+  background-size: 10px
   left: 11px
 
   &:hover, &:focus
-    background: #dddad7 url("../img/arrow-left.png") no-repeat center
-      size: 6px
+    background: rgba(255, 255, 255, 0.6) url("../img/arrow-left.png") no-repeat center
+    background-size: 10px
 
 .slider-products-top__wrapper
-  border: solid 1px #aa9b98
+  /*border: solid 1px #aa9b98;
+  border-radius: 5px
   max-width: 450px
   width: 100%
   padding: 15px 0
   position: relative
+  margin: 10px 0 0
+  box-shadow: 0 1px 15px 0 rgba(4, 62, 68, 0.15)
 
   .slick-dots
     position: relative
@@ -938,8 +1198,14 @@ h2
         margin: 0
 
       button
+        display: -webkit-box
+        display: -ms-flexbox
         display: flex
+        -webkit-box-align: center
+        -ms-flex-align: center
         align-items: center
+        -webkit-box-pack: center
+        -ms-flex-pack: center
         justify-content: center
         width: auto
         height: auto
@@ -953,11 +1219,9 @@ h2
         &:before, &:after
           display: none
 
-    .slick-active
-      button
-        background: #7f6965
-        color: #fff
-
+    .slick-active button
+      background: #7f6965
+      color: #fff
 
 .slider-products-top__nav
   margin: 0 auto 0 15px
@@ -966,10 +1230,15 @@ h2
   width: 100%
   padding: 0 15px
 
-
 .slider-products-top__line
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   margin: 0 0 40px
   padding: 0 15px
@@ -986,7 +1255,11 @@ h2
   color: #ff592b
 
 .slider-products-card
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
 
   .btn
@@ -1000,7 +1273,11 @@ h2
 
 .units
   margin: 3px 0 0 5px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
 
   img
@@ -1013,19 +1290,26 @@ h2
   position: relative
   width: 210px
   height: 180px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
 
 .sale-box
   position: absolute
   background: url("../img/sale-bg.png") no-repeat center
-    size: cover
+  background-size: cover
   color: #fff
   top: 0
   left: 0
@@ -1033,27 +1317,48 @@ h2
   height: 32px
   font-size: 13px
   font-weight: 500
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   text-align: center
-
 
 .slider-products-card__content
   width: calc(100% - 210px)
   padding: 0 0 0 19px
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+  .button-wrapper
+    margin: auto 0 0
 
 .rating
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   color: #aeaeae
   font-size: 12px
   margin: 0 0 20px
 
 .rating-list
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   margin: 0 10px 0 0
 
@@ -1061,22 +1366,34 @@ h2
     margin: 0 5px 0 0
     width: 17px
     height: 16px
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
 
     &:last-child
       margin: 0
 
 .slider-products-card__title
-  font-size: 18px
-  color: $text
+  font-size: 15px
+  color: #1c1c1c
   margin: 0 0 15px
   width: 100%
 
 .sale-value
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   color: #fff
   width: 41px
@@ -1086,10 +1403,14 @@ h2
   font-size: 14px
 
 .price-wrapper
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
-
 
 .old-price
   color: #aeaeae
@@ -1101,13 +1422,13 @@ h2
     content: ''
     position: absolute
     top: 50%
+    -webkit-transform: translate(0, -50%)
     transform: translate(0, -50%)
     left: 0
     width: 100%
     height: 1px
     background: #aeaeae
 
-//about
 .about
   padding: 90px 0
 
@@ -1118,6 +1439,7 @@ h2
     font-size: 20px
     margin: 0 0 20px
     line-height: 1.1
+    font-weight: 300
 
 .about-wrapper
   width: 100%
@@ -1128,11 +1450,17 @@ h2
 .about-content
   width: 100%
   border-radius: 5px
-  border: solid 1px #eae6e5
   padding: 39px 40px 36px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
 .box-text
@@ -1140,43 +1468,51 @@ h2
   font-weight: 300
   line-height: 1.53
 
-  p
+  p, ul li
     margin: 0 0 20px
 
     &:last-child
       margin: 0
 
-  ul
-    li
-      margin: 0 0 20px
-
-      &:last-child
-        margin: 0
-
-
 .list-disc
   list-style: disc
   padding: 0 0 0 20px
 
-
 .about-box
   width: 49%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -webkit-box-pack: start
+  -ms-flex-pack: start
   justify-content: flex-start
 
-
-//group-company
 .group-company
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   margin: 20px 0 0
 
 .group-company__links
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   max-width: 387px
   width: 100%
@@ -1184,20 +1520,33 @@ h2
   border-radius: 5px
   border: solid 1px #aa9b98
   padding: 20px
-  color: $text
+  color: #1c1c1c
   font-size: 18px
   font-weight: 500
   text-transform: uppercase
   margin: 0 0 40px
+  position: relative
+  overflow: hidden
 
 .group-company__icon
-  width: 69px
-  margin: 0 13px 0 0
+  width: 100%
+  height: 100%
+
+  /*margin: 0 13px 0 0;
+  position: absolute
+  left: 0
+  top: 0
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 .group-company__text
   max-width: 155px
+  position: relative
+  color: #fff
 
-//footer
 footer
   background: #fff
   border-top: 1px solid #aa9b98
@@ -1205,11 +1554,15 @@ footer
   h3
     font-size: 15px
     font-weight: 500
-    color: $accent
+    color: #543731
     margin: 0 0 25px
 
   .phone
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
     color: #1c1c1c
     font-size: 16px
@@ -1222,9 +1575,17 @@ footer
 
 .phone-icon
   margin: 0 10px 0 0
+  .icon-svg
+    width: 12px
+    height: 18px
+    fill: #543731
 
 .mail
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   color: #1c1c1c
   font-size: 13px
@@ -1232,44 +1593,55 @@ footer
 .mail-icon
   margin: 0 7px 0 0
 
-.footer-menu
-  li
-    margin: 0 0 20px
+.footer-menu li
+  margin: 0 0 20px
 
-    &:last-child
-      margin: 0
+  &:last-child
+    margin: 0
 
-    a
-      font-size: 13px
-      color: #877572
+  a
+    font-size: 13px
+    color: #877572
 
 .footer-top
   padding: 54px 0 51px
   background: #fff
 
   .container
+    -webkit-box-align: start
+    -ms-flex-align: start
     align-items: flex-start
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
 
-
 .footer-bottom
-  background: $accent
+  background: #543731
   color: #fff
   padding: 16px 0
   font-size: 13px
 
   .container
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: start
+    -ms-flex-pack: start
     justify-content: flex-start
 
 .footer-box
-  &:last-child
-    h3
-      margin: 0 0 13px
+  &:last-child h3
+    margin: 0 0 13px
 
   h3
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
     width: 100%
 
@@ -1284,13 +1656,18 @@ footer
     content: '+'
     display: inline-block
     font-size: 20px
-    color: $accent
+    color: #543731
     font-family: 'Stolzl', sans-serif
     font-weight: 300
 
 .menu-document
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 0 86px
 
@@ -1304,7 +1681,11 @@ footer
       color: #fff
 
 .form-subscribe
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   position: relative
   margin: 0 0 28px
@@ -1315,7 +1696,7 @@ footer
     font-size: 13px
     color: #888888
 
-    &::placeholder
+    &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
       color: #888888
 
   button
@@ -1323,7 +1704,7 @@ footer
     right: 0
     top: 0
     height: 100%
-    background: $accent
+    background: #543731
     color: #fff
     width: 97px
     font-size: 10px
@@ -1331,8 +1712,13 @@ footer
     border-radius: 0 3px 3px 0
 
 .list-social
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 28px
 
@@ -1343,8 +1729,14 @@ footer
       margin: 0
 
     a
+      display: -webkit-box
+      display: -ms-flexbox
       display: flex
+      -webkit-box-align: center
+      -ms-flex-align: center
       align-items: center
+      -webkit-box-pack: center
+      -ms-flex-pack: center
       justify-content: center
       width: 32px
       height: 32px
@@ -1352,8 +1744,13 @@ footer
       background-color: #b4a7a5
 
 .list-payment
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
   li
@@ -1363,28 +1760,45 @@ footer
       margin: 0
 
     a
+      display: -webkit-box
+      display: -ms-flexbox
       display: flex
+      -webkit-box-align: center
+      -ms-flex-align: center
       align-items: center
+      -webkit-box-pack: center
+      -ms-flex-pack: center
       justify-content: center
       width: 46px
       height: 32px
       border-radius: 5px
       background-color: #f9f9f8
 
-//tabs
 .tabs__content
   display: none
   width: 100%
 
-.tabs__content.active
-  display: flex
-  flex-direction: column
+  &.active
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
 
 .tabs__caption
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
 
   li
@@ -1392,9 +1806,16 @@ footer
     max-width: 224px
     width: 100%
     text-align: center
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
+    -webkit-transition: .3s ease
     transition: .3s ease
     cursor: pointer
     text-transform: uppercase
@@ -1403,14 +1824,18 @@ footer
     color: #301f1c
     margin: 0 0 40px
 
-
   .active
     background: #4b312c
     color: #fff
 
 .row
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
   margin: 0 -10px
 
@@ -1429,9 +1854,10 @@ footer
   border: solid 1px #eae6e5
   position: relative
 
-  &:hover
-    .btn-hover
-      display: flex
+  //&:hover .btn-hover
+  //  display: -webkit-box
+  //  display: -ms-flexbox
+  //  display: flex
 
   .units
     margin: 0
@@ -1450,8 +1876,14 @@ footer
   width: 100%
   height: 285px
   overflow: hidden
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   background: #d1d1d1
   border-radius: 5px 5px 0 0
@@ -1459,13 +1891,21 @@ footer
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
 
 .product-card__body
   width: 100%
   padding: 13px 20px 20px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
 
 .product-card__title
@@ -1478,7 +1918,11 @@ footer
 
 .price
   font-size: 24px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
 
   .units
@@ -1490,8 +1934,14 @@ footer
 
 .rub-icon
   width: 11px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   margin: 3px 0 0 6px
 
@@ -1515,11 +1965,23 @@ footer
     font-weight: 300
     color: #fff
 
-.btn-hover__body
+.btn-hover.click
   display: flex
+
+.btn-hover__body
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   text-align: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   width: calc(100% - 62px)
   line-height: 1.38
@@ -1532,17 +1994,16 @@ footer
   width: 62px
   height: 100%
 
-//dishes
 .dishes
-  margin: 100px 0 0
+  margin: 10px 0 0
 
 .product-label
   position: absolute
-  width: 140px
-  height: 141px
+  width: 125px
+  height: 125px
   top: -10px
   left: -10px
-  font-size: 10.5px
+  font-size: 7.5px
   font-weight: bold
   color: #fff
   letter-spacing: 1.05px
@@ -1571,16 +2032,17 @@ footer
     right: 8px
 
   span
-    width: 200px
-    height: 35px
-    line-height: 35px
+    width: 165px
+    height: 30px
+    line-height: 30px
     position: absolute
-    top: 30px
-    left: -50px
+    top: 25px
+    left: -36px
     z-index: 1
     overflow: hidden
     -webkit-transform: rotate(-45deg)
     transform: rotate(-45deg)
+    -webkit-box-shadow: 0 3px 15px 0 rgba(67, 61, 43, 0.1)
     box-shadow: 0 3px 15px 0 rgba(67, 61, 43, 0.1)
     background: #c81925
     text-align: center
@@ -1588,7 +2050,11 @@ footer
 .new-price
   font-size: 24px
   color: #c81947
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
 
   .units
@@ -1604,8 +2070,14 @@ footer
   border-radius: 5px
   position: relative
   overflow: hidden
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   font-size: 28px
   color: #f1efec
@@ -1617,7 +2089,8 @@ footer
     top: 0
     width: 100%
     height: 100%
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(23, 23, 23, .7) 100%)
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(23, 23, 23, 0.7)))
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(23, 23, 23, 0.7) 100%)
 
 .banner-box__title
   position: absolute
@@ -1630,6 +2103,7 @@ footer
 .banner-box__img
   width: 100%
   height: 100%
+  -o-object-fit: cover
   object-fit: cover
 
 .phone-box, .btn-search-mobile
@@ -1643,14 +2117,15 @@ footer
   height: calc(100% - 166px)
   overflow-y: auto
   z-index: 7
-  background: $accent
+  background: #543731
   display: none
 
   .location
-    margin: 0 0 20px
+    margin: 0 0 15px
     color: #fff
 
     img
+      -webkit-filter: brightness(0) invert(1)
       filter: brightness(0) invert(1)
 
   .phone-box .phone
@@ -1658,28 +2133,37 @@ footer
     color: #fff
 
     img
+      -webkit-filter: brightness(0) invert(1)
       filter: brightness(0) invert(1)
 
-.mobile-menu__footer, .mobile-menu__body
-  padding: 10px 20px
+.mobile-menu__footer
+  padding: 0px 10px 0px 20px
 
 .mobile-menu__body
+  padding: 0px 10px 0px 20px
   background: #fff
 
 .btn-burger
   display: none
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
-  width: 34px
-  //height: 100%
+  width: 40px
   position: relative
   padding: 0 10px 0 0
 
   span
     width: 24px
     height: 3px
-    background: $accent
+    background: #543731
+    -webkit-transition: .3s ease
     transition: .3s ease
     margin: 0 0 4px
     display: block
@@ -1688,27 +2172,29 @@ footer
       width: 70%
       margin: 0
 
-.btn-burger.clicked
-  span
+  &.clicked span
     position: absolute
     top: 50%
+    -webkit-transform: translate(0, -50%)
     transform: translate(0, -50%)
     left: 0
 
     &:first-child
+      -webkit-transform: rotate(45deg)
       transform: rotate(45deg)
 
     &:nth-child(2)
+      -webkit-transform: rotate(135deg)
       transform: rotate(135deg)
 
     &:last-child
       width: 0
 
 .menu-mobile
-  margin: 0 0 30px
+  margin: 0 0 15px
 
   li
-    margin: 0 0 15px
+    margin: 15px 0 15px
 
     &:last-child
       margin: 0
@@ -1719,46 +2205,55 @@ footer
 .btn-catalog
   font-weight: 500
   position: relative
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
 
   &:after
     content: '-'
     display: inline-block
     margin: 0 0 0 auto
+    -webkit-transition: .3s ease
     transition: .3s ease
 
-.btn-catalog.click
-  &:after
+  &.click:after
     content: '+'
 
 .dropDown-menu
   position: relative
 
-  li
-    a
-      display: flex
-      align-items: center
-      font-size: 14px
-      color: $text
+  li a
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    font-size: 13px
+    text-transform: uppercase
+    color: #1c1c1c
+    border-bottom: 1px solid #ececec
 
 .dropDown-menu__links
   position: relative
-  padding: 7px 0
+  padding: 15px 0
   font-size: 14px
-  color: $accent
+  color: #543731
 
   &:after
     content: ''
     position: absolute
     right: 0
     top: 50%
+    -webkit-transform: translate(0, -50%)
     transform: translate(0, -50%)
     width: 20px
     height: 12px
     background: url("../img/arrow-right.png") no-repeat center
-      size: contain
-
+    background-size: contain
 
 .menu-level2
   position: fixed
@@ -1769,6 +2264,7 @@ footer
   overflow-y: auto
   background: #fff
   z-index: 2
+  -webkit-transition: .3s ease
   transition: .3s ease
 
 .banner-menu-level2
@@ -1776,42 +2272,52 @@ footer
   max-height: 200px
   overflow: hidden
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   margin: 30px auto
 
-.list-menu-level2
+  img
+    display: none
 
+.list-menu-level2
   li
     margin: 0
 
     a
-      padding: 9px 20px
+      padding: 15px 20px
       position: relative
 
-  .click-back
-    a
-      text-transform: uppercase
-      text-align: center
-      justify-content: center
-      background: #fbf8f6
-      position: relative
+  .click-back a
+    text-align: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    background: #f2f3f5
+    position: relative
 
-      &:before
-        content: ''
-        position: absolute
-        left: 20px
-        top: 50%
-        transform: translate(0, -50%)
-        width: 14px
-        height: 8px
-        background: url("../img/arrow-left.png") no-repeat center
-          size: contain
+    &:before
+      content: ''
+      position: absolute
+      left: 20px
+      top: 50%
+      -webkit-transform: translate(0, -50%)
+      transform: translate(0, -50%)
+      width: 14px
+      height: 8px
+      background: url("../img/arrow-left.png") no-repeat center
+      background-size: contain
 
 .icon-dropDownMenu
   width: 20px
   margin: 0 10px 0 0
+  display: none
 
 .overlay
   position: fixed
@@ -1820,7 +2326,7 @@ footer
   top: 165px
   width: 100%
   height: calc(100% - 165px)
-  background: $accent
+  background: #543731
   opacity: .7
   display: none
 
@@ -1835,16 +2341,22 @@ footer
   height: 100%
   z-index: 4
 
-//page catalog
 .breadcrumbs-section
-  margin: 15px 0 24px
+  margin: 15px 0 15px
 
   .container
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
 
 .breadcrumb
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   font-size: 13px
 
@@ -1855,20 +2367,18 @@ footer
       &:after
         content: ''
         display: inline-block
-        margin: 0 14px
+        margin: 0 10px
         width: 4px
         height: 8px
         background: url("../img/arrow-right.png") no-repeat center
-          size: contain
+        background-size: contain
 
     span
       color: #858585
 
-    .breadcrumb-links
-      span
-        color: #006761
-        border-bottom: 1px dotted #006761
-
+    .breadcrumb-links span
+      color: #006761
+      border-bottom: 1px dotted #006761
 
 .sidebar
   width: 270px
@@ -1877,7 +2387,11 @@ footer
     display: none
 
   h3
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
     margin: 0 0 15px
     font-size: 20px
@@ -1885,14 +2399,26 @@ footer
 
     .icon
       margin: 0 5px 0 0
+      display: -webkit-box
+      display: -ms-flexbox
       display: flex
+      -webkit-box-align: center
+      -ms-flex-align: center
       align-items: center
+      -webkit-box-pack: center
+      -ms-flex-pack: center
       justify-content: center
 
 .sidebar-title
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   margin: 0 0 15px
 
@@ -1903,14 +2429,51 @@ footer
   width: calc(100% - 270px)
   padding: 0 0 0 35px
 
+.full-width
+  width: 100%
+  padding: 0
+
+.show-for-xlarge
+  margin: 20px 0
+
+.search-from
+  width: 100%
+  position: relative
+
+  button
+    position: absolute
+    right: 0
+    top: 0
+    width: 72px
+    height: 100%
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    border: solid 1px #aa9b98
+    border-radius: 0 5px 5px 0
+
+.show-for-xlarge .list-products li:first-child
+  width: 100%
+  display: flex
+  align-items: center
+
 h1
   font-size: 26px
   font-weight: 500
 
 .line-title
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 16px
 
@@ -1921,8 +2484,13 @@ h1
 
 .list-products
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
   li
@@ -1932,17 +2500,17 @@ h1
       margin-right: 0
 
     a
-      color: $text
+      color: #1c1c1c
       font-size: 14px
       padding: 6.5px 7px
       border-radius: 5px
       border: solid 1px #aa9b98
 
       &:hover
-        background: $accent
+        background: #543731
         color: #fff
+        -webkit-box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
         box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
-
 
 .banner-horizontal
   margin: 17px 0 23px
@@ -1952,8 +2520,13 @@ h1
   overflow: hidden
   padding: 13px 30px
   color: #fff
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
   &:before
@@ -1963,13 +2536,15 @@ h1
     top: 0
     width: 100%
     height: 100%
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(23, 23, 23, .5) 100%)
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(rgba(23, 23, 23, 0.5)))
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(23, 23, 23, 0.5) 100%)
     z-index: 1
 
 .banner-bg
   position: absolute
   left: 50%
   top: 50%
+  -webkit-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
 
 .banner-title
@@ -1982,7 +2557,7 @@ h1
 
 .subscribe
   background: url("../img/bg1.jpg") no-repeat center
-    size: cover
+  background-size: cover
 
 .subscribe-wrapper
   margin: 45px auto
@@ -2005,7 +2580,7 @@ h1
       color: #888888
       padding: 0 136px 0 16px
 
-      &::placeholder
+      &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
         color: #888888
 
     button
@@ -2029,25 +2604,37 @@ h1
       position: absolute
       left: 0
       top: 50%
+      -webkit-transform: translate(0, -50%)
       transform: translate(0, -50%)
       width: 21px
       height: 21px
       background: url("../img/check.png") no-repeat center
-        size: contain
+      background-size: contain
 
 .img-subscribe
   margin: 0 auto
 
 .line-sorting
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 30px
 
 .sorting-wrapper
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
 
   p
@@ -2057,13 +2644,14 @@ h1
 
 select
   padding: 0
+  -webkit-box-sizing: border-box
   box-sizing: border-box
   outline: none
-  font-family: $default-font
+  font-family: "Stolzl", sans-serif
   color: #543731
   font-size: 14px
   border: none
-    bottom: 1px solid #aa9b98
+  border-bottom: 1px solid #aa9b98
   -webkit-appearance: none
   appearance: none
   -moz-appearance: none
@@ -2074,12 +2662,22 @@ select
   background: url("../img/arrow-bottom.png") no-repeat right center
 
 .views-products
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
 
 .views-products__item
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   margin: 0 10px 0 0
   width: 27px
@@ -2089,6 +2687,7 @@ select
   background: #fff
   padding: 3px 6px
   cursor: pointer
+  -webkit-transition: .3s ease
   transition: .3s ease
 
   &:last-child
@@ -2104,12 +2703,12 @@ select
     .icon-svg
       fill: #fff
 
-.views-products__item.active
-  background: $accent
-  border-color: $accent
+  &.active
+    background: #543731
+    border-color: #543731
 
-  .icon-svg
-    fill: #fff
+    .icon-svg
+      fill: #fff
 
 .icon-svg
   width: 100%
@@ -2118,21 +2717,39 @@ select
 .mb-30
   margin-bottom: 30px
 
+.mt-30
+  margin-top: 30px
+
 .bottom-line
   padding: 0 0 10px
   border-bottom: 1px solid #eae6e5
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
 .pagination
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
   li
     margin: 0 5px 0 0
+    display: flex
+    align-items: center
+    justify-content: center
 
     &:last-child
       margin: 0
@@ -2145,15 +2762,20 @@ select
 
     .active
       color: #fff
-      background: $green
+      background: #289074
 
     .links-next
       background: #e8e8e8
-      color: $green
+      color: #289074
 
 .form-pagination
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   font-size: 13px
 
@@ -2177,10 +2799,14 @@ select
     padding: 8px 14px
 
     &:hover
-      background: $accent
+      background: #543731
 
 .links-prev
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   margin: 0 0 19px
   width: 100%
@@ -2190,7 +2816,6 @@ select
   img
     margin: 0 6px 0 0
     width: 5px
-
 
 .sidebar-item
   border-radius: 5px
@@ -2212,7 +2837,11 @@ select
   width: 100%
   font-size: 17px
   font-weight: 500
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   cursor: pointer
 
@@ -2223,11 +2852,12 @@ select
     width: 11px
     height: 6px
     background: url("../img/arrow-top.png") no-repeat center
-      size: contain
+    background-size: contain
+    -webkit-transition: .3s ease
     transition: .3s ease
 
-.block_title.in
-  &:after
+  &.in:after
+    -webkit-transform: scale(1, -1)
     transform: scale(1, -1)
 
 .block_hover
@@ -2242,19 +2872,26 @@ select
 .filter-selected
   width: 100%
   display: none
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 10px
 
 .filter-selected-item
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   padding: 2px
   font-size: 10px
-  color: $text
+  color: #1c1c1c
   margin: 0 3px 5px 0
-  border: 1px solid $hover
-    radius: 3px
+  border: 1px solid #7f6965
+  border-radius: 3px
 
   &:last-child
     margin-right: 0
@@ -2275,35 +2912,44 @@ select
     width: 2px
     height: 100%
     left: 6px
-    background: $accent
+    background: #543731
 
   &:before
+    -webkit-transform: rotate(45deg)
     transform: rotate(45deg)
 
   &:after
+    -webkit-transform: rotate(135deg)
     transform: rotate(135deg)
 
-.menu-category-sidebar
-  li
-    margin: 0 0 15px
+.menu-category-sidebar li
+  margin: 0 0 15px
 
-    &:last-child
-      margin: 0
+  &:last-child
+    margin: 0
 
-    a
-      font-size: 14px
-      color: $text
+  a
+    font-size: 14px
+    color: #1c1c1c
 
-      &:hover
-        text-decoration: underline
-    .active
-      color: $green
+    &:hover
       text-decoration: underline
 
+  .active
+    color: #289074
+    text-decoration: underline
+
 .slider-price
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
 
   input
@@ -2314,7 +2960,7 @@ select
     font-size: 16px
     color: #1c1c1c
 
-    &::placeholder
+    &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
       color: #1c1c1c
 
 .line-input
@@ -2326,8 +2972,8 @@ select
   width: 100%
   margin: 35px 0 0
   border: none
-    radius: 2px
-  background: rgba(#aa9b98, .5)
+  border-radius: 2px
+  background: rgba(170, 155, 152, 0.5)
   height: 4px
 
 .ui-corner-all, .ui-widget.ui-widget-content
@@ -2336,7 +2982,7 @@ select
 .ui-slider-horizontal .ui-slider-handle
   background: #4b312c
   border: none
-    radius: 50%
+  border-radius: 50%
   width: 14px
   height: 14px
   outline: none
@@ -2347,11 +2993,20 @@ select
 
 .checkbox
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  -ms-flex-direction: row
   flex-direction: row
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: start
+  -ms-flex-pack: start
   justify-content: flex-start
-  color: $text
+  color: #1c1c1c
   font-size: 14px
 
   .checkbox-inp
@@ -2365,9 +3020,10 @@ select
     display: inline-block
     vertical-align: middle
     border: solid 1px #aa9b98
-      radius: 3px
+    border-radius: 3px
     background: #ffffff
     cursor: pointer
+    -webkit-transition: .3s ease
     transition: .3s ease
     margin: 0 10px 0 0
 
@@ -2377,20 +3033,29 @@ select
     cursor: pointer
 
   .checkbox-inp:checked + .checkbox-custom
-    background: $green
-    border-color: $green
+    background: #289074
+    border-color: #289074
 
   .label-val
     color: #888888
 
 .radio
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  -ms-flex-direction: row
   flex-direction: row
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: start
+  -ms-flex-pack: start
   justify-content: flex-start
-  color: $text
-  font-size: 15px
+  color: #1c1c1c
+  font-size: 12px
 
   .radio-inp
     display: none
@@ -2403,7 +3068,7 @@ select
     display: inline-block
     vertical-align: middle
     border: solid 1px #aa9b98
-      radius: 50%
+    border-radius: 50%
     background: #ffffff
     cursor: pointer
     margin: 0 10px 0 0
@@ -2414,14 +3079,16 @@ select
     cursor: pointer
 
   .radio-inp:checked + .radio-custom
-    border-color: $green
+    border-color: #289074
     border-width: 2px
+
     &:before
       content: ''
       position: absolute
       left: 50%
       top: 50%
-      transform: translate(-50%,-50%)
+      -webkit-transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)
       width: 12px
       height: 12px
       background-color: #289074
@@ -2429,108 +3096,133 @@ select
 
 .checkout-item-pay
   .checkout-item__wrapper
+    -webkit-box-pack: start
+    -ms-flex-pack: start
     justify-content: flex-start
+
   .radio
     width: auto
     margin: 0 34px 0 0
+
     &:last-child
       margin: 0
+
     .label
       max-width: 225px
 
 .promo-wrapper
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 20px 0 0
+
   label
     max-width: 178px
     position: relative
     margin: 0 17px 0 0
+
     .input-icon
       position: absolute
       top: 50%
-      transform: translate(0,-50%)
+      -webkit-transform: translate(0, -50%)
+      transform: translate(0, -50%)
       right: 20px
       width: 23px
       height: 16px
+
     input
       border: dashed 2px #ffa131
       color: #ffa131
       font-size: 15px
       padding: 0 43px 0 20px
-      &::placeholder
+
+      &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
         color: #ffa131
+
   button, .btn
     max-width: 126px
     height: 46px
     font-size: 15px
     font-weight: normal
-    &:disabled
-      border-color: #eeeeee
-      background: #eeeeee
-      color: #bababa
-      cursor: inherit
-  .label-promo
-    input
+
+  button:disabled, .btn:disabled
+    border-color: #eeeeee
+    background: #eeeeee
+    color: #bababa
+    cursor: inherit
+
+  .label-promo input
+    color: #1c1c1c
+
+    &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
       color: #1c1c1c
-      &::placeholder
-        color: #1c1c1c
 
+.list-checkbox li
+  margin: 0 0 10px
 
-
-.list-checkbox
-  li
-    margin: 0 0 10px
-
-    &:last-child
-      margin: 0
+  &:last-child
+    margin: 0
 
 .btn-filter
   display: none
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   padding: 6.5px 7px
   border-radius: 5px
   font-size: 14px
   border: solid 1px #aa9b98
+  -webkit-transition: .3s ease
   transition: .3s ease
 
   &:hover
-    background: $accent
+    background: #543731
     color: #fff
+    -webkit-box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
     box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
 
     .btn-filter-val
       color: #fff
 
 .btn-filter-val
-  color: $text
+  color: #1c1c1c
   font-size: 12px
   margin: 0 0 0 2px
 
-//product page
 .recommended-products
   margin: 0 0 60px
 
 .product-description
   margin: 44px 0 60px
+
   .tabs__caption
+    width: -moz-fit-content
     width: fit-content
     border-bottom: 2px solid #eae6e5
+
     li
       font-size: 20px
       text-transform: none
       width: auto
       max-width: none
+      -webkit-box-flex: 1
+      -ms-flex: auto
       flex: auto
       margin: 0 40px 0 0
       border: none
-        radius: 0
+      border-radius: 0
       padding: 0 0 7px
       position: relative
+
       &:last-child
         margin: 0
+
       &:before
         content: ''
         position: absolute
@@ -2538,23 +3230,32 @@ select
         bottom: -2px
         width: 100%
         height: 2px
+        -webkit-transition: .3s ease
         transition: .3s ease
         background: transparent
+
     .active
-      color: $green
+      color: #289074
       background: transparent
+
       &:before
-        background: $green
+        background: #289074
+
   .tabs__content
     padding: 28px 0
-
 
 .product-photo
   position: relative
   width: 488px
   height: 488px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   border-radius: 5px
 
@@ -2567,6 +3268,7 @@ select
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
 
 .product-content
@@ -2575,8 +3277,10 @@ select
   border: solid 1px #eae6e5
   margin: 0 0 0 auto
   padding: 15px
+
   .button-group
     margin: 22px 0 0
+
     .btn
       height: 54px
 
@@ -2587,14 +3291,23 @@ select
 
 .products-characteristics
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 17px 0
 
 .article-item
   margin: 0 30px 0 0
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   color: #898989
   font-size: 15px
@@ -2605,7 +3318,11 @@ select
     margin: 0 0 0 10px
 
 .brand-item
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   color: #898989
   font-size: 15px
@@ -2617,30 +3334,48 @@ select
     text-decoration: underline
 
 .availability
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   color: #1c1c1c
   font-size: 15px
   margin: 0 0 0 auto
+
   span
     margin: 0 6px 0 0
 
 .cost-product
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+
   .price-wrapper
     margin: 0 19px 0 0
+
   .new-price
     font-size: 41px
+
     img
       width: 20px
       margin: 5px 0 0 7px
+
   .old-price
     font-size: 25.5px
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
     margin: 0 10px 0 11px
+
     img
       width: 11px
       margin: 3px 0 0 6px
@@ -2653,11 +3388,16 @@ select
   height: 26px
   border-radius: 5px
   border: solid 2px #f4d1da
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   font-size: 14px
   padding: 0 8px
   color: #1c1c1c
+
   img
     margin: 0 0 0 3px
     width: 7px
@@ -2674,17 +3414,28 @@ select
 
 .product-content__info
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+
   .whatsapp
     font-size: 15px
+
   .availability
     margin: 0 15px 0 0
 
 .availability-in-stores
-  color: $green
+  color: #289074
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   margin: 0 0 0 60px
   font-size: 15px
@@ -2693,23 +3444,29 @@ select
   margin: 0 8px 0 0
   width: 33px
 
-//set-products
 .set-products
   margin: 0 0 60px
+
   .product-card__title
     font-size: 13px
     margin: 0 0 15px
+
   .product-card__img
     height: 224px
+
   .button-wrapper
     margin: 21px 0 0
+
   .btn-green
     height: 42px
     font-size: 14.5px
+
   .btn-hover__body
     font-size: 12px
+
   .btn-hover__add
     height: 100%
+
   h2
     font-size: 25.5px
     text-align: left
@@ -2724,10 +3481,12 @@ select
   font-size: 15px
   font-weight: 500
   margin: 0 0 20px
+
   .price
     margin: 19px 0 0
     font-size: 24px
     font-weight: normal
+
     img
       width: 12px
       margin: 0 0 0 5px
@@ -2735,28 +3494,26 @@ select
 .set-products__content
   width: 244px
   padding: 0 20px 0 0
+
   .btn
     height: 42px
     max-width: 200px
     font-size: 14.5px
 
-
 .set-products__wrapper
   width: calc(100% - 244px)
-
 
 .product-info-mobile
   display: none
 
-//page basket
 .wrapper-basket
   margin: 20px 0 90px
+
   h3
     margin: 0 0 25px
     font-size: 20px
     font-weight: 500
     color: #1c1c1c
-
 
 .basket-value
   color: #888888
@@ -2765,10 +3522,10 @@ select
 .consent
   padding: 14px 100px 17px 19px
   background: #f7f3f1
+
   a
     display: inline
-    color: $green
-
+    color: #289074
 
 .consent-text
   margin: 10px 0 0
@@ -2777,15 +3534,26 @@ select
   display: block
 
 .sentence
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 22px
   font-size: 13px
+
   p
     width: 100%
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -ms-flex-wrap: wrap
     flex-wrap: wrap
 
 .sentence-line
@@ -2800,34 +3568,44 @@ select
 
 .sentence-bg
   height: 6px
-  background-color: #aa9b98
+  background-color: #289074
   position: absolute
   left: 2px
   top: 50%
-  transform: translate(0,-50%)
+  -webkit-transform: translate(0, -50%)
+  transform: translate(0, -50%)
   width: 249px
   border-radius: 4px 0 0 4px
 
 .sentence-value
-  color: $green
+  color: #289074
   margin: 0 5px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   font-weight: 500
   white-space: nowrap
+
   img
     margin: 0 0 0 5px
 
-.form-checkout
-  button
-    height: 52px
-    font-size: 16.5px
+.form-checkout button
+  height: 52px
+  font-size: 16.5px
 
 .total-sum
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   margin: 0 0 0 5px
   font-size: 18.5px
+
   img
     width: 9px
     margin: 0 0 0 5px
@@ -2838,11 +3616,16 @@ select
   border: solid 1px #eae6e5
   height: 949px
   overflow-y: auto
+
   h3
     margin: 0 0 8px
+
   .checkbox
     font-size: 13px
+    -webkit-box-align: start
+    -ms-flex-align: start
     align-items: flex-start
+
     .checkbox-custom
       width: 22px
       min-width: 22px
@@ -2851,20 +3634,33 @@ select
 
 .option-delivery
   .checkbox
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+
   .label
     font-size: 15px
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
 
 .question-icon
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   width: 19px
   height: 19px
   border: solid 1px #aa9b98
-    radius: 50%
+  border-radius: 50%
   font-size: 13px
   color: #7a6763
   margin: 0 0 0 5px
@@ -2878,6 +3674,7 @@ select
 .checkout-item
   padding: 17px 0
   border-bottom: 1px solid #eae6e5
+
   &:last-child
     margin: 0
 
@@ -2887,13 +3684,22 @@ select
 
 .checkout-item__wrapper
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+
   label, .dropDown-select
     width: calc(100% - 56px)
     position: relative
+
   input
     width: 100%
     height: 46px
@@ -2901,35 +3707,40 @@ select
     border: solid 1px #aa9b98
     padding: 0 20px
     color: #1c1c1c
-    &::placeholder
+
+    &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
       color: #1c1c1c
+
   .w-100
     width: 100%
+
   .w-50
     width: 49%
+
   .mb-10
     margin-bottom: 10px
 
 .input-description
   position: absolute
   top: 50%
-  transform: translate(0,-50%)
+  -webkit-transform: translate(0, -50%)
+  transform: translate(0, -50%)
   right: 19px
-  color: #bababa
+  color: #1c1c1c
   font-size: 11px
   font-weight: 300
 
-.checkout-item-contacts
-  input
-    color: #bababa
-    &::placeholder
-      color: #bababa
+.checkout-item-contacts input
+  color: #1c1c1c
 
-.label-checked
-  input
+  &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
     color: #1c1c1c
-    &::placeholder
-      color: #1c1c1c
+
+.label-checked input
+  color: #1c1c1c
+
+  &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
+    color: #1c1c1c
 
 .input-error
   color: #e3000b
@@ -2941,8 +3752,10 @@ select
   input
     border-color: #e3000b
     color: #1c1c1c
-    &::placeholder
+
+    &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder, &::placeholder
       color: #1c1c1c
+
   .input-description
     color: #e3000b
 
@@ -2954,36 +3767,51 @@ select
   margin: 0 0 0 19px
   color: #e3000b
 
-
-
 .checkout-item__wrapper-box
   width: 46px
   margin: 0 0 0 auto
+
   .price
     font-size: 18px
+
     img
       width: 9px
       margin: 0 0 0 4px
 
 .btn-location
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   width: 46px
   height: 46px
   border-radius: 5px
   border: solid 1px #289074
+  -webkit-transition: .3s ease
   transition: .3s ease
-  &:hover
-    background: $green
-    img
-      filter: brightness(0) invert(1)
 
+  &:hover
+    background: #289074
+
+    img
+      -webkit-filter: brightness(0) invert(1)
+      filter: brightness(0) invert(1)
 
 .checkout-item__title
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   margin: 0 0 12px
 
@@ -2995,21 +3823,32 @@ select
   border: solid 1px #aa9b98
   cursor: pointer
 
-.dropDown-select.open
-  box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
-  .dropDown-select__item
-    border-bottom: none
-    position: relative
-    z-index: 3
-    &:after
-      transform: rotate(180deg)
-  .dropDown-select__wrap
-    display: block
+  &.open
+    -webkit-box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
+    box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
+
+    .dropDown-select__item
+      border-bottom: none
+      position: relative
+      z-index: 3
+
+      &:after
+        -webkit-transform: rotate(180deg)
+        transform: rotate(180deg)
+
+    .dropDown-select__wrap
+      display: block
 
 .dropDown-select__item
   background: #fff
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   padding: 0 20px
   color: #1c1c1c
@@ -3017,12 +3856,13 @@ select
   overflow: hidden
   border-radius: 5px
   height: 100%
+
   &:after
     content: ''
     width: 11px
     height: 6px
     background: url("../img/arrow-bottom.png") no-repeat center
-      size: 11px
+    background-size: 11px
     display: inline-block
 
 .dropDown-select__wrap
@@ -3033,25 +3873,36 @@ select
   z-index: 2
   background: #fff
   border-radius: 0 0 5px 5px
+  -webkit-box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
   box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
   border: solid 1px #aa9b98
-    top: none
+  border-top: none
   padding: 0 20px
   display: none
 
 .dropDown-select__list
   width: 100%
+
   li
     border-top: 1px solid #eae6e5
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
     padding: 14px 0
     color: #1c1c1c
     font-size: 15px
+    -webkit-transition: .3s ease
     transition: .3s ease
+
     &:hover
-      color: $green
+      color: #289074
+
       .price
         &:after
           content: ''
@@ -3059,17 +3910,18 @@ select
           width: 9px
           height: 11px
           background: url("../img/rub-green.png") no-repeat center
-            size: contain
+          background-size: contain
           margin: 0 0 0 4px
+
         img
           display: none
+
   .price
     font-size: 18px
+
     img
       width: 9px
       margin: 0 0 0 4px
-
-
 
 .label-text
   display: block
@@ -3080,37 +3932,44 @@ select
 .overflow-select
   max-height: 200px
 
-.basket-wrapper
-  select
-    outline: none
-    border-radius: 5px
-    border: solid 1px #aa9b98
-    width: 100%
-    height: 100%
-
+.basket-wrapper select
+  outline: none
+  border-radius: 5px
+  border: solid 1px #aa9b98
+  width: 100%
+  height: 100%
 
 .basket-section
   width: calc(100% - 590px)
   padding: 20px 20px 0 0
+
   .banner-horizontal
     height: 98px
     margin: 0 0 20px
 
 .card-product-line
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 10px
   border-radius: 6px
   border: solid 1px #eae6e5
   overflow: hidden
+
   &:last-child
     margin: 0
+
   .product-card__img
     width: 140px
     height: auto
     border-radius: 0
+
   .product-card__title
     min-height: auto
     margin: 0 0 19px
@@ -3122,9 +3981,15 @@ select
 
 .card-product-line__bottom
   width: 100%
-  margin: 17px 0 0
+  margin: 10px 0 0
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: end
+  -ms-flex-pack: end
   justify-content: flex-end
 
 .quantity
@@ -3137,14 +4002,21 @@ select
 
 .ui-selectmenu-button
   width: 100%
+  -webkit-box-sizing: border-box
   box-sizing: border-box
   padding: 8px 15px 8px 14px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
 
-.ui-selectmenu-button.ui-button
-  width: 100%
+  &.ui-button
+    width: 100%
 
 .ui-selectmenu-text
   margin-right: 0
@@ -3152,15 +4024,22 @@ select
 
 .ui-button .ui-icon
   background: url("../img/arrow-bottom.png") no-repeat center
-    size: 11px
+  background-size: 11px
 
-.ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon
   background: url("../img/arrow-top.png") no-repeat center
-    size: 11px
+  background-size: 11px
+
+.ui-button
+  &:hover .ui-icon, &:focus .ui-icon
+    background: url("../img/arrow-top.png") no-repeat center
+    background-size: 11px
 
 .ui-icon
   width: 11px
   height: 6px
+  -webkit-box-ordinal-group: 2
+  -ms-flex-order: 1
   order: 1
 
 .ui-corner-all, .ui-corner-right, .ui-corner-br
@@ -3173,50 +4052,62 @@ select
 .ui-selectmenu-button
   &:hover
     background: #fff
+    -webkit-box-shadow: 0px 3px 15px 0 rgba(84, 55, 49, 0.1)
     box-shadow: 0px 3px 15px 0 rgba(84, 55, 49, 0.1)
     outline: none
+
   &:focus
     background: #fff
 
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus
   outline: none
-  background: #fff
+
+.ui-button
+  &:hover, &:focus
+    outline: none
 
 .ui-corner-bottom
   border-radius: 0 0 5px 5px
 
-.ui-selectmenu-open
-  .ui-widget.ui-widget-content
-    background: #fff
-    box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
-    border: solid 1px #aa9b98
-      top: none
-
-.ui-selectmenu-button-open.ui-corner-all, .ui-selectmenu-button-open.ui-corner-top, .ui-selectmenu-button-open.ui-corner-right, .ui-selectmenu-button-open.ui-corner-tr
-  border-radius: 5px 5px 0 0
+.ui-selectmenu-open .ui-widget.ui-widget-content
   background: #fff
+  -webkit-box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
+  box-shadow: 0 3px 15px 0 rgba(84, 55, 49, 0.1)
   border: solid 1px #aa9b98
-    bottom: none
+  border-top: none
+
+.ui-selectmenu-button-open
+  &.ui-corner-all, &.ui-corner-top, &.ui-corner-right, &.ui-corner-tr
+    border-radius: 5px 5px 0 0
+    background: #fff
+    border: solid 1px #aa9b98
+    border-bottom: none
 
 .ui-menu .ui-menu-item-wrapper
   padding: 13px 19px
   border: none
-    top: solid 1px #aa9b98
+  border-top: solid 1px #aa9b98
   color: #1c1c1c
   font-size: 15px
 
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active
   border-color: #aa9b98
   background: transparent
-  color: $green
+  color: #289074
 
-.ui-menu .ui-state-focus, .ui-menu .ui-state-active
-  margin: 0
+.ui-button
+  &:active, &.ui-state-active:hover
+    border-color: #aa9b98
+    background: transparent
+    color: #289074
+
+.ui-menu
+  .ui-state-focus, .ui-state-active
+    margin: 0
 
 .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr
   border-radius: 5px
 
-//modal
 .modal__div
   position: fixed
   width: 100%
@@ -3224,11 +4115,19 @@ select
   height: 100%
   top: 45%
   left: 50%
+  -webkit-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
   z-index: 101
   overflow: auto
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
   display: none
   opacity: 0
@@ -3245,14 +4144,19 @@ select
   height: auto
   overflow: auto
   margin: 50px auto
+  -webkit-box-sizing: border-box
   box-sizing: border-box
   position: relative
   border-radius: 5px
   background: #fff
+
   .tabs__caption
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
     border-bottom: 1px solid #eae6e5
     margin: 22px 0 0
+
     li
       margin: 0 30px 0 0
       padding: 10px 0
@@ -3264,7 +4168,8 @@ select
       max-width: none
       width: auto
       border: none
-        radius: 0
+      border-radius: 0
+
       &:before
         content: ''
         position: absolute
@@ -3273,55 +4178,73 @@ select
         width: 100%
         height: 2px
         background: transparent
+        -webkit-transition: .3s ease
         transition: .3s ease
+
       &:last-child
         margin: 0
+
     .active
       background: transparent
-      color: $green
-      &:before
-        background: $green
+      color: #289074
 
+      &:before
+        background: #289074
 
 .maps-delivery
   width: 100%
   height: 299px
+
   iframe
     width: 100%
     height: 100%
 
 .form-modal__bottom
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   padding: 20px 30px
+
   .btn
     height: 42px
     max-width: 355px
     font-size: 14px
+
   .btn-border
     border: solid 1px #bababa
     color: #1c1c1c
+
     &:hover
-      border-color: $green
+      border-color: #289074
       color: #fff
 
 .form-wrapper
   padding: 20px 30px
+
   input
     height: 46px
     border-radius: 5px
     border: solid 1px #aa9b98
+
   .checkbox
     margin: 10px 0 15px
     font-size: 13px
+
     .checkbox-custom
       width: 22px
       height: 22px
       min-width: 22px
       margin: 0 9px 0 0
+
   .radio
     width: 100%
     position: relative
@@ -3330,6 +4253,7 @@ select
     margin: 0 0 10px
     height: 46px
     padding: 0 20px
+
     &:last-child
       margin: 0
 
@@ -3337,29 +4261,43 @@ select
   position: absolute
   right: 20px
   top: 50%
-  transform: translate(0,-50%)
-
+  -webkit-transform: translate(0, -50%)
+  transform: translate(0, -50%)
 
 .input-title
   color: #626262
   font-size: 15px
   margin: 0 0 9px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+
   .question-icon
     margin: 0 0 0 10px
 
 .label-group
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
   label
     max-width: 140px
     width: 100%
+
   .ui-selectmenu-button
     height: 46px
+
   .ui-selectmenu-text
     font-size: 15px
     color: #1c1c1c
@@ -3369,8 +4307,13 @@ select
 
 .delivery-date
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 10px
 
@@ -3378,30 +4321,39 @@ select
   height: 31px
   border-radius: 5px
   border: solid 1px #aa9b98
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   text-align: center
   padding: 0 9px
   color: #1c1c1c
   font-size: 14px
-  margin: 0 10px 0 0
+  margin: 0 10px 5px 0
   cursor: pointer
+
   &:hover
     background: #aa9b98
     color: #fff
+
   &:last-child
     margin: 0
 
-.delivery-date__item.active
-  background: #aa9b98
-  color: #fff
+  &.active
+    background: #aa9b98
+    color: #fff
 
-//help page
-.wrapper-help, .wrapper-about
+.wrapper-help
   margin: 0 0 77px
 
 .wrapper-about
+  margin: 0 0 77px
+
   .help-box
     height: 100%
 
@@ -3411,6 +4363,7 @@ select
 
 .sidebar-menu__item
   margin: 0 0 18px
+
   &:last-child
     margin: 0
 
@@ -3421,7 +4374,9 @@ select
   z-index: 1
   position: relative
   margin: 0 0 20px
+  -webkit-transition: .3s ease
   transition: .3s ease
+
   &:before
     content: ''
     position: absolute
@@ -3431,9 +4386,13 @@ select
     border: solid 1px #b3b3b3
     left: 10px
     top: 10px
+    -webkit-transition: .3s ease
     transition: .3s ease
+
   &:hover
+    -webkit-box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
     box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+
     &:before
       opacity: 0
 
@@ -3458,16 +4417,25 @@ select
   max-width: 114px
   height: 114px
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: start
+  -ms-flex-pack: start
   justify-content: flex-start
 
 .help-box-menu
   margin: 26px 0 0
+
   li
     margin: 0 0 15px
+
     &:last-child
       margin: 0
+
     a
       color: #1c1c1c
       font-size: 15px
@@ -3478,29 +4446,42 @@ select
   margin: 10px auto 0
   padding: 35px 30px
   background: url("../img/bg2.png") no-repeat center
-    size: cover
+  background-size: cover
   border: solid 1px #aa9b98
   background-color: #543731
   color: #fff
   border-radius: 5px
+
   h3
     font-size: 30px
     font-weight: 500
     margin: 0 0 24px
+
     span
       font-weight: normal
       display: block
 
 .banner-callback__links
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   color: #fff
+
   strong
     font-weight: 500
 
 .banner-callback__icon
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   border-radius: 50%
   background: #289074
@@ -3513,21 +4494,28 @@ select
 
 .line-wrapper
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 21px 0 0
+
   .banner-callback__links
     margin: 0 52px 0 0
+
     &:last-child
       margin: 0
-    &:hover
-      .banner-callback__text
-        text-decoration: none
+
+    &:hover .banner-callback__text
+      text-decoration: none
+
   .banner-callback__text
     color: #29b1e3
     text-decoration: underline
-
 
 .banner-callback__icon-whatsapp
   width: 40px
@@ -3535,10 +4523,8 @@ select
   min-width: 40px
   margin: 0 15px 0 0
 
-//delivery page
-.wrapper-delivery
-  .wrapper-content
-    margin: 0 0 29px
+.wrapper-delivery .wrapper-content
+  margin: 0 0 29px
 
 .delivery-banner
   width: 100%
@@ -3546,14 +4532,22 @@ select
   border-radius: 5px
   height: 212px
   position: relative
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+
   h3
     font-size: 24px
     font-weight: bold
     margin: 0 0 15px
     text-transform: uppercase
+
   .box-text
     width: 100%
     font-weight: normal
@@ -3576,61 +4570,84 @@ select
     height: 100%
     width: calc(100% + 30px)
     background: #289074
+    -webkit-transform: skewX(-18deg)
     transform: skewX(-18deg)
-  >*
+
+  > *
     position: relative
 
 .delivery-banner-img
   position: absolute
   right: 0
   top: 50%
-  transform: translate(0,-50%)
+  -webkit-transform: translate(0, -50%)
+  transform: translate(0, -50%)
   max-width: 521px
   width: 100%
 
 .stages-delivery
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 70px 0 0
 
 .stage-delivery
   width: 25%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   text-align: center
   margin: 0 0 63px
   font-size: 14px
   color: #1c1c1c
   line-height: 1.71
-  &:last-child
-    .stage-delivery__icon
-      &:before
-        display: none
+
+  &:last-child .stage-delivery__icon:before
+    display: none
 
 .stage-delivery__icon
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   padding: 25px 15px
   width: 88px
   height: 88px
   border: solid 1px #289074
-    radius: 50%
+  border-radius: 50%
   margin: 0 auto 17px
   position: relative
   background: #ffffff
+
   &:before
     content: ''
     position: absolute
     top: 50%
-    transform: translate(0,-50%)
+    -webkit-transform: translate(0, -50%)
+    transform: translate(0, -50%)
     right: -130px
     width: 125px
     height: 1px
     border: dashed 1px #289074
+
   .icon-svg
     fill: #289074
 
@@ -3641,41 +4658,48 @@ select
       max-width: none
       height: 61px
       border: solid 1px #289074
-        radius: 0
+      border-radius: 0
       color: #1c1c1c
       font-size: 18px
       text-transform: none
+
     .active
       background: #289074
       color: #fff
       font-weight: 500
+
   .tabs__content
     font-size: 14px
     line-height: 1.71
     font-weight: normal
+
     p
       margin: 0
+
     .box-text
       font-size: 14px
       font-weight: normal
       margin: 0 0 28px
 
-.list-dots
-  li
-    position: relative
-    display: flex
-    align-items: flex-start
-    margin: 0 0 20px
-    &:before
-      content: ''
-      min-width: 9px
-      width: 9px
-      height: 9px
-      background: #289074
-      border-radius: 50%
-      margin: 7px 10px 0 0
+.list-dots li
+  position: relative
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  margin: 0 0 20px
 
-//wrapper-window
+  &:before
+    content: ''
+    min-width: 9px
+    width: 9px
+    height: 9px
+    background: #289074
+    border-radius: 50%
+    margin: 7px 10px 0 0
+
 .wrapper-window
   margin: 99px auto 50px
 
@@ -3686,6 +4710,7 @@ select
   width: 100%
   border-radius: 10px
   border: solid 1px #b3b3b3
+
   &:before
     content: ''
     position: absolute
@@ -3695,19 +4720,24 @@ select
     height: 100%
     top: 10px
     left: 10px
+
   h1
     text-align: center
     width: 100%
     margin: 0 auto 47px
+
   h6
     text-align: center
     margin: 24px auto 49px
     font-weight: 500
+
   .btn
     height: 61px
     font-size: 18px
+
   .btn-border
     color: #1c1c1c
+
     &:hover
       color: #fff
 
@@ -3729,15 +4759,24 @@ select
 .form
   width: 100%
   margin: 0 auto
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+
   label
     margin: 0 0 40px
+
   input
     border: solid 1px #b3b3b3
-      radius: 5px
+    border-radius: 5px
     background-color: #ffffff
     position: relative
     z-index: 1
@@ -3745,16 +4784,22 @@ select
     font-weight: bold
     color: #181818
     padding: 0 25px
+
   .input-title
     font-size: 16px
     margin: 0 0 14px
     width: 100%
     color: #1c1c1c
+
   .label-message
     margin: 0 auto 20px
+
     .input-title
       text-align: center
+      -webkit-box-pack: center
+      -ms-flex-pack: center
       justify-content: center
+
   textarea
     height: 100px
     border-radius: 5px
@@ -3763,66 +4808,79 @@ select
 
   .button-group
     width: 100%
+    -ms-flex-wrap: wrap
     flex-wrap: wrap
+
     .btn
       width: 100%
       max-width: none
       margin: 0 auto 20px
+
       &:last-child
         margin: 0 auto
+
   .line-wrapper
     .input-title
       width: auto
+
     a
       margin: 0 0 14px auto
+
   .checkbox
     font-size: 14px
     margin: 0 0 22px
+
     a
       display: inline
       text-decoration: underline
       color: #1c1c1c
+
     .checkbox-custom
       width: 20px
       height: 20px
       min-width: 20px
       margin: 0 10px 0 0
-  .col-form
 
-    .checkbox
-      margin: 0 0 13px
-      font-size: 13px
-      .checkbox-custom
-        width: 17px
-        min-width: 17px
-        height: 17px
-        margin: 0 15px 0 0
-        border: none
-        background: #4ea68e
-      .checkbox-inp:checked + .checkbox-custom
-        box-shadow: 0 3px 5px 0 rgba(84, 55, 49, 0.46)
-        background: #4ea68e
-        &:before
-          content: ''
-          position: absolute
-          left: 50%
-          top: 50%
-          transform: translate(-50%,-50%)
-          width: 9px
-          height: 8px
-          background: url("../img/check-mark.png") no-repeat center
-            size: 9px
+  .col-form .checkbox
+    margin: 0 0 13px
+    font-size: 13px
 
+    .checkbox-custom
+      width: 17px
+      min-width: 17px
+      height: 17px
+      margin: 0 15px 0 0
+      border: none
+      background: #4ea68e
 
-.form-registration
-  .recapcha
-    justify-content: flex-start
-    margin: 40px 0 0
-    img
-      margin: 0
+    .checkbox-inp:checked + .checkbox-custom
+      -webkit-box-shadow: 0 3px 5px 0 rgba(84, 55, 49, 0.46)
+      box-shadow: 0 3px 5px 0 rgba(84, 55, 49, 0.46)
+      background: #4ea68e
+
+      &:before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        -webkit-transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%)
+        width: 9px
+        height: 8px
+        background: url("../img/check-mark.png") no-repeat center
+        background-size: 9px
+
+.form-registration .recapcha
+  -webkit-box-pack: start
+  -ms-flex-pack: start
+  justify-content: flex-start
+  margin: 40px 0 0
+
+  img
+    margin: 0
 
 .links-accent
-  color: $green
+  color: #289074
 
 .input-wrapper
   position: relative
@@ -3830,18 +4888,19 @@ select
   height: 100%
   display: block
 
-  &:hover
-    &:before
-      opacity: 0
+  &:hover:before
+    opacity: 0
+
   &:before
     content: ''
     position: absolute
     width: 100%
     height: 100%
     border: solid 1px #b3b3b3
-      radius: 5px
+    border-radius: 5px
     top: 10px
     left: 10px
+    -webkit-transition: .3s ease
     transition: .3s ease
 
 .canceling-number
@@ -3850,24 +4909,34 @@ select
 
 .window-box-cancel
   max-width: 552px
+
   h1
     margin: 0 auto 19px
+
   .window-box__body
     padding: 39px 16px 40px
-  .form
-    button
-      height: 43px
+
+  .form button
+    height: 43px
 
 .recapcha
   margin: 0 auto 30px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
+
   img
     margin: 0 auto
 
 .window-box-welcome
   max-width: 700px
+
   .window-box__body
     padding: 40px 90px 50px
 
@@ -3875,13 +4944,13 @@ select
   .description-title
     text-align: center
     margin: 0 auto 39px
+
   h1
     margin: 0 auto 19px
 
-.input-wrapper-error
-  input
-    border-bottom-color: #d63030
-    border-bottom-width: 2px
+.input-wrapper-error input
+  border-bottom-color: #d63030
+  border-bottom-width: 2px
 
 .error-box
   width: 100%
@@ -3892,48 +4961,63 @@ select
 
 .window-box-registration
   max-width: none
+
   .window-box__body
     padding: 50px 60px
 
 .col-form
   width: 48.5%
 
-.input-wrapper-border
-  input
-    border-bottom-color: #543731
-    border-bottom-width: 2px
+.input-wrapper-border input
+  border-bottom-color: #543731
+  border-bottom-width: 2px
 
-//wrapper-basket-order
 .wrapper-basket-order
   margin: 27px 0 100px
+
   .container
+    -webkit-box-align: start
+    -ms-flex-align: start
     align-items: flex-start
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
 
 .basket-order__box
   padding: 20px 10px
   border-radius: 5px
+  -webkit-box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.31)
   box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.31)
   border: solid 1px #eae6e5
   background-color: #ffffff
   max-width: 310px
   width: 100%
+
   .sentence
     text-align: center
     margin: 0 0 12px
+
     p
+      -webkit-box-pack: center
+      -ms-flex-pack: center
       justify-content: center
+
   .btn
     font-size: 16px
 
 .order-box
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
   margin: 0 0 14px
   border-bottom: solid 1px #eae6e5
   padding: 0 0 14px
   font-size: 14px
+
   &:last-child
     margin: 0
     border: none
@@ -3943,12 +5027,20 @@ select
   height: 85px
   border-radius: 5px
   overflow: hidden
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
+
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
 
 .order-box-body
@@ -3967,29 +5059,46 @@ select
   margin: 8px 0
 
 .order-box-price
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   color: #c81947
+
   img
     margin: 0 0 0 3px
     width: 8px
 
 .order-box-total
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   padding: 0 0 14px
 
-//shops
 .shops-box
   min-height: 449px
   margin: 0
 
 .shops-box__body
   padding: 0
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
 
 .shops-box__body-content
@@ -4004,9 +5113,11 @@ select
   color: #1c1c1c
   font-size: 14px
   margin: auto 0 0
+
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
 
 .shops-box__image-title
@@ -4016,6 +5127,7 @@ select
   border-radius: 3px
   bottom: 20px
   left: 20px
+
   &:before
     content: ''
     position: absolute
@@ -4025,6 +5137,7 @@ select
     border: 1px solid #fff
     width: 100%
     height: 100%
+
   span
     width: 100%
     height: 100%
@@ -4032,8 +5145,14 @@ select
     border-radius: 3px
     position: relative
     z-index: 1
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
 
 .shops-box-title
@@ -4046,19 +5165,33 @@ select
   color: #1c1c1c
   font-size: 14px
   line-height: 1.4
+
   a
     color: #1c1c1c
+
   li
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: start
+    -ms-flex-align: start
     align-items: flex-start
     margin: 0 0 12px
+
     &:last-child
       margin: 0
+
   .icon
     min-width: 16px
     width: 16px
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
     margin: 2px 10px 0 0
 
@@ -4067,16 +5200,26 @@ select
 
 .shop-info
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
 
 .shop-info-box
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
   font-size: 14px
   font-weight: 300
   margin: 0 80px 23px 0
+
   a
     color: #1c1c1c
 
@@ -4095,15 +5238,23 @@ select
   font-weight: 300
 
 .shop-gallery__item
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   width: 100%
   height: 210px
   border-radius: 5px
   position: relative
   border: solid 1px #eae6e5
+  -webkit-transition: .3s ease
   transition: .3s ease
+
   &:before
     content: ''
     position: absolute
@@ -4113,105 +5264,145 @@ select
     border: solid 1px #b3b3b3
     left: 10px
     top: 10px
+    -webkit-transition: .3s ease
     transition: .3s ease
+
   &:hover
+    -webkit-box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
     box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+
     &:before
       opacity: 0
+
   img
     position: relative
     z-index: 1
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
     border-radius: 5px
 
 .company-text
   margin: 0 0 28px
   line-height: 1.5
+
   .links-blue
     font-weight: normal
     margin: 0 0 27px
 
-.window-box-fast
-  .description-title
-    font-weight: 300
-    max-width: 465px
+.window-box-fast .description-title
+  font-weight: 300
+  max-width: 465px
 
 .window-box-thanks
   .description-title
     line-height: 1.88
     text-align: center
+
   .window-box__body
     padding: 50px 40px
 
 .window-order-number
   text-align: center
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   margin: 29px auto 40px
   font-weight: 300
   font-size: 18px
+
   p
     color: rgba(28, 28, 28, 0.6)
     margin: 0 auto 14px
     text-transform: uppercase
+
   span
     font-size: 48px
 
-.variable-payment
-  h3
-    margin: 0 0 26px
-    width: 100%
-    font-size: 20px
-    font-weight: 500
+.variable-payment h3
+  margin: 0 0 26px
+  width: 100%
+  font-size: 20px
+  font-weight: 500
 
 .variable-payment__box
   margin: 0 0 35px
   padding: 0 0 32px
   border-bottom: 1px solid #aa9b98
   width: 100%
+
   &:last-child
     border: none
     padding: 0
+
   h4
     font-size: 18px
     font-weight: 500
 
 .variable-payment__box-title
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
   margin: 0 0 13px
 
 .variable-payment-icon
   width: 41px
   min-width: 41px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   margin: 0 16px 0 0
 
 .variable-payment__box-body
   line-height: 1.5
+
   p
     margin: 0 0 30px
+
     &:last-child
       margin: 0
+
   h4
     margin: 0 0 12px
+
   ul
     margin: 0 0 30px
 
 .error-page
   margin: 100px 0
+
   .container
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
+
   h3
     font-size: 26px
     font-weight: 500
+
   .num
     margin: 49px 0
     color: #289074
@@ -4222,6 +5413,7 @@ select
   max-width: 415px
   margin: 0 32px 0 0
   width: 100%
+
   .btn
     max-width: 230px
     margin: 29px 0 0
@@ -4229,48 +5421,52 @@ select
 .col-2
   width: 46%
 
-.wrapper-window-orders
-  .row
-    justify-content: space-between
+.wrapper-window-orders .row
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
 
 .window-box-order
   margin: 0
   height: 100%
+
   .window-box__body
     padding: 39px 24px
+
   .date
     text-align: center
     width: 100%
     margin: 0 auto 49px
+
   h5
     text-align: center
     font-size: 12px
     margin: 0 auto 5px
+
   .btn
     max-width: 300px
     height: 43px
     font-size: 16px
     margin: 0 auto
+
   .btn-cancel
     margin: 19px auto 0
     max-width: 208px
 
-
-.window-box-order-info
-  h1
-    margin: 0 auto 19px
+.window-box-order-info h1
+  margin: 0 auto 19px
 
 .note
   text-align: center
   margin: 0 auto
   max-width: 377px
   font-size: 12px
+
   strong
     font-weight: 500
 
-.window-box-order-info
-  h1
-    margin: 0 auto 19px
+.window-box-order-info h1
+  margin: 0 auto 19px
 
 .window-box-order-title
   font-size: 26px
@@ -4281,31 +5477,49 @@ select
 
 .pay-img
   margin: 51px auto 20px
+
   img
     margin: 0 auto
 
 .orders-info
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
 
 .orders-info__list
   li
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -ms-flex-wrap: wrap
     flex-wrap: wrap
     margin: 0 0 23px
+
     &:last-child
       margin: 0
+
   p
     margin: 0 15px 0 0
+
   span
     color: rgba(28, 28, 28, 0.5)
 
-
 .window-box-order__line
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
 
 .window-box-order__photo
@@ -4314,8 +5528,14 @@ select
   width: 62px
   height: 62px
   min-width: 62px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
 .window-box-order__content
@@ -4332,6 +5552,7 @@ select
   margin: 19px auto
   text-align: center
   font-size: 18px
+
   strong
     font-weight: 500
 
@@ -4344,46 +5565,60 @@ select
 .mr-auto
   margin: 0 auto
 
-//wrapper-cabinet
-.wrapper-cabinet
-  h1
-    text-align: center
-    margin: 0 auto 39px
-
+.wrapper-cabinet h1
+  text-align: center
+  margin: 0 auto 39px
 
 .windows-box-cabinet
   margin: 0 0 30px
+
   &:last-child
     margin: 0
+
   .window-box__body
     padding: 0
+
   .button-group
     width: 100%
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
+
     .btn
       max-width: 45%
       height: 40px
       font-size: 14px
+
       &:last-child
         margin: 22px 0 0
+
   .btn
     max-width: 185px
     height: 40px
     font-size: 14px
     margin: 22px 0 0
+
   .btn-default
     margin: 0 0 16px
     max-width: 140px
     height: 35px
+
   .btn-green
     background: #4ea68e
 
-
 .windows-box-cabinet__head
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: start
+  -ms-flex-pack: start
   justify-content: flex-start
   padding: 20px 16px
   border-bottom: 1px solid #b3b3b3
@@ -4392,40 +5627,54 @@ select
   margin: 0 14px 0 0
 
 .windows-box-cabinet__content
-
   font-size: 14px
 
 .windows-box-cabinet__item
   padding: 22px 15px 19px
   border-bottom: 1px solid #b3b3b3
+
   &:last-child
     border: none
+
   .links-accent, .links-red
     text-decoration: underline
     margin: 13px 0 0
 
-.list-info
-  li
-    display: flex
-    align-items: center
-    justify-content: space-between
-    flex-wrap: wrap
-    margin: 0 0 15px
-    &:last-child
-      margin: 0
-    span
-      width: 45%
+.list-info li
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  margin: 0 0 15px
+
+  &:last-child
+    margin: 0
+
+  span
+    width: 45%
 
 .orders-line
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 13px
+
   h4
     font-weight: 500
     margin: 0 40px 0 0
-
 
 .date-orders
   color: rgba(28, 28, 28, 0.4)
@@ -4445,27 +5694,31 @@ select
     font-size: 14px
     font-weight: normal
     color: #1c1c1c
+
   label
     margin: 0 0 20px
+
   .btn
     margin: 0
 
-.modal__div-window
-  .window-box
-    margin: 30px auto
+.modal__div-window .window-box
+  margin: 30px auto
 
 .category-links
   border: solid 1px #aa9b98
-    radius: 5px
-
+  border-radius: 5px
   background: #fff
   height: 100%
   color: #000
   font-weight: 500
   position: relative
+  margin: 15px 0 0
+
   &:hover
+    -webkit-box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
     box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
-    color: $accent
+    color: #543731
+
   &:before
     content: ''
     position: absolute
@@ -4475,9 +5728,13 @@ select
     border: solid 1px #b3b3b3
     left: 10px
     top: 10px
+    -webkit-transition: .3s ease
     transition: .3s ease
+
   &:hover
+    -webkit-box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
     box-shadow: 0 0 10px rgba(84, 85, 49, 0.5)
+
     &:before
       opacity: 0
 
@@ -4485,9 +5742,18 @@ select
   width: 100%
   height: 100%
   border-radius: 5px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   text-align: center
   position: relative
@@ -4498,6 +5764,4 @@ select
 .category-links__text
   margin: 10px auto 0
 
-
 @import "media"
-// Всегда в конце

@@ -34,6 +34,10 @@ $('.slider-products-top').slick({
     ]
 });
 
+$('.btn-add-card').click(function () {
+    $(this).siblings('.btn-hover').addClass('click');
+});
+
 
 // tabs
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
@@ -190,6 +194,7 @@ $('[name="mail"]').inputmask({
 });
 
 $('[name="phone"]').inputmask({"mask": "+7 999 999 99 99"});
+
 
 
 // модальные окна (несколько)
