@@ -38,6 +38,15 @@ $('.btn-add-card').click(function () {
     $(this).siblings('.btn-hover').addClass('click');
 });
 
+$('.basket-box').hover(function () {
+   $('.basket-order__box1').fadeToggle();
+});
+
+$('.basket-box').click(function () {
+    $('.basket-order__box-absolute').fadeOut();
+    $('.basket-order__box2').fadeIn();
+});
+
 
 // tabs
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {

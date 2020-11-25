@@ -4673,6 +4673,13 @@ select {
   .basket-order__box .btn {
     font-size: 16px; }
 
+.basket-order__box-absolute {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 100%;
+  display: none; }
+
 .order-box {
   width: 100%;
   display: -webkit-box;
