@@ -128,7 +128,7 @@ $('.btn-filter').click(function () {
     $('.sidebar').fadeIn();
 });
 
-$('.sidebar-close').click(function () {
+$('.sidebar-close').on('click', function () {
     $('.overlay').fadeOut();
     $('.sidebar').fadeOut();
 });
@@ -138,7 +138,7 @@ $('.btn-close-banner').click(function () {
 });
 
 // accordeon
-$('.panel_heading .block_title').click(function () {
+$('.panel_heading .block_title').on('click', function () {
     $(this).toggleClass('in').next().slideToggle();
     $('.panel_heading .block_title').not(this).removeClass('in');
 });
